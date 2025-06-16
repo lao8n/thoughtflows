@@ -1,0 +1,167 @@
+Sequential Flow: A → B → C
+
+import asyncio
+
+from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.conditions import MaxMessageTermination
+from autogen_agentchat.teams import DiGraphBuilder, GraphFlow
+from autogen_ext.models.openai import OpenAIChatCompletionClient
+
+
+async def main():
+    # Initialize agents with OpenAI model clients.
+    model_client = OpenAIChatCompletionClient(model="gpt-4.1-nano")
+    agent_a = AssistantAgent("A", model_client=model_client, system_message="You are a helpful assistant.")
+    agent_b = AssistantAgent("B", model_client=model_client, system_message="Translate input to Chinese.")
+    agent_c = AssistantAgent("C", model_client=model_client, system_message="Translate input to English.")
+
+    # Create a directed graph with sequential flow A -> B -> C.
+    builder = DiGraphBuilder()
+    builder.add_node(agent_a).add_node(agent_b).add_node(agent_c)
+    builder.add_edge(agent_a, agent_b).add_edge(agent_b, agent_c)
+    graph = builder.build()
+
+    # Create a GraphFlow team with the directed graph.
+    team = GraphFlow(
+        participants=[agent_a, agent_b, agent_c],
+        graph=graph,
+        termination_condition=MaxMessageTermination(5),
+    )
+
+    # Run the team and print the events.
+    async for event in team.run_stream(task="Write a short story about a cat."):
+        print(event)
+
+
+asyncio.run(main())
+Parallel Fan-out: A → (B, C)
+
+import asyncio
+
+from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.conditions import MaxMessageTermination
+from autogen_agentchat.teams import DiGraphBuilder, GraphFlow
+from autogen_ext.models.openai import OpenAIChatCompletionClient
+
+
+async def main():
+    # Initialize agents with OpenAI model clients.
+    model_client = OpenAIChatCompletionClient(model="gpt-4.1-nano")
+    agent_a = AssistantAgent("A", model_client=model_client, system_message="You are a helpful assistant.")
+    agent_b = AssistantAgent("B", model_client=model_client, system_message="Translate input to Chinese.")
+    agent_c = AssistantAgent("C", model_client=model_client, system_message="Translate input to Japanese.")
+
+    # Create a directed graph with fan-out flow A -> (B, C).
+    builder = DiGraphBuilder()
+    builder.add_node(agent_a).add_node(agent_b).add_node(agent_c)
+    builder.add_edge(agent_a, agent_b).add_edge(agent_a, agent_c)
+    graph = builder.build()
+
+    # Create a GraphFlow team with the directed graph.
+    team = GraphFlow(
+        participants=[agent_a, agent_b, agent_c],
+        graph=graph,
+        termination_condition=MaxMessageTermination(5),
+    )
+
+    # Run the team and print the events.
+    async for event in team.run_stream(task="Write a short story about a cat."):
+        print(event)
+
+
+asyncio.run(main())
+Conditional Branching: A → B (if ‘yes’) or C (otherwise)
+
+import asyncio
+
+from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.conditions import MaxMessageTermination
+from autogen_agentchat.teams import DiGraphBuilder, GraphFlow
+from autogen_ext.models.openai import OpenAIChatCompletionClient
+
+
+async def main():
+    # Initialize agents with OpenAI model clients.
+    model_client = OpenAIChatCompletionClient(model="gpt-4.1-nano")
+    agent_a = AssistantAgent(
+        "A",
+        model_client=model_client,
+        system_message="Detect if the input is in Chinese. If it is, say 'yes', else say 'no', and nothing else.",
+    )
+    agent_b = AssistantAgent("B", model_client=model_client, system_message="Translate input to English.")
+    agent_c = AssistantAgent("C", model_client=model_client, system_message="Translate input to Chinese.")
+
+    # Create a directed graph with conditional branching flow A -> B ("yes"), A -> C (otherwise).
+    builder = DiGraphBuilder()
+    builder.add_node(agent_a).add_node(agent_b).add_node(agent_c)
+    # Create conditions as callables that check the message content.
+    builder.add_edge(agent_a, agent_b, condition=lambda msg: "yes" in msg.to_model_text())
+    builder.add_edge(agent_a, agent_c, condition=lambda msg: "yes" not in msg.to_model_text())
+    graph = builder.build()
+
+    # Create a GraphFlow team with the directed graph.
+    team = GraphFlow(
+        participants=[agent_a, agent_b, agent_c],
+        graph=graph,
+        termination_condition=MaxMessageTermination(5),
+    )
+
+    # Run the team and print the events.
+    async for event in team.run_stream(task="AutoGen is a framework for building AI agents."):
+        print(event)
+
+
+asyncio.run(main())
+Loop with exit condition: A → B → C (if ‘APPROVE’) or A (otherwise)
+
+import asyncio
+
+from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.conditions import MaxMessageTermination
+from autogen_agentchat.teams import DiGraphBuilder, GraphFlow
+from autogen_ext.models.openai import OpenAIChatCompletionClient
+
+
+async def main():
+    # Initialize agents with OpenAI model clients.
+    model_client = OpenAIChatCompletionClient(model="gpt-4.1")
+    agent_a = AssistantAgent(
+        "A",
+        model_client=model_client,
+        system_message="You are a helpful assistant.",
+    )
+    agent_b = AssistantAgent(
+        "B",
+        model_client=model_client,
+        system_message="Provide feedback on the input, if your feedback has been addressed, "
+        "say 'APPROVE', otherwise provide a reason for rejection.",
+    )
+    agent_c = AssistantAgent(
+        "C", model_client=model_client, system_message="Translate the final product to Korean."
+    )
+
+    # Create a loop graph with conditional exit: A -> B -> C ("APPROVE"), B -> A (otherwise).
+    builder = DiGraphBuilder()
+    builder.add_node(agent_a).add_node(agent_b).add_node(agent_c)
+    builder.add_edge(agent_a, agent_b)
+
+    # Create conditional edges using strings
+    builder.add_edge(agent_b, agent_c, condition=lambda msg: "APPROVE" in msg.to_model_text())
+    builder.add_edge(agent_b, agent_a, condition=lambda msg: "APPROVE" not in msg.to_model_text())
+
+    builder.set_entry_point(agent_a)
+    graph = builder.build()
+
+    # Create a GraphFlow team with the directed graph.
+    team = GraphFlow(
+        participants=[agent_a, agent_b, agent_c],
+        graph=graph,
+        termination_condition=MaxMessageTermination(20),  # Max 20 messages to avoid infinite loop.
+    )
+
+    # Run the team and print the events.
+    async for event in team.run_stream(task="Write a short poem about AI Agents."):
+        print(event)
+
+
+asyncio.run(main())
