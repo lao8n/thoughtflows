@@ -48,6 +48,14 @@ class NearestNeighborFlow:
             
         self.model_client = OpenAIChatCompletionClient(model=model_name, api_key=api_key)
         
+        # New agent for current situation
+        self.current_situation_describer = AssistantAgent(
+            "CurrentSituationDescriber",
+            model_client=self.model_client,
+            system_message="""You are an expert at summarizing current events.\nFor the given prompt, write a brief historical-style note as if this is a historical event.\nProvide:\n1. Name of the event/situation (e.g., 'US Debt Crisis 2025')\n2. Brief description (2-3 sentences)""",
+            output_content_type=HistoricalExample
+        )
+
         # Initialize the historical finder
         self.historical_finder = AssistantAgent(
             "HistoricalFinder",
@@ -102,10 +110,19 @@ class NearestNeighborFlow:
         os.makedirs(output_dir, exist_ok=True)
         output_file = os.path.join(output_dir, "output.txt")
         flow_graph_file = os.path.join(output_dir, "flow_graph.png")
-        # First, get the historical examples
-        print("Sending prompt to historical_finder...")
-        examples_result = await self.historical_finder.on_messages(
+        # Step 1: Generate a HistoricalExample for the current prompt
+        current_example_result = await self.current_situation_describer.on_messages(
             messages=[TextMessage(source="user", content=prompt)],
+            cancellation_token=None
+        )
+        if hasattr(current_example_result, 'chat_message') and hasattr(current_example_result.chat_message, 'content'):
+            current_example = current_example_result.chat_message.content
+        else:
+            current_example = current_example_result
+        # Step 2: Get the historical examples as before
+        historical_finder_prompt = f"{current_example.name}: {current_example.description}"
+        examples_result = await self.historical_finder.on_messages(
+            messages=[TextMessage(source="user", content=historical_finder_prompt)],
             cancellation_token=None
         )
         print(f"examples_result type: {type(examples_result)}")
@@ -124,6 +141,8 @@ class NearestNeighborFlow:
             print("examples_data.examples is empty")
             raise ValueError("No historical examples found")
         print(f"Found {len(examples_data.examples)} historical examples")
+        # Step 3: Prepend the current example
+        examples_data.examples = [current_example] + examples_data.examples
         # Write historical examples to output file
         with open(output_file, "w", encoding="utf-8") as f:
             f.write(f"Prompt: {prompt}\n\n")
