@@ -1,15 +1,19 @@
 import asyncio
 from typing import List, Dict, Any
 from dataclasses import dataclass
-from autogen import AssistantAgent, OpenAIWrapper
-from autogen.agentchat.contrib.text_analyzer_agent import TextAnalyzerAgent
-from autogen.agentchat.contrib.graph_flow import DiGraphBuilder, GraphFlow
+from autogen_agentchat.agents import AssistantAgent
+from autogen_ext.models.openai import OpenAIChatCompletionClient
 from autogen_agentchat.conditions import MaxMessageTermination
+from autogen_agentchat.teams import DiGraphBuilder, GraphFlow
 from pydantic import BaseModel, Field
 import networkx as nx
 import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 import os
+from autogen_core.models import LLMMessage
+from autogen_agentchat.messages import TextMessage
+import numpy as np
+import re
 
 # Load environment variables from .env file
 load_dotenv()
@@ -36,13 +40,13 @@ class NearestMatch(BaseModel):
     predictions: List[str] = Field(..., description="List of predictions based on this example")
 
 class NearestNeighborFlow:
-    def __init__(self, model_name: str = "gpt-4"):
+    def __init__(self, model_name: str = "gpt-4o-mini"):
         # Get API key from environment variable
         api_key = os.getenv("OPENAI_API_KEY")
         if not api_key:
             raise ValueError("OPENAI_API_KEY environment variable not found. Please check your .env file.")
             
-        self.model_client = OpenAIWrapper(model=model_name, api_key=api_key)
+        self.model_client = OpenAIChatCompletionClient(model=model_name, api_key=api_key)
         
         # Initialize the historical finder
         self.historical_finder = AssistantAgent(
@@ -53,7 +57,7 @@ class NearestNeighborFlow:
             For each example, provide:
             1. Name of the event/situation
             2. Brief description (2-3 sentences)""",
-            response_format=HistoricalExamplesList
+            output_content_type=HistoricalExamplesList
         )
         
         # Initialize the nearest neighbor
@@ -65,13 +69,16 @@ class NearestNeighborFlow:
             1. Which example is most similar to the current situation
             2. Why it's the best match
             3. What predictions can be made based on this example""",
-            response_format=NearestMatch
+            output_content_type=NearestMatch
         )
 
     def _create_similarity_analyzer(self, example: HistoricalExample, index: int) -> AssistantAgent:
         """Create a similarity analyzer agent for a specific example."""
+        # Sanitize the example name to be a valid Python identifier
+        base_name = re.sub(r'\W|^(?=\d)', '_', example.name)
+        agent_name = f"SimilarityAnalyzer_{base_name}"
         return AssistantAgent(
-            f"SimilarityAnalyzer_{index}",
+            agent_name,
             model_client=self.model_client,
             system_message=f"""You are an expert at analyzing similarities and differences between situations.
             Analyze this specific historical example:
@@ -81,65 +88,94 @@ class NearestNeighborFlow:
             For this example, analyze:
             1. Key similarities with the current situation
             2. Important differences""",
-            response_format=SimilarityAnalysis
+            output_content_type=SimilarityAnalysis
         )
 
     async def run_analysis(self, prompt: str) -> Dict[str, Any]:
+        # Sanitize prompt for filename
+        safe_prompt = re.sub(r'\W+', '_', prompt.strip())
+        output_file = f"flows/{safe_prompt}.txt"
         # First, get the historical examples
-        examples_result = await self.historical_finder.generate_reply(
-            sender=None, 
-            messages=[{"role": "user", "content": prompt}]
+        print("Sending prompt to historical_finder...")
+        examples_result = await self.historical_finder.on_messages(
+            messages=[TextMessage(source="user", content=prompt)],
+            cancellation_token=None
         )
-        
-        if not isinstance(examples_result, HistoricalExamplesList):
+        print(f"examples_result type: {type(examples_result)}")
+        print(f"examples_result content: {examples_result}")
+        # Extract the actual content from the Response object
+        if hasattr(examples_result, 'chat_message') and hasattr(examples_result.chat_message, 'content'):
+            examples_data = examples_result.chat_message.content
+        else:
+            examples_data = examples_result
+        print(f"examples_data type: {type(examples_data)}")
+        print(f"examples_data content: {examples_data}")
+        if not isinstance(examples_data, HistoricalExamplesList):
+            print("examples_data is not a HistoricalExamplesList")
             raise ValueError("Failed to get historical examples")
-            
-        if not examples_result.examples:
+        if not examples_data.examples:
+            print("examples_data.examples is empty")
             raise ValueError("No historical examples found")
-            
-        print(f"Found {len(examples_result.examples)} historical examples")
-        
+        print(f"Found {len(examples_data.examples)} historical examples")
+        # Write historical examples to output file
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(f"Prompt: {prompt}\n\n")
+            f.write("--- Historical Examples ---\n")
+            for ex in examples_data.examples:
+                f.write(f"Name: {ex.name}\nDescription: {ex.description}\n\n")
         # Create one similarity analyzer per example
         self.similarity_analyzers = [
             self._create_similarity_analyzer(example, i)
-            for i, example in enumerate(examples_result.examples)
+            for i, example in enumerate(examples_data.examples)
         ]
-        
         # Create the flow graph
         builder = DiGraphBuilder()
-        
         # Add nodes
         builder.add_node(self.historical_finder)
         for analyzer in self.similarity_analyzers:
             builder.add_node(analyzer)
         builder.add_node(self.nearest_neighbor)
-        
         # Create fan-out edges from historical_finder to each similarity analyzer
         for analyzer in self.similarity_analyzers:
             builder.add_edge(self.historical_finder, analyzer)
-        
         # Create edges from all similarity analyzers to nearest_neighbor
         for analyzer in self.similarity_analyzers:
             builder.add_edge(analyzer, self.nearest_neighbor)
-        
         graph = builder.build()
-        
         # Visualize the graph
         self.visualize_graph(graph)
-        
         # Create the team
         team = GraphFlow(
             participants=[self.historical_finder] + self.similarity_analyzers + [self.nearest_neighbor],
             graph=graph,
             termination_condition=MaxMessageTermination(20)
         )
-        
         # Run the analysis
         results = []
         async for event in team.run_stream(task=prompt):
             results.append(event)
-            
-        return self._process_results(results)
+        # Process results and write to files
+        final_result = self._process_results(results)
+        # Write similarity analyses to both similarity_analyses.txt and append to output_file
+        if "similarity_analysis" in final_result:
+            with open("similarity_analyses.txt", "w", encoding="utf-8") as f:
+                for analysis in final_result["similarity_analysis"]:
+                    f.write(f"Example: {analysis.example_name}\nSimilarities: {analysis.similarities}\nDifferences: {analysis.differences}\n\n")
+            # Also append to output_file
+            with open(output_file, "a", encoding="utf-8") as f:
+                f.write("\n--- Similarity Analyses ---\n")
+                for analysis in final_result["similarity_analysis"]:
+                    f.write(f"Example: {analysis.example_name}\nSimilarities: {analysis.similarities}\nDifferences: {analysis.differences}\n\n")
+        # Write nearest match to both nearest_match.txt and append to output_file
+        if "nearest_match" in final_result:
+            with open("nearest_match.txt", "w", encoding="utf-8") as f:
+                match = final_result["nearest_match"]
+                f.write(f"Best Match: {match.best_match}\nReasoning: {match.reasoning}\nPredictions: {match.predictions}\n")
+            # Also append to output_file
+            with open(output_file, "a", encoding="utf-8") as f:
+                f.write("\n--- Best Match ---\n")
+                f.write(f"Best Match: {match.best_match}\nReasoning: {match.reasoning}\nPredictions: {match.predictions}\n")
+        return final_result
     
     def _process_results(self, events: List[Any]) -> Dict[str, Any]:
         final_result = {}
@@ -164,26 +200,47 @@ class NearestNeighborFlow:
             
         return final_result
 
-    def visualize_graph(self, graph: nx.DiGraph, filename: str = "flow_graph.png"):
+    def visualize_graph(self, graph, filename: str = "flow_graph.png"):
         """Visualize the flow graph using NetworkX and Matplotlib."""
+        print(f"Graph type: {type(graph)}")
         plt.figure(figsize=(12, 8))
-        pos = nx.spring_layout(graph)
-        
-        # Draw nodes
-        nx.draw_networkx_nodes(graph, pos, node_color='lightblue', 
-                             node_size=2000, alpha=0.6)
-        
+        # Get nodes from the custom graph object
+        if hasattr(graph, 'nodes'):
+            nodes = list(graph.nodes.keys())
+            node_objs = graph.nodes
+            print(f"Nodes: {nodes}")
+        else:
+            print("Cannot visualize graph - no nodes attribute")
+            plt.close()
+            return
+        # Simple circular layout
+        n_nodes = len(nodes)
+        angles = [2 * np.pi * i / n_nodes for i in range(n_nodes)]
+        x_coords = [np.cos(angle) for angle in angles]
+        y_coords = [np.sin(angle) for angle in angles]
+        node_pos = {node: (x, y) for node, x, y in zip(nodes, x_coords, y_coords)}
+        # Plot nodes
+        plt.scatter(x_coords, y_coords, c='lightblue', s=1000, alpha=0.6)
+        # Add node labels
+        for node in nodes:
+            x, y = node_pos[node]
+            plt.annotate(str(node), (x, y), ha='center', va='center', fontsize=10, fontweight='bold')
         # Draw edges
-        nx.draw_networkx_edges(graph, pos, edge_color='gray', 
-                             arrows=True, arrowsize=20)
-        
-        # Draw labels
-        nx.draw_networkx_labels(graph, pos, font_size=10, font_weight='bold')
-        
+        for node in nodes:
+            node_obj = node_objs[node]
+            if hasattr(node_obj, 'edges'):
+                for edge in node_obj.edges:
+                    target = edge.target
+                    if target in node_pos:
+                        x0, y0 = node_pos[node]
+                        x1, y1 = node_pos[target]
+                        plt.arrow(x0, y0, x1-x0, y1-y0, length_includes_head=True, head_width=0.05, head_length=0.1, fc='gray', ec='gray', alpha=0.5)
         plt.title("Nearest Neighbor Flow Graph")
+        plt.axis('equal')
         plt.axis('off')
         plt.savefig(filename)
         plt.close()
+        print(f"Graph saved to {filename}")
 
 async def main():
     # Example usage
