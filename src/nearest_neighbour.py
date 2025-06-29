@@ -76,7 +76,9 @@ class NearestNeighborFlow:
         """Create a similarity analyzer agent for a specific example."""
         # Sanitize the example name to be a valid Python identifier
         base_name = re.sub(r'\W|^(?=\d)', '_', example.name)
-        agent_name = f"SimilarityAnalyzer_{base_name}"
+        agent_name = f"SA_{base_name}"
+        # Truncate to ensure <64 chars
+        agent_name = agent_name[:60]
         return AssistantAgent(
             agent_name,
             model_client=self.model_client,
@@ -92,9 +94,14 @@ class NearestNeighborFlow:
         )
 
     async def run_analysis(self, prompt: str) -> Dict[str, Any]:
-        # Sanitize prompt for filename
+        # Sanitize prompt for folder name
         safe_prompt = re.sub(r'\W+', '_', prompt.strip())
-        output_file = f"flows/{safe_prompt}.txt"
+        # Get project root (parent of src)
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        output_dir = os.path.join(project_root, "flows", safe_prompt)
+        os.makedirs(output_dir, exist_ok=True)
+        output_file = os.path.join(output_dir, "output.txt")
+        flow_graph_file = os.path.join(output_dir, "flow_graph.png")
         # First, get the historical examples
         print("Sending prompt to historical_finder...")
         examples_result = await self.historical_finder.on_messages(
@@ -142,8 +149,8 @@ class NearestNeighborFlow:
         for analyzer in self.similarity_analyzers:
             builder.add_edge(analyzer, self.nearest_neighbor)
         graph = builder.build()
-        # Visualize the graph
-        self.visualize_graph(graph)
+        # Visualize the graph in the output directory
+        self.visualize_graph(graph, filename=flow_graph_file)
         # Create the team
         team = GraphFlow(
             participants=[self.historical_finder] + self.similarity_analyzers + [self.nearest_neighbor],
@@ -156,23 +163,15 @@ class NearestNeighborFlow:
             results.append(event)
         # Process results and write to files
         final_result = self._process_results(results)
-        # Write similarity analyses to both similarity_analyses.txt and append to output_file
+        # Write similarity analyses and best match to output_file
         if "similarity_analysis" in final_result:
-            with open("similarity_analyses.txt", "w", encoding="utf-8") as f:
-                for analysis in final_result["similarity_analysis"]:
-                    f.write(f"Example: {analysis.example_name}\nSimilarities: {analysis.similarities}\nDifferences: {analysis.differences}\n\n")
-            # Also append to output_file
             with open(output_file, "a", encoding="utf-8") as f:
                 f.write("\n--- Similarity Analyses ---\n")
                 for analysis in final_result["similarity_analysis"]:
                     f.write(f"Example: {analysis.example_name}\nSimilarities: {analysis.similarities}\nDifferences: {analysis.differences}\n\n")
-        # Write nearest match to both nearest_match.txt and append to output_file
         if "nearest_match" in final_result:
-            with open("nearest_match.txt", "w", encoding="utf-8") as f:
-                match = final_result["nearest_match"]
-                f.write(f"Best Match: {match.best_match}\nReasoning: {match.reasoning}\nPredictions: {match.predictions}\n")
-            # Also append to output_file
             with open(output_file, "a", encoding="utf-8") as f:
+                match = final_result["nearest_match"]
                 f.write("\n--- Best Match ---\n")
                 f.write(f"Best Match: {match.best_match}\nReasoning: {match.reasoning}\nPredictions: {match.predictions}\n")
         return final_result
@@ -241,6 +240,13 @@ class NearestNeighborFlow:
         plt.savefig(filename)
         plt.close()
         print(f"Graph saved to {filename}")
+
+def get_output_dir(prompt):
+    safe_prompt = re.sub(r'\W+', '_', prompt.strip())
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # project root
+    output_dir = os.path.join(base_dir, "flows", safe_prompt)
+    os.makedirs(output_dir, exist_ok=True)
+    return output_dir
 
 async def main():
     # Example usage
