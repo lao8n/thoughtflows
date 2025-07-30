@@ -1,16 +1,13 @@
 import asyncio
 from typing import List, Dict, Any
-from dataclasses import dataclass
 from autogen_agentchat.agents import AssistantAgent
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 from autogen_agentchat.conditions import MaxMessageTermination
 from autogen_agentchat.teams import DiGraphBuilder, GraphFlow
 from pydantic import BaseModel, Field
-import networkx as nx
 import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 import os
-from autogen_core.models import LLMMessage
 from autogen_agentchat.messages import TextMessage
 import numpy as np
 import re
@@ -21,23 +18,33 @@ load_dotenv()
 # Pydantic models for structured outputs
 class HistoricalExample(BaseModel):
     name: str = Field(..., description="Name of the historical event/situation")
-    description: str = Field(..., description="Brief description of the event/situation")
+    description: str = Field(..., description="Description of the event/situation")
 
 class HistoricalExamplesList(BaseModel):
     examples: List[HistoricalExample] = Field(..., description="List of historical examples")
+
+class Prediction(BaseModel):
+    prediction: str = Field(..., description="Specific prediction based on this example")
+    weight: float = Field(..., description="The probability of this prediction being true between 0 and 1 based upon the similarities and differences between the example and the current case")
+    resolution_criteria: str = Field(..., description="The resolution criteria for this prediction. Ideally a specific quantitative metric or objective that can be used to measure the success or failure of the prediction")
+    timeframe: int = Field(..., description="The timeframe of the prediction in years")
 
 class SimilarityAnalysis(BaseModel):
     example_name: str = Field(..., description="Name of the example being analyzed")
     similarities: List[str] = Field(..., description="List of key similarities with the current situation")
     differences: List[str] = Field(..., description="List of important differences from the current situation")
+    prediction: List[Prediction] = Field(..., description="Specific prediction based on this example")
 
-class SimilarityAnalysesList(BaseModel):
-    analyses: List[SimilarityAnalysis] = Field(..., description="List of similarity analyses")
+class WeightedNearestNeighbor(BaseModel):
+    predictions: List[Prediction] = Field(..., description="Synthesised list of predictions with weights")
 
-class NearestMatch(BaseModel):
-    best_match: str = Field(..., description="Name of the most similar historical example")
-    reasoning: str = Field(..., description="Explanation of why this is the best match")
-    predictions: List[str] = Field(..., description="List of predictions based on this example")
+class MetaExample(BaseModel):
+    name: str = Field(..., description="Name of the historical event/situation")
+    description: str = Field(..., description="Brief description of the meta example")
+    predictions: List[Prediction] = Field(..., description="Predictions for this meta example")
+
+class Pathways(BaseModel):
+    pathways: List[MetaExample] = Field(..., description="List of meta examples or pathways.")
 
 class NearestNeighborFlow:
     def __init__(self, model_name: str = "gpt-4o-mini"):
@@ -52,7 +59,7 @@ class NearestNeighborFlow:
         self.current_situation_describer = AssistantAgent(
             "CurrentSituationDescriber",
             model_client=self.model_client,
-            system_message="""You are an expert at summarizing current events.\nFor the given prompt, write a brief historical-style note as if this is a historical event.\nProvide:\n1. Name of the event/situation (e.g., 'US Debt Crisis 2025')\n2. Brief description (2-3 sentences)""",
+            system_message="""You are an expert at summarizing current events.\nFor the given prompt, write a brief historical-style note as if this is a historical event.\nProvide:\n1. Name of the event/situation (e.g., 'US Debt Crisis 2025')\n2. Generate at least 1000 words of text""",
             output_content_type=HistoricalExample
         )
 
@@ -61,23 +68,37 @@ class NearestNeighborFlow:
             "HistoricalFinder",
             model_client=self.model_client,
             system_message="""You are an expert at finding relevant historical examples.
-            For any given prompt, find 3-5 historical examples that are most similar.
+            For any given prompt, find 25 historical examples that are most similar.
+            Make sure the example is not just the current situation however.
             For each example, provide:
             1. Name of the event/situation
-            2. Brief description (2-3 sentences)""",
+            2. Generate at least 1000 words of text per example describing the event/situation""",
             output_content_type=HistoricalExamplesList
         )
+
+        # Similarity analyzer initialised in the flow
         
         # Initialize the nearest neighbor
-        self.nearest_neighbor = AssistantAgent(
-            "NearestNeighbor",
+        self.weighted_nearest_neighbor = AssistantAgent(
+            "WeightedNearestNeighbor",
             model_client=self.model_client,
-            system_message="""You are an expert at finding the most relevant historical precedent.
-            Analyze all examples and their similarities/differences to determine:
-            1. Which example is most similar to the current situation
-            2. Why it's the best match
-            3. What predictions can be made based on this example""",
-            output_content_type=NearestMatch
+            system_message="""Take all the examples and synthesise a list of predictions with weights
+            The forecast should be a binary (yes/no) prediction ith assigned
+probabilities and timeframes (ranging from 1-10 years). Each forecast should be one sentence,
+time-bounded, and include objective resolution criteria. Avoid vague or subjective statements as your
+predictions should be specific, measurable, and logically grounded. Only produce your 5 best predictions""",
+            output_content_type=WeightedNearestNeighbor
+        )
+
+        self.pathways_analyser = AssistantAgent(
+            "PathwaysAnalyser",
+            model_client=self.model_client,
+            system_message="""Take all the examples and synthesise them into a list of meta examples, or pathways.
+            These should be groupings of examples into a single meta example that captures the essence of the underlying
+            examples and their similarities. Include specific details from the underlying examples.
+            These pathways should be at least 1000 words long each
+            """,
+            output_content_type=Pathways
         )
 
     def _create_similarity_analyzer(self, example: HistoricalExample, index: int) -> AssistantAgent:
@@ -97,7 +118,13 @@ class NearestNeighborFlow:
             
             For this example, analyze:
             1. Key similarities with the current situation
-            2. Important differences""",
+            2. Important differences
+            3. Weight of the example (between 0 and 1)
+            4. Specific predictions based on this example. The forecast should be a binary (yes/no) prediction ith assigned
+probabilities and timeframes (ranging from 1-10 years). Each forecast should be one sentence,
+time-bounded, and include objective resolution criteria. Avoid vague or subjective statements as your
+predictions should be specific, measurable, and logically grounded. 
+            """,
             output_content_type=SimilarityAnalysis
         )
 
@@ -157,22 +184,24 @@ class NearestNeighborFlow:
         # Create the flow graph
         builder = DiGraphBuilder()
         # Add nodes
+        builder.add_node(self.current_situation_describer)
         builder.add_node(self.historical_finder)
         for analyzer in self.similarity_analyzers:
             builder.add_node(analyzer)
-        builder.add_node(self.nearest_neighbor)
-        # Create fan-out edges from historical_finder to each similarity analyzer
+        builder.add_node(self.weighted_nearest_neighbor)
+        builder.add_node(self.pathways_analyser)
+        # Add edges
+        builder.add_edge(self.current_situation_describer, self.historical_finder)
         for analyzer in self.similarity_analyzers:
             builder.add_edge(self.historical_finder, analyzer)
-        # Create edges from all similarity analyzers to nearest_neighbor
-        for analyzer in self.similarity_analyzers:
-            builder.add_edge(analyzer, self.nearest_neighbor)
+            builder.add_edge(analyzer, self.weighted_nearest_neighbor)
+            builder.add_edge(analyzer, self.pathways_analyser)
         graph = builder.build()
         # Visualize the graph in the output directory
         self.visualize_graph(graph, filename=flow_graph_file)
         # Create the team
         team = GraphFlow(
-            participants=[self.historical_finder] + self.similarity_analyzers + [self.nearest_neighbor],
+            participants=[self.current_situation_describer, self.historical_finder] + self.similarity_analyzers + [self.weighted_nearest_neighbor, self.pathways_analyser],
             graph=graph,
             termination_condition=MaxMessageTermination(20)
         )
@@ -187,12 +216,30 @@ class NearestNeighborFlow:
             with open(output_file, "a", encoding="utf-8") as f:
                 f.write("\n--- Similarity Analyses ---\n")
                 for analysis in final_result["similarity_analysis"]:
-                    f.write(f"Example: {analysis.example_name}\nSimilarities: {analysis.similarities}\nDifferences: {analysis.differences}\n\n")
-        if "nearest_match" in final_result:
+                    f.write(f"Example: {analysis.example_name}\nSimilarities: {analysis.similarities}\nDifferences: {analysis.differences}\n")
+                    for pred in analysis.prediction:
+                        f.write(f"Prediction: {pred.prediction}\nWeight: {pred.weight}\nTimeframe: {pred.timeframe} years\nResolution Criteria: {pred.resolution_criteria}\n")
+                    f.write("\n")
+        if "weighted_predictions" in final_result:
             with open(output_file, "a", encoding="utf-8") as f:
-                match = final_result["nearest_match"]
-                f.write("\n--- Best Match ---\n")
-                f.write(f"Best Match: {match.best_match}\nReasoning: {match.reasoning}\nPredictions: {match.predictions}\n")
+                predictions = final_result["weighted_predictions"]
+                f.write("\n--- Weighted Predictions ---\n")
+                for pred in predictions.predictions:
+                    f.write(f"Prediction: {pred.prediction}\nWeight: {pred.weight}\nTimeframe: {pred.timeframe} years\nResolution Criteria: {pred.resolution_criteria}\n\n")
+        if "pathways" in final_result:
+            with open(output_file, "a", encoding="utf-8") as f:
+                pathways = final_result["pathways"]
+                f.write("\n--- Meta Examples/Pathways ---\n")
+                for i, pathway in enumerate(pathways.pathways, 1):
+                    f.write(f"Pathway {i}: {pathway.name}\n")
+                    f.write(f"Description: {pathway.description}\n")
+                    f.write("Predictions:\n")
+                    for pred in pathway.predictions:
+                        f.write(f"  - Prediction: {pred.prediction}\n")
+                        f.write(f"    Weight: {pred.weight}\n")
+                        f.write(f"    Timeframe: {pred.timeframe} years\n")
+                        f.write(f"    Resolution Criteria: {pred.resolution_criteria}\n")
+                    f.write("\n")
         return final_result
     
     def _process_results(self, events: List[Any]) -> Dict[str, Any]:
@@ -206,8 +253,10 @@ class NearestNeighborFlow:
                         final_result["historical_examples"] = event.content.examples
                     elif isinstance(event.content, SimilarityAnalysis):
                         similarity_analyses.append(event.content)
-                    elif isinstance(event.content, NearestMatch):
-                        final_result["nearest_match"] = event.content
+                    elif isinstance(event.content, WeightedNearestNeighbor):
+                        final_result["weighted_predictions"] = event.content
+                    elif isinstance(event.content, Pathways):
+                        final_result["pathways"] = event.content
                 except Exception as e:
                     print(f"Error processing result: {e}")
                     continue
@@ -270,8 +319,7 @@ def get_output_dir(prompt):
 async def main():
     # Example usage
     flow = NearestNeighborFlow()
-    result = await flow.run_analysis("US debt crisis")
-    print(result)
+    result = await flow.run_analysis("Effect of AI on the global economy")
 
 if __name__ == "__main__":
     asyncio.run(main())
