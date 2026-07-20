@@ -1,0 +1,664 @@
+{
+  "variables": [
+    {
+      "id": "V1",
+      "name": "Reinstatement ratio (new human-complementary task creation vs. displacement)",
+      "state_space": [
+        "net-displacement (low reinstatement)",
+        "partial/lagged reinstatement with transition scarring",
+        "strong reinstatement (net occupational expansion)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "Global South",
+          "reading": "Reinstatement is most adverse here: AI reverses cognitive-offshoring wage arbitrage (#29) AND forecloses the BPO development-ladder used to build domestic tech capacity (#103), with limited domestic AI deployment capacity to absorb. Confidence: medium-low."
+        }
+      ],
+      "current_reading": "Genuinely indeterminate and the single highest-leverage unknown. Leading indicators show entry-level knowledge-work contraction (#7) and apprenticeship-pipeline severance risk (#92, #93), but macro employment shows no clear signal yet; new AI-native roles (auditors, evaluators, orchestrators) are emerging but unmeasured (#21, #111). The decisive empirical test is 2026-2030 occupational-category emergence (#10). Confidence: low.",
+      "trajectory": "Historically GPTs eventually reinstate but with 15-30yr lags and brutal transitions \u2014 electrification grew manufacturing employment after organizational redesign (#A4), the internet created ~70x software roles (#A57), radiology/legal-tech/spreadsheets expanded not contracted their professions for decades (#A58, #A60, #A18). Clock: reinstatement lags displacement by roughly a generation (#3). Analogy BREAKS if agentic AI encodes the complement/'compositor' layer itself, as CAD did to draftsmen (#A14, #A7) \u2014 that is the historically novel risk.",
+      "leverage": "high",
+      "base_rate": "Prior general-purpose-tech waves were net-positive for employment (#2, #104, #A55, #A57); breaks because agentic AI attacks reasoning/synthesis/learning simultaneously giving an unusually low reinstatement ratio (#1) and severs the junior rung that forms future experts (#92-#94, #100).",
+      "note_ids": [
+        1,
+        3,
+        7,
+        10,
+        21,
+        92,
+        93,
+        94,
+        100,
+        104,
+        111
+      ],
+      "analogy_ids": [
+        4,
+        7,
+        14,
+        18,
+        55,
+        57,
+        58,
+        60
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "Capability trajectory & architectural ceiling (the master clock)",
+      "state_space": [
+        "architectural plateau (displacement bounded/delayed)",
+        "steady linear scaling (tractable timeline)",
+        "self-accelerating / recursive (non-linear, windows collapse)"
+      ],
+      "actor_readings": [],
+      "current_reading": "Continued scaling observed through 2026, but reliable multi-step agentic reasoning, grounding, and error-propagation in long chains remain contested ceilings (#26); recursive self-improvement appears shallow so far (#27). Confidence: medium.",
+      "trajectory": "This is the clock all other variables are read against. If self-accelerating, linear extrapolation of displacement fails and every adaptive/absorptive lens dies (#27). Paradigm plateaus are real and precedented \u2014 expert systems and Fifth-Generation both hit architectural walls and triggered multi-year winters (#A21, #A24). Analogy breaks because transformers have demonstrated deployed, revenue-generating capability that expert systems never had.",
+      "leverage": "high",
+      "base_rate": "AI-winter base rate: overpromise beyond demonstrated capability triggered ~80% funding cuts and talent exodus (#A21, #A24); but current empirical productivity gains are real (#107, #A58), lowering plateau odds relative to 1987.",
+      "note_ids": [
+        26,
+        27,
+        114
+      ],
+      "analogy_ids": [
+        21,
+        24
+      ]
+    },
+    {
+      "id": "V3",
+      "name": "Diffusion / deployment velocity (capability-to-deployment gap)",
+      "state_space": [
+        "stalled/slow (institutional + ROI buffers)",
+        "moderate",
+        "fast / state-mandated"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Fast diffusion (liberal market economy, weak buffers) but capped by physical power constraint (#14, #57). Confidence: medium-high."
+        },
+        {
+          "actor": "EU",
+          "reading": "Slowest: AI Act high-risk conformity costs concentrated in highest-displacement sectors (#90) plus codetermination/works-council sign-off adds 12-36 months per rollout (#14, #A35). Confidence: medium-high."
+        },
+        {
+          "actor": "China",
+          "reading": "State-mandated deployment across health/education/finance without democratic resistance sets the competitive benchmark (#71, #77). Confidence: medium."
+        },
+        {
+          "actor": "Aging CMEs (Japan/Germany/Korea)",
+          "reading": "AI fills genuine labor shortages rather than displacing, muting both diffusion friction and backlash (#16). Confidence: medium."
+        }
+      ],
+      "current_reading": "Near-term diffusion is running well behind capability: enterprise integration, liability, change management and disappointing ROI create a substantial buffer (#9, #60); the complementary-reorganization bottleneck is the real governor (#A4, #A56). Confidence: medium-high that hype overstates near-term deployment.",
+      "trajectory": "Electrification lagged 30yr and the IT-productivity paradox 25yr because reorganization, not the technology, is the bottleneck (#A4, #A56). But software/API delivery compresses this, and institutionalized professions show a 'delayed then sudden' cliff once one large actor defects (#A8 Wapping). Regulatory and physical throttles can extend the lag (#63, #90).",
+      "leverage": "high",
+      "base_rate": "GPT diffusion consistently lags technologist predictions by 1-2 decades (#A4, #A56); breaks if state mandates or competitive defection force adoption faster than institutional buffers can react.",
+      "note_ids": [
+        9,
+        60,
+        63,
+        90
+      ],
+      "analogy_ids": [
+        4,
+        8,
+        56
+      ]
+    },
+    {
+      "id": "V4",
+      "name": "Physical infrastructure bottleneck (compute / power / water)",
+      "state_space": [
+        "silicon/fab-bound",
+        "power & grid-bound",
+        "water/cooling-bound",
+        "resolved / abundant"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Power/grid-bound; leads on chips and talent but electrons bind the buildout (#57, #58). PPAs partly floor the capex cycle (#61). Confidence: high."
+        },
+        {
+          "actor": "China",
+          "reading": "Chip-bound by US export controls (#69, #A46) but power-rich; racing domestic fabrication. Confidence: high."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Energy-abundant hosting advantage (NEOM/G42/Masdar) lets it compete on training-run economics despite thinner talent (#62). Confidence: medium."
+        },
+        {
+          "actor": "Taiwan/global",
+          "reading": "TSMC ~90% of leading-edge logic is a single-point discontinuity risk that dwarfs the energy bottleneck if a Strait contingency occurs (#76). Confidence: (tail) medium-low probability, extreme magnitude."
+        }
+      ],
+      "current_reading": "The binding physical constraint is migrating from chips to electrons: US grid-interconnection queues exceed 5yr (2,600+GW pending) and datacenter power/water is triggering ratepayer backlash and moratoria (#57, #63, #66). Confidence: high near-term.",
+      "trajectory": "Fabs build in 3-4yr; transmission and generation take 5-10+yr with decade-long permitting (#57, #65), making power a MORE durable moat than chips (#58). SMR/new-gen race against the investment cycle is the unresolved sub-crux (#65). Overbuild-then-cheap-infrastructure is the Perez/railway/telecom pattern (#56, #59, #A19, #A20, #A22).",
+      "leverage": "high",
+      "base_rate": "Infrastructure booms overbuild the enabling layer then crash, leaving cheap durable inputs for the next wave (#A19, #A20); but AI compute depreciates on 3-5yr cycles unlike rail, shortening the stranding (#A19).",
+      "note_ids": [
+        41,
+        49,
+        56,
+        57,
+        58,
+        61,
+        62,
+        63,
+        65,
+        66,
+        76
+      ],
+      "analogy_ids": [
+        19,
+        20,
+        22
+      ]
+    },
+    {
+      "id": "V5",
+      "name": "Talent pipeline elasticity & geographic concentration",
+      "state_space": [
+        "inelastic / geo-concentrated (durable moat)",
+        "semi-elastic",
+        "elastic / diffuse (bottleneck temporary)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Absorbs the majority of world-class researchers via universities/H-1B/O-1 but the visa chokepoint is the single most self-defeating lever it holds (#52, #A5). Confidence: medium-high."
+        },
+        {
+          "actor": "China",
+          "reading": "Building domestic pipeline plus diaspora recruitment (Thousand Talents analog #A10); civil-military fusion aids retention (#78). Confidence: medium."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Talent is its binding constraint despite capital and energy abundance (#62). Confidence: medium."
+        }
+      ],
+      "current_reading": "Frontier talent is hyper-concentrated in a few hundred institutions/metros (#33), but education, tooling and immigration are expanding the pipeline. Whether this is a temporary bottleneck or a durable moat is unresolved (#11). Confidence: medium.",
+      "trajectory": "Talent moats are fragile to geopolitical shocks (German chemistry #A11, post-Soviet #A15) and take 10-15yr to rebuild once dispersed (#A16 nuclear). Immigration law is a live, self-reinforcing chokepoint diverting talent to Canada/UK/Gulf (#52); non-compete enforcement shapes the mobility map (#53).",
+      "leverage": "medium",
+      "base_rate": "Cold War STEM mobilization and the ~40k-person semiconductor cohort show states weaponize education pipelines and visa regimes when talent is the binding input (#A5, #A10); breaks because AI talent is broader, more mobile, and diffuses via open publication faster than fabs.",
+      "note_ids": [
+        11,
+        33,
+        51,
+        52,
+        53,
+        74
+      ],
+      "analogy_ids": [
+        5,
+        10,
+        11,
+        15,
+        16
+      ]
+    },
+    {
+      "id": "V6",
+      "name": "Value-capture locus (which layer of the stack captures the rents)",
+      "state_space": [
+        "diffuse / commoditized (SMB + worker capture)",
+        "model-lab concentration",
+        "hyperscaler platform/distribution concentration",
+        "hardware + power concentration",
+        "enterprise-deployer capture"
+      ],
+      "actor_readings": [],
+      "current_reading": "The model layer is commoditizing fast (open weights #35; ~99% inference price collapse #36), so durable rents are migrating to non-replicable layers: compute hardware (#41), power (#58), platform envelopment/distribution (#37, #A30), or enterprise deployers who pocket the margin (#42). The tool-vs-agent phase transition is the governing sub-crux for democratization vs. concentration (#114). Confidence: medium.",
+      "trajectory": "History is emphatic: the entity that builds the reference architecture rarely keeps the rents \u2014 value migrates to the interface/infrastructure control point (IBM/Wintel #A25, #A49; Android GMS #A51; Standard Oil refining #A27; Bloomberg communication layer #A30). Commoditization is faster than any prior wave because weights ship directly (#A49). Coasian/long-tail/nano-corp forces push the OTHER way toward democratization (#105, #106, #110).",
+      "leverage": "high",
+      "base_rate": "PC/Linux/Android/database/Hadoop commoditization all relocated rents to infra + proprietary upper layers (#A49-A54); breaks because models improve continuously, unlike static software, so 'good-enough open' may keep getting lapped (#A52, #A53).",
+      "note_ids": [
+        4,
+        34,
+        35,
+        36,
+        37,
+        38,
+        41,
+        42,
+        43,
+        105,
+        106,
+        109,
+        110,
+        112,
+        113,
+        114,
+        115
+      ],
+      "analogy_ids": [
+        25,
+        26,
+        27,
+        30,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ]
+    },
+    {
+      "id": "V7",
+      "name": "Liability & licensing regime (adoption brake in regulated sectors)",
+      "state_space": [
+        "strict product-liability brake",
+        "negligence/service permissive",
+        "arbitraged-away (caps/offshore)",
+        "guild-captured (licensed-only instrument)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "EU",
+          "reading": "Strictest: AI Act high-risk conformity + human-oversight mandates function as a sector-by-sector diffusion throttle (#90). Confidence: medium-high."
+        },
+        {
+          "actor": "US",
+          "reading": "Litigation-driven \u2014 trial bar + consumer-protection advocates are a faster, better-resourced, harder-to-capture coalition than labor (#86, #91). Confidence: medium."
+        }
+      ],
+      "current_reading": "Product-vs-service classification is unresolved in every major jurisdiction and sets the entire incentive structure (#81); insurers cannot price correlated/novel/tail agentic risk, creating a ceiling in mandatory-insurance sectors (#80); but liability caps and offshoring blunt the brake for large firms, concentrating it on SMEs (#89). Confidence: low-medium.",
+      "trajectory": "The timing of the first attributable catastrophe relative to framework codification decides targeted vs. comprehensive backlash (#88, #83). One high-visibility failure can trigger disproportionate retrenchment (#82, #83, #A12 Flash Crash). Professional guilds will insert 'human oversight' rents rather than block outright (#A31, #A32, #A17).",
+      "leverage": "medium",
+      "base_rate": "Licensed cartels (AMA/Medicare #A31; bar/UPL vs LegalZoom #A32; pilots/FAA #A17) delay 20-30yr and capture the oversight layer rather than stopping the technology; Intuit-style statutory blockades hold ~25yr then break suddenly (#A33).",
+      "note_ids": [
+        17,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        87,
+        88,
+        89,
+        96,
+        97,
+        102
+      ],
+      "analogy_ids": [
+        12,
+        17,
+        31,
+        32,
+        33
+      ]
+    },
+    {
+      "id": "V8",
+      "name": "Political backlash channel & coalition-formation speed",
+      "state_space": [
+        "no effective backlash",
+        "labor-protection coalition",
+        "safety/accountability coalition",
+        "incumbent regulatory capture",
+        "antitrust structural separation"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Fragmented liberal-market backlash routed through litigation + safety frame; high salience because white-collar/professionally-organized workers hit first (#5). Confidence: medium."
+        },
+        {
+          "actor": "EU",
+          "reading": "Channels response through negotiation/codetermination rather than populist protection (#14, #A35). Confidence: medium-high."
+        }
+      ],
+      "current_reading": "Organized labor is largely absent and knowledge workers are diffuse/de-institutionalized (#39, #A1, #A3, #A14); the safety/accountability frame outpolls the jobs frame and is cross-partisan (#91, #86); incumbents pursue capture (#18, #A28) while antitrust authorities could force the opposite (#40, #A29). Coalition likely forms POST-displacement, fragmented (#22). Confidence: medium.",
+      "trajectory": "Political accommodation historically lags disruption \u2014 Luddite immiseration ran ~2 decades before Factory Acts (#A1); Gilded Age reform came only after visible crisis (#54); the New Deal settlement required a mobilizing crash first, not anticipation (#A36). Speed of AI diffusion (V3) may outrun coalition formation entirely (#22).",
+      "leverage": "high",
+      "base_rate": "Automation backlashes are historically overdetermined but slow and reshaping-not-stopping (#A1, #A3, #A8); channel gravitates to access-controls/credentialing, not technology bans (#A9). Higher-ed and trial-bar are potent non-labor coalitions (#98, #86).",
+      "note_ids": [
+        5,
+        12,
+        18,
+        22,
+        39,
+        40,
+        54,
+        86,
+        91,
+        98,
+        101
+      ],
+      "analogy_ids": [
+        1,
+        3,
+        8,
+        9,
+        28,
+        29,
+        36,
+        54
+      ]
+    },
+    {
+      "id": "V9",
+      "name": "National-security / great-power race override",
+      "state_space": [
+        "race-dominant (override defeats backlash)",
+        "contested",
+        "collapses (AI proves militarily brittle)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Uses race framing to shield labs and mandate procurement; but democratic civil-military fusion gap limits spillover vs China (#78). Confidence: medium."
+        },
+        {
+          "actor": "China",
+          "reading": "Explicit civil-military fusion + deployment mandates give the deepest override, narrowing democratic competitors' policy space (#71, #78). Confidence: medium."
+        }
+      ],
+      "current_reading": "Framing is strong: bipartisan insulation of frontier labs (#73), export controls acting as a domestic diffusion accelerant/demand floor (#69, #77), state-as-deployer mandates (#77). The 'adversary deploys anyway' logic collapses coalition-speed into irrelevance (#68, #71). Entirely contingent on AI delivering verifiable military advantage (#79). Confidence: medium.",
+      "trajectory": "A Sputnik-style capability shock could compress the political response and unlock resources far beyond current levels (#A10). Governance regimes for dual-use tech fail against software defection \u2014 NPT/BWC/export-control precedents show verification breaks when the artifact is a copyable file (#A43, #A45, #A46). Taiwan is the abrupt terminator (#76).",
+      "leverage": "high",
+      "base_rate": "Cold War talent/tech mobilization and COCOM show security framing sustains investment through commercial doubt (#A10, #A46); breaks if battlefield evidence (e.g., Ukraine) shows AI brittle under EW/adversarial conditions (#79, #72).",
+      "note_ids": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        77,
+        78,
+        79,
+        76
+      ],
+      "analogy_ids": [
+        10,
+        43,
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "id": "V10",
+      "name": "Wage-appropriability & aggregate-demand feedback (distribution)",
+      "state_space": [
+        "wages track productivity (broad gains)",
+        "decouple to capital (employment ok, wages/living-standards diverge)",
+        "demand collapse / underconsumption",
+        "deflationary secular stagnation"
+      ],
+      "actor_readings": [],
+      "current_reading": "Contested and wide. Labor-share compression, monopsony, and bargaining collapse can decouple wages from employment (#4, #15, #23); MPC differential is a mechanical underconsumption engine (#44, #45). Offsetting: intra-capital price competition routes gains to consumers (#46, #36), capex boom substitutes demand short-term (#49), B2B/B2G insulates AI revenue (#50), positional goods floor human demand (#48). Confidence: low.",
+      "trajectory": "Ford/Great-Compression shows broad prosperity was an institutional CHOICE (unions, labor law) not an automatic tech outcome (#A55). Consumer-credit buffer that masked prior wage stagnation may be outpaced (#45). Gilded Age resolved only after crisis (#54). Speenhamland warns poorly-designed transfers get captured by employers to suppress wages (#A34).",
+      "leverage": "high",
+      "base_rate": "r>g and superstar-firm concentration compress labor share (#4, #113); breaks if commoditization + competition pass gains to consumers as real-income gains despite nominal wage stagnation (#46, #36).",
+      "note_ids": [
+        4,
+        15,
+        23,
+        31,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        55
+      ],
+      "analogy_ids": [
+        34,
+        35,
+        36,
+        54,
+        55
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "V2",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "",
+      "note": "Capability ceiling caps how much cognitive labor can actually be substituted; a plateau bounds/delays displacement (#26, #A21)."
+    },
+    {
+      "source": "V2",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "",
+      "note": "Deployment cannot outrun capability; reliable multi-step agentic reasoning is the precondition for regulated-sector rollout (#26, #9)."
+    },
+    {
+      "source": "V2",
+      "target": "V8",
+      "kind": "gates",
+      "actor": "",
+      "note": "Self-accelerating capability collapses the adaptation window, so coalitions form post-displacement and fragmented (#27, #22)."
+    },
+    {
+      "source": "V4",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "",
+      "note": "Power/grid and water bottlenecks physically cap deployment scale regardless of capability or demand (#57, #63, #66)."
+    },
+    {
+      "source": "V4",
+      "target": "V6",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Because compute and power are the non-replicable layers, durable rents concentrate there as models commoditize (#41, #58)."
+    },
+    {
+      "source": "V4",
+      "target": "V4",
+      "kind": "chokepoint_controlled_by",
+      "actor": "US",
+      "note": "US controls leading-edge silicon (NVIDIA/TSMC/ASML) and uses export controls to bind China's frontier compute (#69, #A46)."
+    },
+    {
+      "source": "V4",
+      "target": "V3",
+      "kind": "chokepoint_controlled_by",
+      "actor": "Gulf",
+      "note": "Firm low-cost power is controllable by energy-abundant states, giving them a training-run hosting chokepoint over others' diffusion (#58, #62)."
+    },
+    {
+      "source": "V5",
+      "target": "V4",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Talent-vs-compute: at the frontier one can partly relieve scarcity of the other; training is compute-bound, deployment/alignment talent-bound, and which binds may flip (#51)."
+    },
+    {
+      "source": "V5",
+      "target": "V5",
+      "kind": "chokepoint_controlled_by",
+      "actor": "US",
+      "note": "H-1B/OPT visa policy is a self-reinforcing chokepoint the US can throttle \u2014 and diverting talent to Canada/UK/Gulf is the most self-defeating move (#52, #A5)."
+    },
+    {
+      "source": "V3",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "",
+      "note": "No operational deployment, no displacement \u2014 the adoption lag is the buffer that determines whether V1 even activates (#9, #60)."
+    },
+    {
+      "source": "V3",
+      "target": "V8",
+      "kind": "gates",
+      "actor": "",
+      "note": "Diffusion velocity races coalition-formation speed; fast diffusion depletes worker bargaining power before organizing (#22, #A1)."
+    },
+    {
+      "source": "V7",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "",
+      "note": "Strict product-liability + uninsurable tail risk brake deployment in regulated, high-value sectors precisely where displacement risk is highest (#80, #81, #87)."
+    },
+    {
+      "source": "V9",
+      "target": "V8",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "National-security framing overrides labor and antitrust backlash \u2014 'adversary deploys anyway' defeats any coalition speed (#68, #71, #73)."
+    },
+    {
+      "source": "V6",
+      "target": "V6",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Open-weight commoditization + inference-price collapse relieve model-layer rent scarcity, pushing value to hardware/platform/deployer layers (#35, #36, #A49)."
+    },
+    {
+      "source": "V1",
+      "target": "V10",
+      "kind": "gates",
+      "actor": "",
+      "note": "Reinstatement determines wage income, which drives consumer demand \u2014 but wage-appropriability can decouple even with full employment (#23, #44)."
+    },
+    {
+      "source": "V10",
+      "target": "V8",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Demand collapse / visible inequality is the crisis that historically triggers the political settlement (post-crisis, not pre) (#54, #A36, #A55)."
+    },
+    {
+      "source": "V7",
+      "target": "V8",
+      "kind": "gates",
+      "actor": "",
+      "note": "Timing of first attributable catastrophe vs. framework codification decides whether backlash is targeted or comprehensive (#88, #83)."
+    },
+    {
+      "source": "V2",
+      "target": "V8",
+      "kind": "correlates",
+      "actor": "US",
+      "note": "A capability/capex bust erodes incumbent lobbying and opens a regulatory window unavailable during the hype cycle (#67, #59, #A20)."
+    }
+  ],
+  "forecast_signals": [
+    {
+      "id": "F1",
+      "binary_question": "Will US BLS or an equivalent official statistical agency recognize at least one net-new AI-native occupational category exceeding 100,000 US workers by 31 Dec 2028?",
+      "measures": "V1",
+      "probability": 0.4,
+      "resolution_criteria": "Resolves YES if a BLS SOC code (or official BLS employment estimate) for a role such as 'AI auditor/evaluator/agent-orchestrator' reports >=100k employed by 2028-12-31; else NO."
+    },
+    {
+      "id": "F2",
+      "binary_question": "Will frontier model capability benchmarks continue improving without a public 12-month plateau through 31 Dec 2026 (US labs)?",
+      "measures": "V2",
+      "probability": 0.7,
+      "resolution_criteria": "Resolves YES if a leading public benchmark (e.g., successor to current reasoning/agentic evals) shows a documented new SOTA from a US lab in each half of 2026; NO if no SOTA gain for any 12-month window ending in 2026."
+    },
+    {
+      "id": "F3",
+      "binary_question": "Will median US grid interconnection wait time in a major ISO (PJM/ERCOT/MISO) still exceed 4 years as of 31 Dec 2027?",
+      "measures": "V4",
+      "probability": 0.8,
+      "resolution_criteria": "Resolves YES if LBNL or the ISO's own queue report shows median completion time >4 years for the most recent cohort as of 2027-12-31; else NO."
+    },
+    {
+      "id": "F4",
+      "binary_question": "Will China field a domestically-fabricated sub-7nm AI accelerator at commercial volume by 31 Dec 2027?",
+      "measures": "V4",
+      "probability": 0.5,
+      "resolution_criteria": "Resolves YES if a China-fabbed (SMIC or equivalent) <7nm AI training/inference chip is confirmed shipping in >100k units by credible teardown/supply-chain reporting by 2027-12-31; else NO."
+    },
+    {
+      "id": "F5",
+      "binary_question": "Will the US impose additional (net-tightening) AI-chip or model-weight export controls on China by 31 Dec 2026?",
+      "measures": "V9",
+      "probability": 0.8,
+      "resolution_criteria": "Resolves YES if BIS publishes a new or amended rule tightening AI-hardware or model-weight export scope after 2025-07-10 and before 2026-12-31; else NO."
+    },
+    {
+      "id": "F6",
+      "binary_question": "Will an open-weight model reach top-10 on a major general-capability leaderboard within 90 days of the leading frontier release, at any point through 31 Dec 2026?",
+      "measures": "V6",
+      "probability": 0.7,
+      "resolution_criteria": "Resolves YES if a freely downloadable open-weight model appears in the top 10 of a recognized public leaderboard within 90 days of a frontier proprietary release during the window; else NO."
+    },
+    {
+      "id": "F7",
+      "binary_question": "Will any G7 jurisdiction adopt a statute or binding court precedent classifying autonomous agentic AI as a 'product' for strict-liability purposes by 31 Dec 2027?",
+      "measures": "V7",
+      "probability": 0.3,
+      "resolution_criteria": "Resolves YES if a G7 national law or apex/appellate ruling applies product strict liability to agentic AI outputs by 2027-12-31; else NO."
+    },
+    {
+      "id": "F8",
+      "binary_question": "Will a US federal AI safety/liability bill be enacted before any US federal AI labor-displacement/redistribution bill, as of 31 Dec 2028?",
+      "measures": "V8",
+      "probability": 0.6,
+      "resolution_criteria": "Resolves YES if a safety/liability-framed federal AI statute is signed into law before any displacement/UBI/robot-tax federal statute (or if a safety bill is enacted and no labor bill exists) by 2028-12-31; NO if a labor bill is enacted first; VOID if neither is enacted."
+    },
+    {
+      "id": "F9",
+      "binary_question": "Will aggregate AI-related datacenter/GPU capex decline more than 30% year-over-year in any four-quarter window ending by 31 Dec 2027?",
+      "measures": "V4",
+      "probability": 0.4,
+      "resolution_criteria": "Resolves YES if combined reported AI-infrastructure capex of the major hyperscalers falls >30% YoY for any trailing-four-quarter period ending on or before 2027-12-31; else NO."
+    },
+    {
+      "id": "F10",
+      "binary_question": "Will the US labor share of national income show a measurable decline (>=0.5pp) between 2025 and 2028?",
+      "measures": "V10",
+      "probability": 0.5,
+      "resolution_criteria": "Resolves YES if BLS/BEA nonfarm labor share for 2028 is at least 0.5 percentage points below its 2025 value; else NO."
+    },
+    {
+      "id": "F11",
+      "binary_question": "Will the EU AI Act's high-risk obligations be documented as materially delaying agentic AI deployment in at least one covered sector by 31 Dec 2027?",
+      "measures": "V3",
+      "probability": 0.6,
+      "resolution_criteria": "Resolves YES if an EU institution, regulator, or major industry survey attributes measurable deployment delay in a high-risk sector (health, finance, employment, critical infrastructure) to AI Act conformity requirements by 2027-12-31; else NO."
+    },
+    {
+      "id": "F12",
+      "binary_question": "Will a single attributable agentic-AI failure trigger a sector-wide moratorium or emergency licensing regime in any OECD jurisdiction by 31 Dec 2028?",
+      "measures": "V7",
+      "probability": 0.3,
+      "resolution_criteria": "Resolves YES if a government imposes a moratorium or new mandatory licensing on agentic AI in a sector following a specific attributable failure event by 2028-12-31; else NO."
+    }
+  ],
+  "binding_constraint_by_actor": [
+    {
+      "actor": "US",
+      "reading": "Minimum stave is PHYSICAL POWER/GRID (V4). The US leads on capability (V2), talent (V5) and chips, but electrons \u2014 not silicon \u2014 bind its buildout: 5+yr interconnection queues, water stress, and ratepayer backlash (#57, #58, #63, #66). PPAs partly floor the capex cycle (#61). Secondary constraint is the litigation/safety backlash channel (V8/V7). Confidence: high."
+    },
+    {
+      "actor": "China",
+      "reading": "Minimum stave is COMPUTE/CHIPS (V4), because the US controls that chokepoint via export controls (#69, #A46); power and deployment-will are abundant (#71, #77) and talent is being domesticated (#A10). Clears only via indigenous sub-7nm fabrication (F4). Confidence: high."
+    },
+    {
+      "actor": "EU",
+      "reading": "Minimum stave is DIFFUSION VELOCITY (V3), self-imposed via AI Act high-risk conformity (#90), codetermination (#A35) and VoC buffers (#14). Not a capability leader, so its outcome is gated by its own deployment institutions rather than by physical inputs. Confidence: medium-high."
+    },
+    {
+      "actor": "Gulf",
+      "reading": "Minimum stave is TALENT DEPTH (V5). Capital and firm low-cost power are abundant, giving a hosting edge (#62), but the human-capital pipeline is thin and must be imported (contingent on diverting talent, F-adjacent to #52). Confidence: medium."
+    },
+    {
+      "actor": "Displaced knowledge workers",
+      "reading": "Minimum stave is COALITION-FORMATION SPEED vs. displacement velocity (V8 gated by V3). If diffusion outruns organizing, they arrive fragmented and bargaining-depleted (#22, #A1); their most effective substitute vehicle is the safety/liability/trial-bar coalition, not labor organizing (#86, #91). Confidence: medium."
+    },
+    {
+      "actor": "Global South (India/Philippines/Nigeria)",
+      "reading": "Minimum stave is REINSTATEMENT + development-ladder survival (V1). AI erases offshoring wage arbitrage (#29) and forecloses the BPO-to-domestic-industry ramp (#103) faster than domestic AI capacity can form. Confidence: medium-low."
+    }
+  ],
+  "summary": "The graph reveals a layered dependency structure with one master clock and an actor-split binding constraint. Capability trajectory (V2) sits upstream: it gates both how much labor is displaced (V1) and how fast deployment proceeds (V3), and if it turns self-accelerating it collapses every adaptation and coalition-formation window (#27, #22, #A21, #A24). The near-term binding constraint is physical infrastructure (V4), but it is NOT the same input for everyone: the US is power/grid-bound (#57, #58), China is chip-bound because the US controls that chokepoint (#69, #A46), the Gulf is energy-abundant but talent-thin (#62), and Taiwan is a discontinuity risk (#76) \u2014 so there are TWO mutual chokepoints (US chokes China on silicon; power-owning geographies choke US buildout on electrons). Value systematically migrates away from the commoditizing model layer (#35, #36) toward whichever layer cannot be replicated \u2014 hardware, power, platform/distribution (V6; #41, #58, #A49\u2013A54, #A30) \u2014 so labor's share and firm concentration are decided at a different layer than capability. The genuinely unresolved cruxes with the widest state-uncertainty are reinstatement (V1) and distribution/demand-feedback (V10); the national-security race (V9) can override domestic backlash (V8) regardless of coalition speed. The honest read is contested and clock-dependent: outcomes hinge on the RELATIVE clearing speed of each actor's minimum stave, not on any single winner."
+}

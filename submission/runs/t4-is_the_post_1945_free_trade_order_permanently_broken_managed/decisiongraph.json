@@ -1,0 +1,602 @@
+{
+  "variables": [
+    {
+      "id": "V1",
+      "name": "Anchor / rule-writer for the order",
+      "state_space": [
+        "US-anchored liberal (pre-2016)",
+        "US-led managed-mercantilist",
+        "EU regulatory anchor (Brussels Effect)",
+        "co-governed Sino-US bipolar rules",
+        "no anchor / leaderless"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Has vacated the liberal-anchor role and is now the primary source of managed-trade fragmentation, high confidence (#7,#A40). Retains coercive market-access leverage but no intent to re-anchor liberalism."
+        },
+        {
+          "actor": "EU",
+          "reading": "Only actor offering a rule-writing function post-hegemonically, via regulatory reach (#46,#22), but cannot supply security/liquidity public goods (#1). Medium confidence it can partially fill the vacuum, not fully."
+        },
+        {
+          "actor": "China",
+          "reading": "Building parallel rule-architecture (BRI standards, RCEP, mBridge) while using WTO selectively; a co-anchor candidate only under negotiated bipolarity (#10,#49). Ambiguous."
+        }
+      ],
+      "current_reading": "Sitting between 'US-led managed-mercantilist' and 'no liberal anchor', high confidence. The order's architect has affirmatively abandoned comparative-advantage doctrine (IRA/CHIPS/2025 tariffs, #7) so the normative foundation, not just compliance, is gone. The EU projects binding rules via market access (GDPR/CBAM/AI Act, #46,#22) but lacks strategic/security coherence to be a liberal hegemon (#1). No replacement anchor exists.",
+      "trajectory": "Directional away from liberal anchoring, slow-moving and NOT easily reversible \u2014 hegemonic willingness, once withdrawn, historically does not return without a strategic pivot by the anchor itself (UK's EEC pivot took decades, #A30; Pax Britannica hollowed out rather than snapped, #A3). A US re-embedding would require the 1934 RTAA-style deliberate intent that is currently absent (#A15,#A26). Clock: 10-20 years, election-cycle contingent.",
+      "leverage": "high",
+      "base_rate": "In prior tech/trade orders the anchor's exit hollowed the order from within over ~decades (Pax Britannica 1890s-1914 #A3; ITO death but GATT survived 47yrs #A20). Base rate says institutional shell persists while the bargain dissolves. Breaks: the Brussels Effect (#46) is genuinely novel \u2014 rule-writing without military/currency hegemony has no clean historical precedent.",
+      "note_ids": [
+        1,
+        7,
+        46,
+        15,
+        5
+      ],
+      "analogy_ids": [
+        3,
+        15,
+        20,
+        26,
+        30
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "US\u2013China power-transition trajectory",
+      "state_space": [
+        "pre-parity managed friction",
+        "acute parity conflict / bifurcation",
+        "negotiated managed bipolarity (codified rules)",
+        "China plateau / peak-China deceleration"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Treats the arrangement as net-negative and disables institutions rather than reforming (#A27); prefers managed/bilateral first (#A40). Confident."
+        },
+        {
+          "actor": "China",
+          "reading": "Rising but decelerating (#54); export-model pressure generates the surpluses that trigger countermeasures (#48). Incentive to negotiate rises as growth slows. Medium confidence."
+        }
+      ],
+      "current_reading": "Between 'acute parity conflict' and early 'peak-China deceleration', medium confidence. Trade war is epiphenomenal to the transition (#3): it is about who writes the next rules. Demographic/property/productivity headwinds (#54) and a contested export-to-consumption pivot (#48) may be truncating the parity window, which raises Beijing's opportunity cost of protracted conflict and makes a framework deal more attractive.",
+      "trajectory": "Direction: toward either codified bipolarity or long bifurcation; conflict is structurally overdetermined until the transition resolves (#3). Clock is the slowest of all variables (decade+). Peak-China dynamics (#54) could shorten the disruptive interim. The closest precedent (US-Japan #A4,#A47) converged because Japan was a subordinate ally \u2014 China is not, so convergence is far less catch-up-able.",
+      "leverage": "high",
+      "base_rate": "Power-transition base rate: rivalry over rules peaks at parity approach and does not settle until transition completes (#3, Organski/Copeland). US-Japan 1986-95 managed trade converged (#A4,#A47); Hamilton/List US-UK case renegotiated over decades + a world war (#A6). Breaks: nuclear deterrence removes the WWII-style 'reset' that cleared prior transitions (#A1 different), forcing a longer managed interim.",
+      "note_ids": [
+        3,
+        10,
+        48,
+        54,
+        49,
+        52
+      ],
+      "analogy_ids": [
+        4,
+        47,
+        6,
+        27
+      ]
+    },
+    {
+      "id": "V3",
+      "name": "Security-driven fragmentation logic (weaponization of interdependence)",
+      "state_space": [
+        "minimal (efficiency-only trade)",
+        "strategic-sector carve-outs",
+        "pervasive dual-use/tech-stack bifurcation",
+        "hard bloc separation"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Primary wielder on the demand/buyer side (chip controls, outbound investment, #62,#82) \u2014 a postwar first. High confidence this is a durable structural policy, not tactical."
+        },
+        {
+          "actor": "China",
+          "reading": "Primary wielder on the supplier side (gallium/germanium/graphite/rare-earth licensing, #69) \u2014 mirror-image weaponization. High confidence."
+        },
+        {
+          "actor": "EU",
+          "reading": "Reluctant fragmenter \u2014 CBAM (#22) and screening add fracture lines but MNC/hyperscaler exposure (#8,#64) pulls against hard decoupling. Medium confidence, hedging."
+        }
+      ],
+      "current_reading": "At 'strategic-sector carve-outs' escalating toward 'pervasive tech-stack bifurcation', high confidence. Export controls (#18,#62), dollar/reserve weaponization (#19), inbound + outbound investment screening (#81,#82), and defense-industrial-base logic (#25) constitute a security rationale absent from the original liberal design (#6) and structurally WTO-immune (self-judging Art XXI, #18,#79). This layer is largely one-directional/ratchet.",
+      "trajectory": "Direction: escalating and hard to reverse \u2014 governments now rationally invest in redundancy/autarky as insurance (#6); controls are hardware-embedded (#62) and screening scope only ratchets (#87). Clock: fast to impose (policy stroke), slow-to-impossible to unwind. Network-effect/tech bifurcation (#63) is the least catch-up-able; goods rerouting the most.",
+      "leverage": "high",
+      "base_rate": "COCOM ran a genuine tech bifurcation for 45yrs and only liberalized when the adversary collapsed (#A32); SWIFT/dollar weaponization accelerated parallel-system building (#A17). Base rate: security carve-outs institutionalize for decades (MFA 30yrs #A9; agriculture 39yrs #A42). Breaks: China is INSIDE the system (WTO, supply chains) unlike the USSR outside COCOM \u2014 enforcement leaks and coalition unity is the binding constraint.",
+      "note_ids": [
+        6,
+        18,
+        19,
+        25,
+        62,
+        69,
+        81,
+        82,
+        87,
+        63
+      ],
+      "analogy_ids": [
+        32,
+        17,
+        8
+      ]
+    },
+    {
+      "id": "V4",
+      "name": "Supply-chain integration floor (stickiness, agglomeration, rerouting)",
+      "state_space": [
+        "full decoupling",
+        "China+1 partial diversification",
+        "rerouting/relabeling only (cosmetic)",
+        "deepening integration"
+      ],
+      "actor_readings": [],
+      "current_reading": "Between 'China+1 partial' and 'rerouting-only', medium-high confidence. Trillions in sunk MNC costs and agglomeration lock-in (#8,#23) plus friend-shoring announcements outrunning actual capex (#26) mean the 2018-2025 record is diversification + relabeling, not exit. Mexico became #1 US partner via Chinese-input reprocessing (#35,#38); goods deficit hit records despite tariffs (#A48). This is a real brake on V3.",
+      "trajectory": "Direction: slow physical reorganization but fast statistical rerouting. Firms route around managed trade via FDI/third countries every prior episode (#A43-#A48). Clock: goods supply chains rewire in 5-10yrs given capital; the FDI escape valve is being deliberately closed for Chinese firms via screening (#A48,#81) \u2014 the one genuinely novel, less catch-up-able element.",
+      "leverage": "high",
+      "base_rate": "Every managed-trade episode produced GVC workaround not suppression: Japanese auto transplants (#A43), EC screwdriver plants (#A44), MFA quota-jumping created new industries (#A46), maquiladora (#A45), Plaza\u2192Factory Asia (#A47), Section 301\u2192Vietnam/Mexico (#A48). Base rate: trade reroutes, volumes persist. Breaks: China's scale (~19% of manufacturing) makes genuine reshoring an order of magnitude costlier, and investment screening has no precedent for staying closed at this scale.",
+      "note_ids": [
+        8,
+        23,
+        26,
+        35,
+        38,
+        70
+      ],
+      "analogy_ids": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    {
+      "id": "V5",
+      "name": "Institutional adaptation capacity (WTO / dispute settlement / plurilaterals)",
+      "state_space": [
+        "restored multilateral rules",
+        "rump-but-functional (MPIA, JSIs, plurilateral)",
+        "zombie multilateralism",
+        "dead / bloc-only"
+      ],
+      "actor_readings": [],
+      "current_reading": "At 'rump-but-functional' trending toward 'zombie', medium confidence. Appellate Body dead since Dec 2019 (#12); but MPIA now ~53 members (#9), first new multilateral deal in 25yrs (fisheries #33), JSIs at 80-90 members (#33), CPTPP/RCEP filling the US vacuum (#9,#A24). Simultaneously e-commerce moratorium nearly lapsed (#61,#68) and Art XXI is self-judging (#79). Degradation, not destruction (#4).",
+      "trajectory": "Direction: enforcement backbone durably broken, trade-facilitation functions survive. Clock: AB paralysis is more durable than prior blockages because the US now prefers managed trade (#A40 vs GATT-era US wanting liberalization). Great-power disputes become advisory, middle-power disputes stay binding (two-tier, #A55,#A57,#A58). Not catch-up-able without a US strategic pivot (V1).",
+      "leverage": "high",
+      "base_rate": "GATT survived 47yrs institutionally fragile (#A20); consensus-blocking + Section 301 unilateralism is a documented US playbook (#A40); ICJ/UNCLOS/League show major-power defection hollows the mechanism permanently, never restored to prior authority (#A56,#A55,#A59). Doha collapse migrated action to PTAs (#A12). Base rate: zombie/rump, not clean death. Breaks: MPIA is a more institutionalized workaround than GATT-era side-deals \u2014 possibly more resilient.",
+      "note_ids": [
+        4,
+        9,
+        12,
+        33,
+        61,
+        68,
+        79
+      ],
+      "analogy_ids": [
+        20,
+        40,
+        12,
+        55,
+        57,
+        58
+      ]
+    },
+    {
+      "id": "V6",
+      "name": "Domestic political economy & compensation bargain",
+      "state_space": [
+        "durable anti-trade majority (demand-side, decades to shift)",
+        "institutional failure only (supply-side, reformable)",
+        "new compensation coalition rebuilt"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Cross-class protectionist coalition entrenched across both parties (#2,#A40); managed-trade rents captured by capital undermine the labor coalition (#57). Demand-side turn looks durable. Medium-high confidence."
+        },
+        {
+          "actor": "EU",
+          "reading": "Rust-belt/populist pressure real (Le Pen) but single-market membership and CBAM-style measures channel it into managed rather than exit outcomes. Medium confidence."
+        }
+      ],
+      "current_reading": "Closer to 'durable demand-side turn', medium confidence, but genuinely ambiguous (#11). Distributional losers organized cross-class coalitions (#2); the embedded-liberalism compensation bargain collapsed (deindustrialized workers got no adjustment, #15). Critically, managed-trade subsidies are flowing to capital not labor (#57,#39), so even the managed-trade coalition may dissolve before reconsolidation \u2014 no viable new compensation mechanism yet exists (#53).",
+      "trajectory": "Direction: if demand-side (public turn), no institutional reform restores the order \u2014 requires decades of realignment; if supply-side, targeted reform works (#11). Clock: political realignment is the slowest social variable. Every liberalization wave generated organized losers who drove durable backlash (#A22,#A28) \u2014 sticky, low catch-up-ability.",
+      "leverage": "high",
+      "base_rate": "EU Eastern enlargement backlash (#A22) and Latin American ISI-reversal backlash (#A28) show distributional losers destabilize integration for a generation even with safeguards; the WTO integrated China with NO compensation mechanism (#A22,#A27). Base rate: demand-side turns are durable. Breaks: Brexit showed demonstrated costs can DETER imitation and re-stabilize a bloc (#A16), cutting the other way.",
+      "note_ids": [
+        2,
+        11,
+        15,
+        53,
+        57,
+        39
+      ],
+      "analogy_ids": [
+        22,
+        28,
+        27,
+        16
+      ]
+    },
+    {
+      "id": "V7",
+      "name": "Monetary settlement layer (dollar reserve-currency status)",
+      "state_space": [
+        "dollar-dominant",
+        "eroding-but-dominant multipolar",
+        "bifurcated (parallel non-dollar plumbing)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Wielder of dollar weaponization; each use accelerates long-run erosion of its own leverage (#19,#A17). Structurally dominant near-term. Confident."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Core mBridge participants (UAE, Saudi, #65) hedging into non-dollar settlement while retaining dollar ties \u2014 connector-style ambiguity. Medium confidence."
+        },
+        {
+          "actor": "China",
+          "reading": "Building RMB/CBDC alternatives but constrained by capital controls and inconvertibility (#A17). Slow progress."
+        }
+      ],
+      "current_reading": "At 'eroding-but-dominant', medium confidence. Dollar share of reserves fell ~72% (2001) to ~58% (2024) (#A17); Russia's $300bn freeze (2022) proved dollar assets confiscable, incentivizing diversification (#19,#24). mBridge is operational (real-value pilots 2024), China-anchored, geographically tracking Gulf/SE-Asia/connector economies (#65). But network effects and yuan inconvertibility keep the dollar structurally dominant (#A17).",
+      "trajectory": "Direction: slow erosion, faster at the margins where sanctioned/hedging states build parallels. Clock: dollar network effects are far harder to dislodge than tariffs (#A17); de-dollarization is a multi-decade process. mBridge (#65) makes weaponization durably less coercive over ~5-10yrs. Degrades independently of tariff policy (#24).",
+      "leverage": "medium",
+      "base_rate": "Bretton Woods monetary collapse (1971) yet dollar stayed dominant via network effects and G7 coordination \u2014 a rule broke but the currency persisted (#A2). Base rate: reserve status is extremely sticky. Breaks: no prior era had an operational state-backed CBDC bridge (#65) \u2014 the parallel plumbing is genuinely new.",
+      "note_ids": [
+        19,
+        24,
+        28,
+        55,
+        65
+      ],
+      "analogy_ids": [
+        2,
+        17
+      ]
+    },
+    {
+      "id": "V8",
+      "name": "Critical-input chokepoints (chips, mineral processing)",
+      "state_space": [
+        "US/allied-controlled (leading-edge logic)",
+        "China-controlled (mineral/materials processing)",
+        "mutual-chokepoint standoff (MAD-like)",
+        "diversified / neutralized"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Controls the chip chokepoint but is the DEPENDENT party on mineral processing (near-zero domestic lithium-hydroxide capacity, #72). This is its binding material constraint. High confidence."
+        },
+        {
+          "actor": "China",
+          "reading": "Controls the processing chokepoint but is the DEPENDENT party on leading-edge logic and EUV (#40,#62). Mirror-image bind. High confidence."
+        },
+        {
+          "actor": "EU",
+          "reading": "Dependent on BOTH chokepoints, controls neither at scale (CRMA nascent); most exposed to the standoff. Medium-high confidence."
+        }
+      ],
+      "current_reading": "At 'mutual-chokepoint standoff', high confidence. US-allied bloc controls sub-5nm logic (~90% on Taiwan, #40) and EUV/EAR licensing (#62); China controls ~80% rare-earth processing, ~70% cobalt refining, ~60%+ battery precursor (#70) and mirrors chip controls from the supplier side (#69). Each holds a gun to the other's strategic base; neither can decouple without severe self-harm this decade.",
+      "trajectory": "Direction: entrenching on both sides. Chips: US lead is fast-eroding but 5-10yr replacement horizon for any node (#40). Minerals: mining diversifiable but PROCESSING requires 10-15yr builds + toxic-waste permitting (#72,#73) \u2014 geology is a hard ceiling (#73). Processing moat is the LEAST catch-up-able chokepoint; a kinetic Taiwan event (#40) is the one irreversible fast-shock.",
+      "leverage": "high",
+      "base_rate": "OPEC oil weapon was blunted in ~12yrs by substitution but at huge dislocation (#A8); China rare-earth WTO loss (2014) didn't restore supply security \u2014 Western chains still China-processing-dependent a decade later (#A37). IEA/MSP counter-cartel is a 10-15yr project (#A39). Base rate: chokepoints hold for 1-2 decades then get bypassed. Breaks: processing concentration + geology has no goods-trade analogue (#73) \u2014 potentially more durable.",
+      "note_ids": [
+        40,
+        62,
+        69,
+        70,
+        72,
+        73,
+        18
+      ],
+      "analogy_ids": [
+        8,
+        37,
+        39,
+        32
+      ]
+    },
+    {
+      "id": "V9",
+      "name": "Swing-state / connector alignment (India, Global South, connectors)",
+      "state_space": [
+        "forced bloc choice",
+        "durable non-alignment / studied neutrality",
+        "connector equilibrium (rent-extracting ambiguity)",
+        "closing window (bloc consolidation forces choice)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "India",
+          "reading": "The pivotal swing: rejected RCEP, ambivalent on CPTPP, high tariffs, explicit strategic autonomy (#30). If it declines to join, no US-led bloc reaches manufacturing critical mass. Medium-high confidence it stays non-aligned near-term."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Connector/hedging strategy \u2014 mBridge participant + US security ties (#65,#36). Extracting rents from ambiguity. Medium confidence."
+        },
+        {
+          "actor": "China",
+          "reading": "Holds upstream intermediate-input leverage over connectors (#42) \u2014 can threaten the connector equilibrium from the supply side. Under-exercised so far."
+        }
+      ],
+      "current_reading": "At 'connector equilibrium' with 'durable non-alignment', medium confidence. India, Brazil, Vietnam, Indonesia, Gulf trade actively with both sides and hedging is INCREASING not decreasing (#20). Connectors pursue calculated ambiguity as sovereign rent-strategy (#36). India is the decisive swing (scale to deny any US bloc critical mass, #30). But connector rents are geographically concentrated (#41) and threatened by rules-of-origin enforcement (#37) and Chinese input leverage (#42).",
+      "trajectory": "Direction: neutrality currently rational and increasing, but window may be closing as blocs consolidate and rents get squeezed (#43). Clock: connector rents are transitional \u2014 depend on a bloc-building-incompleteness window that closes as IRA/CHIPS/EU capacity comes online (#43). Rules-of-origin enforcement (#37) is the fast institutional variable that could close arbitrage.",
+      "leverage": "medium",
+      "base_rate": "Interwar blocs (#A5) and Zollverein (#A10) forced middle powers to choose as blocs deepened; but today's swing states have more agency (#A5 different, #20). Base rate: consolidating hegemonic blocs narrow non-alignment over time. Breaks: modern connectors have deliberate rent-strategies and China+1 gives them leverage prior middle powers lacked (#36).",
+      "note_ids": [
+        20,
+        30,
+        36,
+        41,
+        42,
+        43,
+        37
+      ],
+      "analogy_ids": [
+        5,
+        10
+      ]
+    },
+    {
+      "id": "V10",
+      "name": "Managed-trade fiscal & state-capacity sustainability",
+      "state_space": [
+        "durable new managed order",
+        "self-limiting transitional episode",
+        "degenerates into rent-capture (self-defeating)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Fiscal ceiling (#32) + eroded state capacity (#34) + capital-capture of subsidies (#57) make its managed-trade turn self-limiting or rent-capturing rather than strategically welfare-improving. Medium confidence."
+        },
+        {
+          "actor": "China",
+          "reading": "Retains developmental-state capacity to execute industrial policy (#34) but faces SOE/provincial resistance to the consumption pivot (#48). Better-positioned to sustain managed trade than Western democracies."
+        }
+      ],
+      "current_reading": "Between 'self-limiting transitional' and 'rent-capture', medium confidence. Strategic-trade theory gives managed trade a welfare rationale (#16), but execution needs developmental-state capacity the US/UK/EU atrophied (#34); subsidies flow to incumbents/capital (#39,#57,#58), risking Stigler-capture rather than strategic equilibrium. Fiscal ceiling (US debt >120% GDP, #32) and structural oligopoly lock-in (#59) are self-limiting mechanisms.",
+      "trajectory": "Direction: managed trade entrenches politically (incumbents write rent rules, #39,#58) even as fiscal capacity erodes. Clock: fab/subsidy structures lock in over 5-10yrs, after which dismantling domestic oligopoly rents is far harder than cutting tariffs (#59). Fiscal consolidation pressure builds over election cycles (#32). Two competing clocks \u2014 political entrenchment vs fiscal exhaustion.",
+      "leverage": "medium",
+      "base_rate": "Agriculture (#A42, 39yrs), MFA (#A9, 30yrs), Imperial Preference (#A30, 40yrs) show sectoral managed trade institutionalizes for decades once incumbents capture it. Latin American ISI ran 3-4 decades before an external debt crisis forced reversal (#A28). Base rate: managed trade is sticky for decades. Breaks: reserve-currency issuers face no IMF-conditionality forcing mechanism (#A28 different) \u2014 stickier still, but fiscal math (#32) is a novel self-limit.",
+      "note_ids": [
+        16,
+        32,
+        34,
+        39,
+        57,
+        58,
+        59
+      ],
+      "analogy_ids": [
+        42,
+        9,
+        30,
+        28
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "V2",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "",
+      "note": "Power-transition rivalry is the upstream driver; it is what converts trade ties into coercive/security instruments \u2014 decoupling follows the transition, not efficiency (#3,#6)."
+    },
+    {
+      "source": "V3",
+      "target": "V5",
+      "kind": "gates",
+      "actor": "",
+      "note": "Security logic guts dispute settlement: self-judging Art XXI (#18,#79) and hardware-embedded controls (#62) are structurally WTO-unchallengeable, disabling the enforcement backbone."
+    },
+    {
+      "source": "V4",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "",
+      "note": "Supply-chain cost floor caps how far security-driven decoupling can physically proceed \u2014 agglomeration + sunk costs make full separation prohibitively expensive (#8,#23,#A48)."
+    },
+    {
+      "source": "V1",
+      "target": "V5",
+      "kind": "gates",
+      "actor": "",
+      "note": "Institutional restoration requires an anchor with intent to lead; the US exit (#7,#A40) blocks AB restoration \u2014 no anchor, no rebuild (#A20,#A26)."
+    },
+    {
+      "source": "V5",
+      "target": "V1",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Plurilateral clubs (CPTPP/RCEP/MPIA/JSIs) and EU regulatory reach partially substitute for the absent hegemon, supplying rules without a single anchor (#9,#33,#46,#A24)."
+    },
+    {
+      "source": "V6",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "US",
+      "note": "Whether the US can resume any liberal-anchor role is gated by its domestic coalition; a durable demand-side turn forecloses re-anchoring for a generation (#2,#11,#A22)."
+    },
+    {
+      "source": "V6",
+      "target": "V10",
+      "kind": "gates",
+      "actor": "",
+      "note": "Managed trade's durability depends on a sustaining coalition; subsidies captured by capital not labor dissolve that coalition before reconsolidation (#57,#39)."
+    },
+    {
+      "source": "V8",
+      "target": "V2",
+      "kind": "chokepoint_controlled_by",
+      "actor": "US",
+      "note": "The Taiwan/TSMC leading-edge chokepoint (US-allied) is the acute contingency that could force rapid hard bloc formation as survival response (#40)."
+    },
+    {
+      "source": "V8",
+      "target": "V4",
+      "kind": "chokepoint_controlled_by",
+      "actor": "China",
+      "note": "China's ~80% processing moat (#70) sits beneath supply-chain separation \u2014 a floor no connector rerouting can bypass (#70), constraining how much V4 diversification is real."
+    },
+    {
+      "source": "V8",
+      "target": "V8",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Mutual chokepoints (US chips vs China minerals, #62 vs #69) create a MAD-like standoff \u2014 each actor's weapon deters the other's full use, mutually capping decoupling this decade."
+    },
+    {
+      "source": "V7",
+      "target": "V3",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Dollar weaponization (#19) is both an instance of security logic and its accelerant \u2014 each use drives parallel-plumbing build (mBridge #65), degrading the settlement layer (#24)."
+    },
+    {
+      "source": "V9",
+      "target": "V2",
+      "kind": "gates",
+      "actor": "",
+      "note": "Swing-state alignment determines whether the transition completes as clean bifurcation or stays plural \u2014 India's scale can deny any US bloc critical mass (#30,#A5,#A10)."
+    },
+    {
+      "source": "V9",
+      "target": "V4",
+      "kind": "chokepoint_controlled_by",
+      "actor": "China",
+      "note": "China's upstream intermediate-input dominance over connectors (Vietnamese electronics, Mexican parts, #42) lets it threaten the connector equilibrium from the supply side."
+    },
+    {
+      "source": "V5",
+      "target": "V9",
+      "kind": "gates",
+      "actor": "",
+      "note": "Rules-of-origin enforcement capacity (an institutional variable, #37) determines whether connector arbitrage persists or closes \u2014 cosmetic vs structural fragmentation."
+    },
+    {
+      "source": "V10",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "",
+      "note": "Fiscal ceiling + oligopoly lock-in (#32,#59) set whether the managed/security regime is a durable order or a self-limiting transitional episode."
+    },
+    {
+      "source": "V2",
+      "target": "V7",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Near-parity means no single power can anchor a successor monetary order alone (#A2 different), reinforcing settlement-layer fragmentation as the transition proceeds."
+    }
+  ],
+  "forecast_signals": [
+    {
+      "id": "F1",
+      "binary_question": "Will a WTO dispute involving the US or China be resolved with a binding appellate ruling (AB restored or via MPIA covering that party) before 31 Dec 2027?",
+      "measures": "V5",
+      "probability": 0.1,
+      "resolution_criteria": "Yes if, by 2027-12-31, either the WTO Appellate Body has functioning members hearing a US- or China-party appeal, or an MPIA/equivalent binding award is issued in a dispute where the US or China is respondent. Source: WTO dispute-settlement docket."
+    },
+    {
+      "id": "F2",
+      "binary_question": "Will the US dollar share of allocated global FX reserves fall below 55% by Q4 2027?",
+      "measures": "V7",
+      "probability": 0.3,
+      "resolution_criteria": "Yes if IMF COFER data for Q4 2027 reports USD share of allocated reserves below 55.0%. Source: IMF COFER."
+    },
+    {
+      "id": "F3",
+      "binary_question": "Will the US maintain or expand (no net rollback of) advanced-semiconductor export controls on China through 31 Dec 2027?",
+      "measures": "V3",
+      "probability": 0.9,
+      "resolution_criteria": "Yes if BIS Entity List / EAR advanced-computing chip controls in force are equal to or broader than the Oct-2023 baseline as of 2027-12-31, with no wholesale rescission. Source: US BIS Federal Register rules."
+    },
+    {
+      "id": "F4",
+      "binary_question": "Will China keep export-licensing controls on gallium, germanium, or rare-earth processing technology in force through 31 Dec 2027?",
+      "measures": "V8",
+      "probability": 0.85,
+      "resolution_criteria": "Yes if China's MOFCOM maintains licensing/export controls on at least one of gallium, germanium, graphite, antimony, or rare-earth separation technology as of 2027-12-31. Source: MOFCOM announcements."
+    },
+    {
+      "id": "F5",
+      "binary_question": "Will India formally accede to CPTPP or a US-led plurilateral goods-trade bloc by 31 Dec 2028?",
+      "measures": "V9",
+      "probability": 0.1,
+      "resolution_criteria": "Yes if India signs an accession instrument to CPTPP or a comparable US-anchored plurilateral FTA with binding market-access commitments by 2028-12-31. Source: official treaty texts / government announcements."
+    },
+    {
+      "id": "F6",
+      "binary_question": "Will combined US goods imports from Mexico + Vietnam exceed direct US goods imports from China through calendar 2027?",
+      "measures": "V4",
+      "probability": 0.85,
+      "resolution_criteria": "Yes if US Census full-year 2027 goods-import data show Mexico + Vietnam combined exceeding China. Source: US Census Bureau trade data."
+    },
+    {
+      "id": "F7",
+      "binary_question": "Will the US and China sign a formal bilateral framework agreement codifying tariff floors and/or tech-transfer rules by 31 Dec 2027?",
+      "measures": "V2",
+      "probability": 0.25,
+      "resolution_criteria": "Yes if a signed US-China intergovernmental framework text on tariffs/technology/investment is published by 2027-12-31 (beyond a phase-one-style purchase deal). Source: USTR / official joint statements."
+    },
+    {
+      "id": "F8",
+      "binary_question": "Will the WTO customs-duty moratorium on electronic transmissions be made permanent (not merely renewed) by the next Ministerial Conference?",
+      "measures": "V5",
+      "probability": 0.15,
+      "resolution_criteria": "Yes if a WTO Ministerial decision makes the e-commerce moratorium permanent by the conclusion of the next MC. Source: WTO Ministerial outcome documents."
+    },
+    {
+      "id": "F9",
+      "binary_question": "Will the US materially roll back IRA/CHIPS subsidy commitments (net reduction in authorized/obligated funds) by 31 Dec 2028?",
+      "measures": "V10",
+      "probability": 0.35,
+      "resolution_criteria": "Yes if enacted legislation or executive action reduces total authorized IRA clean-energy + CHIPS manufacturing incentives below the FY2025 baseline by 2028-12-31. Source: CBO / Treasury / Commerce budget records."
+    },
+    {
+      "id": "F10",
+      "binary_question": "Will any G7 government take office on a platform whose core plank is trade re-liberalization by 31 Dec 2028?",
+      "measures": "V6",
+      "probability": 0.1,
+      "resolution_criteria": "Yes if, by 2028-12-31, a G7 national government is formed whose published manifesto centrally advocates reducing tariffs / restoring multilateral free trade as a headline commitment. Source: party manifestos and election results."
+    },
+    {
+      "id": "F11",
+      "binary_question": "Will the EU CBAM enter its full definitive (financial-liability) phase on schedule by 1 Jan 2027 without material weakening?",
+      "measures": "V1",
+      "probability": 0.7,
+      "resolution_criteria": "Yes if CBAM certificate purchase obligations take effect for covered sectors from 2026-2027 without a delay or scope-gutting amendment. Source: EU Official Journal / Commission implementing acts."
+    }
+  ],
+  "binding_constraint_by_actor": [
+    {
+      "actor": "US",
+      "reading": "Minimum stave = critical-mineral PROCESSING dependence on China (V8, #70,#72) compounded by its own fiscal/state-capacity ceiling (V10, #32,#34,#59). The US controls the chip chokepoint but cannot clear its processing dependence for 10-15yrs (geology + permitting, #73), and its managed-trade order is fiscally and politically self-limiting. Restoration of any liberal order is separately gated by its domestic coalition (V6)."
+    },
+    {
+      "actor": "China",
+      "reading": "Minimum stave = leading-edge logic-chip access (V8, #40,#62), secondarily dollar settlement (V7) and the export-to-consumption transition (V2, #48). China holds the processing chokepoint but is bound by the ~5-10yr horizon to indigenize sub-5nm fabrication; the chip bind is its most acute, least catch-up-able constraint."
+    },
+    {
+      "actor": "EU",
+      "reading": "Minimum stave =strategic incoherence / lack of a security anchor (V1, #1) leaving it dependent on BOTH chokepoints it controls neither of (V8). Its only lever is regulatory rule-projection (Brussels Effect, #46,#22), which cannot substitute for hard-power public goods. It is the most exposed actor to the mutual-chokepoint standoff."
+    },
+    {
+      "actor": "Connectors / Global South (India, Vietnam, Mexico, Gulf)",
+      "reading": "Minimum stave = rules-of-origin enforcement (V5\u2192V9, #37) plus Chinese intermediate-input dependence (V9, #42) and narrow absorptive capacity (#41). Their connector-rent equilibrium is transitional (#43) \u2014 it clears (closes) when either enforcement tightens or bloc-building capacity comes online, whichever is faster. India uniquely has the scale to keep the whole system plural (#30)."
+    }
+  ],
+  "summary": "The graph does not resolve to \"broken\" vs \"managed\" \u2014 it resolves to a downgraded, plural equilibrium whose depth is set by which constraint clears first. The structural driver is the US\u2013China power transition (V2), which spawns a security-fragmentation logic (V3) that the GATT/WTO rulebook cannot govern and that is largely one-way (weaponization, export controls, investment screening \u2014 #6,#18,#62,#81,#A32). Two brakes sit against full bifurcation: a supply-chain cost floor (V4 \u2014 agglomeration, rerouting, MNC lobbying, #8,#23,#35,#A43-#A48) and a pair of MUTUAL chokepoints (V8) \u2014 the US-allied bloc controls leading-edge logic (#40,#62) while China controls mineral processing (#69,#70), a MAD-like standoff neither can escape this decade. The order's restoration is gated on an absent anchor (V1): the US abandoned the rule-writer role (#7,#A3), the EU can only project regulatory (not liberal-hegemonic) rules (#46), so institutions degrade into plurilateral/rump form (V5 \u2014 MPIA, JSIs, RCEP/CPTPP; #9,#33,#A20,#A24) rather than dying. Whose constraint clears on what clock: the US is bound by mineral-processing dependence and its own fiscal/state-capacity ceiling (V8,V10 \u2014 10-15yr clock #72,#32,#59); China by chip access and dollar settlement (V8,V7 \u2014 5-10yr clock #40,#65); the EU by strategic incoherence; connectors/Global South by rules-of-origin enforcement and Chinese input dependence (V9 \u2014 #37,#42). Honest read: not permanently broken, not restorable to liberal multilateralism \u2014 durably MANAGED and plural, with the depth of fragmentation contested and clock-dependent."
+}

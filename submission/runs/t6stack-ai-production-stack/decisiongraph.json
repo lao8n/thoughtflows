@@ -1,0 +1,627 @@
+{
+  "variables": [
+    {
+      "id": "V1",
+      "name": "Leading-edge logic fabrication (sub-5nm) + Taiwan concentration",
+      "state_space": [
+        "US/allied-controlled via TSMC-Taiwan",
+        "geographically diversified (AZ/Japan at scale)",
+        "bifurcated (China indigenizes mature+trailing-edge frontier)",
+        "catastrophic discontinuity (Taiwan halt)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "China's minimum stave for FRONTIER TRAINING (5nm-class dense clusters), ~4yr behind with a finite window; inference/deployment run fine on mature nodes (#109, #110, #111). Medium-high confidence."
+        },
+        {
+          "actor": "US",
+          "reading": "Not gated on chip capability but exposed to the Taiwan SPOF: a blockade/strike halts global frontier hardware 2-5yr with <15% substitution (#5). High confidence on exposure, low on trigger probability."
+        }
+      ],
+      "current_reading": "US/allied-controlled and Taiwan-concentrated: TSMC >90% of sub-5nm, a single point of failure priced near zero (#5, #118). China is ~4yr behind, not 10 (#110): SMIC 7nm via DUV multipatterning, 5nm targeted 2027-28 at <50% yield; indigenous EUV in trial (#110, #125). High confidence on the concentration fact; medium on China's exact gap.",
+      "trajectory": "Slow-clearing and hardest to catch up: no greenfield leading-edge entrant since TSMC 1987 (#74). Process-recipe tacit knowledge is the non-transferable core (#125, A38 Zeiss, A55 Nikon, A29 TSMC=~14yr even under favorable conditions). TSMC Arizona reaches only ~20% by 2030 (#118, #144). Manufacturing catch-up historically imitable (A13/A14/A28/A51) BUT EUV-denial breaks every LCD/POSCO/Airbus analogy at the leading edge (A24/A28/A34/A52).",
+      "leverage": "high",
+      "base_rate": "East-Asian fab catch-up took 12-18yr WITH equipment access (A28, A32, A37). Base rate for greenfield leading-edge under active tool denial is effectively zero (#74). Analogy breaks: prior catch-ups all had a 'Kawasaki moment' of licensed transfer that export controls now block.",
+      "note_ids": [
+        4,
+        5,
+        9,
+        74,
+        79,
+        108,
+        109,
+        110,
+        118,
+        125,
+        144
+      ],
+      "analogy_ids": [
+        2,
+        13,
+        14,
+        24,
+        28,
+        29,
+        51,
+        55
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "Power & grid execution (electrons, transformers, interconnection)",
+      "state_space": [
+        "capital-gated (money clears it)",
+        "execution-gated (queue/parts/labor bind)",
+        "relieved (behind-the-meter/nuclear/SMR/permitting reform)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "This IS the US minimum stave \u2014 grid interconnection + transformers + parts (#106, #108). High confidence."
+        },
+        {
+          "actor": "China",
+          "reading": "Not power-, speed-, or equipment-gated; controls the grid-equipment supply chain that also taxes the US (#107, #132, A53). High confidence."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Structural energy advantage: sub-$15/MWh solar, greenfield grid, no PUC/queue (#147) \u2014 potentially 40-60% below US all-in cost. Medium confidence this converts to swing-supplier status by 2030."
+        }
+      ],
+      "current_reading": "Execution-gated for the US, decisively (#3, #7, #106): FERC queue >2,700GW with 5-7yr waits (#17), PJM power +76% YoY, HV transformer lead times 2.5-4yr (#106, #132), 30-50% of planned 2026 US datacenters delayed/cancelled on power/parts. Capital is NOT the constraint (#105). High confidence.",
+      "trajectory": "Slow-clearing for the US (5-15yr generation, 10yr transmission #7) but not permanent: nuclear restarts bankable near-term (#134), behind-the-meter routes locally (~8.9GW vs 44GW gap #106), SMRs 2030+ (#16), permitting reform is the swing. China faces essentially no version (#107: +429GW 2024 vs US +49GW). PUC friction (#58-#68) is a durable domestic drag independent of physics.",
+      "leverage": "high",
+      "base_rate": "Energy-intensive infra runs 2-4x over on cost/schedule, execution- not capital-gated (A5 nuclear, A6 Panama 'prior constraint', A3 electrification 65yr). Analogy breaks: no single catastrophic-failure regulator; distributed not single-project. Alcoa/electrification (A8/A3) show energy geography is deterministic and durable.",
+      "note_ids": [
+        2,
+        3,
+        7,
+        16,
+        17,
+        22,
+        34,
+        58,
+        59,
+        60,
+        105,
+        106,
+        107,
+        134
+      ],
+      "analogy_ids": [
+        3,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "id": "V3",
+      "name": "Advanced packaging (CoWoS) + HBM",
+      "state_space": [
+        "binding bottleneck",
+        "eased (capacity ramps)",
+        "China-indigenized at parity"
+      ],
+      "actor_readings": [],
+      "current_reading": "Currently the binding near-term chip sub-constraint, more than wafer starts (#14, #115): TSMC CoWoS ~85-90%, HBM oligopoly SK Hynix-dominant (#15). Where H100/B200/GB200 supply actually chokes. High confidence.",
+      "trajectory": "Medium-clearing: packaging is closer to the 'catchable' end (A51 batteries, A54 shipbuilding commodity segments; JCET/Tianshui competitive at mature packaging). HBM is historically catchable \u2014 memory displaced ~every 12-15yr (#137), CXMT ~2-3yr behind on HBM3 (#115). Faster than leading-edge logic, slower than software.",
+      "leverage": "medium",
+      "base_rate": "Memory/packaging catch-up ~12-15yr per generational displacement (A137 US\u2192Japan\u2192Korea DRAM), and memory IS catchable unlike leading-edge logic because process complexity is lower. Analogy holds better here than for V1.",
+      "note_ids": [
+        14,
+        15,
+        33,
+        115,
+        137
+      ],
+      "analogy_ids": [
+        137,
+        22,
+        51,
+        54
+      ]
+    },
+    {
+      "id": "V4",
+      "name": "Critical materials & grid-equipment refining (China counter-lever)",
+      "state_space": [
+        "China-dominant weaponizable",
+        "partially diversified (ex-China ~20-25%)",
+        "substituted/neutralized"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "China's primary OFFENSIVE lever on the West's physical buildout \u2014 controls the input most proximate to grid interconnection (transformers, #132). High confidence."
+        },
+        {
+          "actor": "US",
+          "reading": "A real cost/timeline tax on the buildout, biting earlier than the fab layer; unaddressed by CHIPS-style policy (#25, #113). Medium-high confidence."
+        }
+      ],
+      "current_reading": "China-dominant and already weaponized (#113, #25): rare earths ~87-90%, gallium ~98%, germanium ~68%, magnets ~90% (tier-3 fabrication is the true bottleneck, #141), plus ~70-80% of large power transformers (#132). Escalation ladder run 2023-2025 with 3-6x price spikes. High confidence.",
+      "trajectory": "Soft but durable lever (#114): raises Western buildout cost +15-25% and timeline +6-12mo, a tax not a knockout \u2014 reversible short-run (embargoes lasted months: A16 2010 rare-earths, A19 OPEC). Western reshoring reaches only ~20-25% of China output by 2028 (#114). Refining is the stickiest layer (A22 Standard Oil, A16). Substitution feasible on 5-10yr peacetime clock (A30 synthetic rubber, A33 Haber-Bosch).",
+      "leverage": "high",
+      "base_rate": "Concentrated-refining chokepoints stickier than fungible-commodity embargoes: diversification took a decade and never broke China's refining share (A16) vs months for oil (A19). Japan specialty chemicals (#119) and litho gases (#120) are distinct mutual materials chokepoints affecting all fabs symmetrically.",
+      "note_ids": [
+        25,
+        113,
+        114,
+        119,
+        120,
+        132,
+        141
+      ],
+      "analogy_ids": [
+        16,
+        19,
+        22,
+        30,
+        33,
+        53
+      ]
+    },
+    {
+      "id": "V5",
+      "name": "EUV lithography / semiconductor tooling chokepoint",
+      "state_space": [
+        "US-allied single-source (ASML+Zeiss+Cymer)",
+        "eroding (indigenous DUV-multipatterning + trial EUV)",
+        "China-indigenized"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "The gate behind the gate \u2014 what actually gates V1 leading-edge. Eroding on a self-set clock plus demand-shift (#111). Medium-high confidence."
+        },
+        {
+          "actor": "EU",
+          "reading": "Netherlands (ASML) + Germany (Zeiss) hold a de facto veto the US cannot exercise unilaterally (#121). High confidence on the structural fact."
+        }
+      ],
+      "current_reading": "US-allied single-source and the hardest, most durable chokepoint in the stack (#112 ranking: EUV > fabs > HBM > design > packaging > EDA). ASML ~98% of sub-5nm, Zeiss optics sub-monopoly makes Germany an unacknowledged veto actor (#121). High confidence.",
+      "trajectory": "Hardest to erode but finite window (~2026-28): China ~4yr behind with indigenous LDP-EUV in trial at ~50% throughput (#110). Optics ecosystem resisted even forcible full transfer (A38 Zeiss: >decade after deporting the engineers). Controls buy years not denial (A15 COCOM 'slow not stop', A23 Siberian pipeline collapsed in 11mo, A35 Slater talent-vector). Lever also loses value as demand shifts from frontier-5nm (#111).",
+      "leverage": "high",
+      "base_rate": "Multilateral tech-denial regimes have a ~15-20yr half-life (A133 COCOM) BUT modern trilateral held tighter than COCOM (A15), and dollar-clearing/OFAC make defection structurally harder (#142). Base rate for replicating a distributed precision-optics ecosystem: 15-25yr (A38).",
+      "note_ids": [
+        26,
+        110,
+        112,
+        111,
+        121,
+        129,
+        142
+      ],
+      "analogy_ids": [
+        15,
+        23,
+        35,
+        38,
+        55,
+        133
+      ]
+    },
+    {
+      "id": "V6",
+      "name": "Software & platform moat (CUDA / EDA / cluster interconnect)",
+      "state_space": [
+        "US-durable proprietary lock-in",
+        "bifurcated (China walled-garden CANN + fragmented rivals)",
+        "commoditized/displaced (open standard or architectural shift)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "A durable, geography-independent rent layer capturing value regardless of where fabs/datacenters sit (#27, #53). But EDA reversal shows lobbyable layers are weak (#112). Medium-high confidence."
+        },
+        {
+          "actor": "China",
+          "reading": "Escaping via RISC-V (#127) and forced CANN indigenization; achieves domestic sufficiency, not global displacement (A80 bifurcation). Medium confidence."
+        }
+      ],
+      "current_reading": "US-durable at CUDA + interconnect (NVLink/InfiniBand, #122), but layer-by-layer variance: EDA controls already REVERSED July 2025 (#112, weak chokepoint), while CUDA/interconnect remain sticky. China's software stacks are fragmented (CANN/Cambricon/Kunlunxin), the worst outcome (#79 HEVC failure mode). Medium-high confidence.",
+      "trajectory": "Software-interface moats erode faster than physical/manufacturing moats (A20 Wintel\u2192ARM; #112). But historically 10-15yr minimum to displace a hardware-embedded standard (A79 H264\u2192AV1, A80 TCP/IP vs OSI), and government mandates fail to displace de-facto standards (A80 GOSIP). CUDA likely bifurcates (China CANN walled-garden) rather than displaced globally. RISC-V/CPO/open weights are erosion vectors (#127, #135, #145).",
+      "leverage": "medium",
+      "base_rate": "Ecosystem/workflow moats persist 20-45yr against cheaper technically-equal rivals absent a forcing function (A75 System/360, A76 Oracle, A78 Bloomberg). Displacement comes from ARCHITECTURAL shift not cloning (A78, A49 vacuum-tube\u2192transistor). Bifurcation (A80) is the likeliest outcome, not global replacement.",
+      "note_ids": [
+        21,
+        27,
+        52,
+        112,
+        122,
+        123,
+        127,
+        135
+      ],
+      "analogy_ids": [
+        20,
+        75,
+        76,
+        78,
+        79,
+        80,
+        145
+      ]
+    },
+    {
+      "id": "V7",
+      "name": "Frontier AI talent",
+      "state_space": [
+        "US-concentrated & retained",
+        "diffusing (immigration friction redirects to CA/UK/UAE/India)",
+        "multipolar (China retention + returnees)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "A candidate US minimum stave for long-run frontier leadership \u2014 the one constraint the US inflicts on itself via visa policy (#83, #84). India is the absent swing that could relieve it (#131). Medium confidence."
+        },
+        {
+          "actor": "China",
+          "reading": "Retention + returnees strengthen China where knowledge is tacit (algorithms), but binding fab infra is missing to deploy process-talent (#89, A64). Medium confidence."
+        },
+        {
+          "actor": "EU",
+          "reading": "Talent-repelling via GDPR research-data friction independent of pay (#90). Medium confidence."
+        }
+      ],
+      "current_reading": "US-concentrated but self-sabotaging: >50% of US AI PhDs foreign-born, power-law concentration in a few hundred researchers (#82), yet H-1B caps / green-card backlogs act as adversarial de-facto industrial policy (#83). Return migration of Chinese-origin researchers accelerating (#85). Equity comp is a genuine US retention moat SOEs/Gulf can't match (#86). Medium confidence.",
+      "trajectory": "Structurally inelastic \u2014 a 5-7yr PhD pipeline capital cannot accelerate (#81), slower-clearing than power or financing in the medium term. Diaspora repatriation works only where domestic infra exists to deploy it (A65 Taiwan sea-turtle YES; A66 Russia/Skolkovo NO; A64 Paperclip: fast where knowledge is tacit + base exists). US institutional pull more durable than any restriction regime (A67 India IIT).",
+      "leverage": "high",
+      "base_rate": "A single-decade talent shock can shift frontier capability irreversibly (A63 Nazi \u00e9migr\u00e9s \u2192 50yr US dominance). Knowledge-layer catch-up is non-imitable unlike manufacturing (#77); AI architecture closer to tacit-embodied (A63/A68 Fuchs) than published-engineering. Analogy breaks: AI publishes openly, lowering the 'Fuchs premium' vs 1930s physics.",
+      "note_ids": [
+        77,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        131
+      ],
+      "analogy_ids": [
+        9,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ]
+    },
+    {
+      "id": "V8",
+      "name": "Capital structure & financial fragility",
+      "state_space": [
+        "hyperscaler self-funded (resilient)",
+        "neocloud/SPV-leveraged (fragile tier)",
+        "cascade (margin-call/write-down doom loop)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Capital is NOT the US constraint (#105); fragility is a tier-specific financial-market risk, not a national buildout stave. High confidence."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Sub-market sovereign capital sustains buildout past private-market signals (#18), suppressing clearing \u2014 but faces landlord-not-owner value-capture risk (A87-A92). Medium confidence."
+        }
+      ],
+      "current_reading": "Bifurcated by tier: hyperscalers self-fund from $50B+/yr FCF (#41, ~$725B 2026 capex #105) and are insulated; fragility concentrates at neocloud/SPV tier \u2014 GPU-as-collateral (#36/#37), circular vendor financing (#35), take-or-pay operating leverage (#43), VC-dependent customers (#40), off-balance-sheet SPVs (#45). Medium-high confidence.",
+      "trajectory": "Fast-transmitting at the fragile tier (impairment within quarters, #40) but slow at the core. GAAP 4-5yr depreciation vs 18-24mo competitive life is a hidden write-down (#38, #39). Political economy may block write-downs for subsidized/national-security assets, inverting the fiber bust (#31). Sovereign/defense/deterrence demand floors (#29, #54) and Gulf sub-market capital (#18) delay clearing.",
+      "leverage": "medium",
+      "base_rate": "Front-loaded infra capex on uncertain demand \u2192 write-downs not moats (A4 fiber 97% dark, A1 railroad Panic 1893 bankrupted 1/3). Analogy breaks: 2000-era CLECs were leveraged; today's dominant buyers are not (#41) \u2014 a bust craters neoclouds without halting hyperscaler buildout. ZIRP-era hurdle rates never repriced (#44).",
+      "note_ids": [
+        8,
+        18,
+        29,
+        31,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        54,
+        105
+      ],
+      "analogy_ids": [
+        1,
+        4,
+        12
+      ]
+    },
+    {
+      "id": "V9",
+      "name": "Model-layer value & open-weight commoditization",
+      "state_space": [
+        "frontier-training-decisive (rents to leading-edge owners)",
+        "commoditized model layer (rents evaporate/diffuse)",
+        "value migrates to application/reorg layer"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "Adversarial open-sourcing is a rational asymmetric response \u2014 commoditize US closed-model rents where China can't match silicon (#101, #96). Relieves China's chip constraint mainly for inference (#116). Medium confidence."
+        },
+        {
+          "actor": "US",
+          "reading": "Open-weight/API leakage undermines the export-control chokepoint (#96, #140, #143) and the frontier-lab rent thesis; a legal gap BIS cannot quickly close (#140). Medium confidence."
+        }
+      ],
+      "current_reading": "Commoditization is LIVE, not speculative (#99): open weights (Llama/Qwen/DeepSeek) cover most enterprise use cases; DeepSeek R1 ~$5-6M refutes capex-justification (#93); distillation compresses the frontier premium faster than the buildout amortizes (#97). Inference-time-compute scaling shifts demand from centralized training to distributed inference (#95, #103). Medium-high confidence, high uncertainty on durability.",
+      "trajectory": "Fastest-diffusing layer \u2014 frontier weights diffuse in weeks (A17 Soviet A-bomb ~4yr for the HARD case; A48 AlexNet at internet speed). Zero marginal replication cost undermines infrastructure-rent thesis (#100). Jevons rebound is the counter-mechanism: efficiency expands total compute demand (#47, #116, A25 shale, A26 Green Revolution, A48). Whether efficiency destroys or expands demand is genuinely unresolved.",
+      "leverage": "high",
+      "base_rate": "Value migrates AWAY from the physical/manufacturing layer to platform/reorg (A13 Japan-in-software, A39 Bell Labs, A40 Nokia\u2192Apple, A41 WWW, A42 productivity paradox, A43 Xerox PARC, A44 dumb-pipe). Analogy breaks: CUDA moat (V6) may be stickier than a transistor patent; and open weights may commoditize the MODEL layer without value pooling anywhere in the stack (#92, #98).",
+      "note_ids": [
+        47,
+        48,
+        51,
+        55,
+        56,
+        70,
+        80,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        116
+      ],
+      "analogy_ids": [
+        13,
+        17,
+        25,
+        26,
+        37,
+        39,
+        41,
+        48
+      ]
+    },
+    {
+      "id": "V10",
+      "name": "Demand realization / killer-app ROI",
+      "state_space": [
+        "demand materializes at scale (buildout justified)",
+        "asymptote at 'good-enough' (demand miss)",
+        "discontinuous capability threshold (underbuilt)"
+      ],
+      "actor_readings": [],
+      "current_reading": "Unresolved and structurally uncertain \u2014 no identified killer app yet generates enough revenue-per-token to underwrite 2027-2030 infrastructure (#23); 'good-enough' enterprise ceiling may cap willingness-to-pay at current capability (#94); benchmark saturation is the near-term leading indicator (#102). Offsetting: defense/deterrence demand floor (#29, #54) and option-value framing (#57). Low-medium confidence either way.",
+      "trajectory": "Slow to resolve, and a threshold not a continuous variable (#51): the buildout may complete before the killer app arrives (A4 fiber, A42 productivity paradox 20-30yr dynamo-delay compressed to maybe 3-5yr for software). Jevons could expand demand (#47) or algorithmic efficiency collapse it (#13). Timing mismatch: 2026-28 delivery may arrive as training demand peaks into an inference-commoditized market (#103).",
+      "leverage": "high",
+      "base_rate": "Infra buildouts routinely overshoot demand timing \u2014 real in direction, wrong in timing (A4 fiber, A1 railroads, A12 dreadnought: both sides build, neither wins decisively, value migrates to next paradigm). Productivity gains lag infra by decades and accrue to reorganizers not builders (A42). Analogy breaks: AI has commercial revenue sustaining it that dreadnoughts/Apollo lacked (A9/A12).",
+      "note_ids": [
+        8,
+        13,
+        23,
+        29,
+        47,
+        48,
+        51,
+        54,
+        57,
+        94,
+        102,
+        103
+      ],
+      "analogy_ids": [
+        1,
+        4,
+        9,
+        12,
+        42
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "V5",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "China",
+      "note": "EUV/tooling is the gate behind the fab gate \u2014 no sub-5nm without ASML+Zeiss; this is why China's V1 is stuck (#110, #112, #121, A38/A55)."
+    },
+    {
+      "source": "V3",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "",
+      "note": "CoWoS packaging + HBM are the actual production bottleneck for H100/B200-class supply, more binding than wafer starts (#14, #115)."
+    },
+    {
+      "source": "V1",
+      "target": "V9",
+      "kind": "gates",
+      "actor": "",
+      "note": "Frontier TRAINING requires leading-edge dense clusters; V1 gates the frontier-model layer but NOT inference/deployment, which run on mature nodes (#9, #109)."
+    },
+    {
+      "source": "V9",
+      "target": "V1",
+      "kind": "substitutes_for",
+      "actor": "China",
+      "note": "Algorithmic efficiency + open weights + inference-time scaling relieve the leading-edge chip constraint, mainly for inference \u2014 a chokepoint whose product becomes less necessary loses value (#111, #116, A25/A48)."
+    },
+    {
+      "source": "V4",
+      "target": "V2",
+      "kind": "chokepoint_controlled_by",
+      "actor": "US",
+      "note": "China controls the materials + grid-equipment (transformers #132, gallium/magnets #113) the US buildout needs at the very first step \u2014 a counter-chokepoint on V2 biting before the fab layer."
+    },
+    {
+      "source": "V5",
+      "target": "V4",
+      "kind": "correlates",
+      "actor": "",
+      "note": "The two levers are asymmetric in KIND and mutual: V5 (US/allied) PREVENTS China from frontier chips (hard, eroding ~4yr); V4 (China) RAISES the cost/timeline of the Western buildout (soft, durable) \u2014 mutual assured disruption, neither a knockout (#114)."
+    },
+    {
+      "source": "V6",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "China",
+      "note": "CUDA + NVLink/InfiniBand interconnect gate usable large-cluster training even where FLOPS exist \u2014 Ascend clusters hit a scaling wall on interconnect, not peak compute (#122, #123)."
+    },
+    {
+      "source": "V7",
+      "target": "V9",
+      "kind": "gates",
+      "actor": "",
+      "note": "Frontier model creation is talent-gated where knowledge is tacit; the model layer's value accrues wherever the researchers are, independent of where compute sits (#82, #89, A63)."
+    },
+    {
+      "source": "V2",
+      "target": "V10",
+      "kind": "gates",
+      "actor": "US",
+      "note": "US deployment is execution-gated \u2014 money cannot clear an interconnection queue (#106); grid throughput caps how much demand can actually be served regardless of ROI."
+    },
+    {
+      "source": "V10",
+      "target": "V8",
+      "kind": "gates",
+      "actor": "",
+      "note": "Demand realization underwrites the whole capital structure; a demand miss triggers the fragile-tier cascade (neocloud/SPV) while hyperscalers absorb it (#40, #41, #43, A4)."
+    },
+    {
+      "source": "V1",
+      "target": "V2",
+      "kind": "correlates",
+      "actor": "",
+      "note": "The actor-specific binding constraints are complementary, not shared: China's stave is V1(chips), the US's is V2(grid) \u2014 'physical constraint' is a vector, not one variable (#108)."
+    },
+    {
+      "source": "V9",
+      "target": "V6",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Open-weight commoditization + API access undermine both export controls and the CUDA/frontier rent thesis \u2014 value may evaporate from the model layer rather than pool at the platform layer (#92, #96, #98, #143)."
+    },
+    {
+      "source": "V8",
+      "target": "V2",
+      "kind": "substitutes_for",
+      "actor": "Gulf",
+      "note": "Gulf/sovereign sub-market capital + energy abundance can relieve the grid-execution constraint by hosting compute where power is unqueued (#18, #147, A88/A11) \u2014 but risks landlord-not-owner value capture (A87-A92)."
+    },
+    {
+      "source": "V9",
+      "target": "V10",
+      "kind": "correlates",
+      "actor": "",
+      "note": "The demand question and commoditization interact: if the model layer commoditizes AND no killer app appears, value migrates to the fragmented application/reorg layer that no subsidy can target (#98, A42)."
+    }
+  ],
+  "forecast_signals": [
+    {
+      "id": "F1",
+      "binary_question": "Will SMIC (or another PRC fab) achieve volume production of a 5nm-class logic node at commercially viable yield (>50%) by end-2028?",
+      "measures": "V1",
+      "probability": 0.4,
+      "resolution_criteria": "Public teardown/analyst confirmation (TechInsights or equivalent) of a PRC-fabbed sub-5nm-class chip in a shipping product at reported yield >50% before 2028-12-31."
+    },
+    {
+      "id": "F2",
+      "binary_question": "Will US large-power-transformer lead times for datacenter interconnection remain above 2 years as of end-2027?",
+      "measures": "V2",
+      "probability": 0.8,
+      "resolution_criteria": "Industry surveys (Wood Mackenzie / DOE / utility IRP filings) report median >100MVA transformer lead times >24 months as of 2027-12-31."
+    },
+    {
+      "id": "F3",
+      "binary_question": "Will China impose a new export restriction on a critical AI-buildout material (gallium, germanium, rare-earth magnets, or graphite) between now and end-2027?",
+      "measures": "V4",
+      "probability": 0.7,
+      "resolution_criteria": "MOFCOM/customs announcement of a new or tightened licensing/export control on any listed material after 2026-07-10 and before 2027-12-31."
+    },
+    {
+      "id": "F4",
+      "binary_question": "Will a PRC-indigenous EUV tool reach reported production-worthy status (usable overlay + >100 wph throughput) by end-2028?",
+      "measures": "V5",
+      "probability": 0.3,
+      "resolution_criteria": "Credible reporting (SMIC/SMEE disclosure or supply-chain analyst) of an indigenous EUV tool in HVM use at >100 wafers/hour before 2028-12-31."
+    },
+    {
+      "id": "F5",
+      "binary_question": "Will a non-CUDA accelerator stack (AMD ROCm, or any Chinese CANN-class stack) exceed 20% of new large-scale training deployments globally by end-2027?",
+      "measures": "V6",
+      "probability": 0.3,
+      "resolution_criteria": "Analyst estimate (Omdia/SemiAnalysis) of >20% share of newly-provisioned training FLOPS on non-CUDA stacks for calendar 2027."
+    },
+    {
+      "id": "F6",
+      "binary_question": "Will the US materially liberalize H-1B caps or employment-based green cards for AI/STEM workers before end-2027?",
+      "measures": "V7",
+      "probability": 0.2,
+      "resolution_criteria": "Enacted federal legislation or rule raising the H-1B cap, creating a STEM cap exemption, or clearing EB green-card backlogs, effective before 2027-12-31."
+    },
+    {
+      "id": "F7",
+      "binary_question": "Will at least one leveraged neocloud (GPU-backed borrower) default, restructure, or breach a debt covenant by end-2027?",
+      "measures": "V8",
+      "probability": 0.5,
+      "resolution_criteria": "Public disclosure of a payment default, covenant waiver/breach, or Chapter 11 by a GPU-collateralized neocloud before 2027-12-31."
+    },
+    {
+      "id": "F8",
+      "binary_question": "Will a frontier-competitive open-weight model (within ~6 months of the top closed model on major benchmarks) be released by end-2027?",
+      "measures": "V9",
+      "probability": 0.8,
+      "resolution_criteria": "An openly downloadable model within 5 points of the leading closed model on MMLU-Pro/GPQA-class benchmarks, released before 2027-12-31."
+    },
+    {
+      "id": "F9",
+      "binary_question": "Will aggregate hyperscaler AI capex growth decelerate (YoY growth below +10%) in any guidance issued before end-2027?",
+      "measures": "V10",
+      "probability": 0.4,
+      "resolution_criteria": "Combined big-4 hyperscaler forward capex guidance shows YoY growth <10% in any quarterly guidance issued before 2027-12-31."
+    },
+    {
+      "id": "F10",
+      "binary_question": "Will a Taiwan-Strait event materially disrupt TSMC leading-edge output before end-2027?",
+      "measures": "V1",
+      "probability": 0.1,
+      "resolution_criteria": "Any PRC military/coast-guard action causing a reported >2-week halt or >20% cut to TSMC sub-5nm output before 2027-12-31."
+    }
+  ],
+  "binding_constraint_by_actor": [
+    {
+      "actor": "US",
+      "reading": "Minimum stave is V2 (power & grid execution) \u2014 transformers, interconnection queue, parts \u2014 NOT capital (#105, #106, #108). Secondary, slower-clearing stave is V7 (talent), the one constraint the US inflicts on itself via immigration policy (#83). Not chip-gated but carries the Taiwan tail-risk in V1 (#118). Read from the graph: the V4\u2192V2 chokepoint and V2\u2192V10 gate both point at execution as the load-bearing edge."
+    },
+    {
+      "actor": "China",
+      "reading": "Minimum stave is V1 (leading-edge logic) for FRONTIER TRAINING, gated behind V5 (EUV/tooling) and near-term V3 (packaging/HBM), plus V6 (interconnect scaling wall) (#108, #109, #122). NOT energy-, capital-, speed-, or materials-gated (#107). Partially relieved by V9 (efficiency/open weights) for inference \u2014 so China's true binding constraint is narrower than 'chips': frontier-training silicon specifically."
+    },
+    {
+      "actor": "EU",
+      "reading": "No leading-edge stave it controls, but holds a de-facto veto node in V5 (ASML/Netherlands + Zeiss/Germany, #121). Its own binding constraint for capability is V7 (talent, repelled by GDPR research friction #90) and V10/demand \u2014 it lacks a domestic anchor-tenant hyperscaler (#72) and spreads subsidies against agglomeration logic (#76). Landlord-without-tenant risk."
+    },
+    {
+      "actor": "Gulf",
+      "reading": "Holds a genuine V2 advantage (cheap unqueued power #147) and V8 sub-market capital (#18), positioning it as a swing inference-supplier by 2030. But its binding constraint is value capture: no V1/V5/V6/V7 \u2014 high 'landlord in a tenant economy' risk (A78/A87-A92); dependent on US export-control posture (A90 Eurodollar, A92 Puerto Rico)."
+    }
+  ],
+  "summary": "The graph is not a single race with one binding input \u2014 it is a set of actor-specific minimum staves connected by mutual chokepoints, with a diffusion clock running underneath. China is gated at leading-edge logic fabrication (V1), itself gated by the EUV/tooling chokepoint (V5) and near-term by packaging/HBM (V3); the US is gated not by capital (abundant, #105) but by power-and-grid execution (V2), which China in turn taxes through its control of materials refining and grid-equipment (V4, #113/#132) \u2014 so each side holds a chokepoint on the other (#114: mutual assured disruption, not destruction). Above the physical layer sits a value-capture question the physical winners may not control: software/platform lock-in (V6) and open-weight commoditization (V9) can route rents to whoever owns the interface or the reorganized application layer, independent of who owns the fabs or datacenters (smile-curve, #70/#80; A39/A41/A42/A44). The honest read is a CONTESTED race whose direction depends on relative clearing speed on a ~2-4yr clock (#117): the US chip/tooling/software edge is a depreciating asset (frontier diffuses fast: A17/A48), while China's materials lever and the US grid constraint are slower-clearing but not knockouts \u2014 and the Taiwan concentration in V1 is the one discontinuity that dwarfs everything else if it triggers (#118, A45/A46/A57)."
+}

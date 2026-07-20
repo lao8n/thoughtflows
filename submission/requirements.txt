@@ -1,0 +1,5 @@
+claude-agent-sdk>=0.2
+pydantic>=2
+python-dotenv>=1
+matplotlib>=3.7
+pillow>=10

@@ -1,0 +1,670 @@
+{
+  "variables": [
+    {
+      "id": "V1",
+      "name": "Leading-edge fab capacity control (TSMC / Taiwan chokepoint outcome)",
+      "state_space": [
+        "US/allied-controlled (status quo)",
+        "degraded (blockade/drought/quake, 10-50% for months)",
+        "destroyed (kinetic + scorched-earth)",
+        "China-seized-functional",
+        "China-seized-shell (non-functional without EUV/talent)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Existential dependency \u2014 F-35/JASSM/C4ISR and all frontier AI compute route through TSMC (#45,#38). A shock degrades the very military needed to respond. Highest-leverage vulnerability, cannot be hedged before ~2030 (#39). Confidence high."
+        },
+        {
+          "actor": "China",
+          "reading": "Wants the capacity but cannot capture it functional (#13,#25); also self-harms \u2014 its own AI/5G/electronics run on TSMC chips SMIC cannot replace (#40). Prize value is contingent on a bloodless seizure that is operationally near-impossible (#A7,#A52)."
+        },
+        {
+          "actor": "Japan/Korea/Netherlands",
+          "reading": "JASM Kumamoto, Samsung/SK Hynix, ASML become existential suppliers post-shock, converting security consumers into veto-holding suppliers (#37,#38,#42). Japan's subsidy commitment is revealed-preference evidence of high assigned disruption probability (#42)."
+        }
+      ],
+      "current_reading": "US/allied-controlled today; TSMC fabricates ~90% of <5nm logic (#1,#35). This is a single point of failure with weeks-to-months of downstream buffer inventory (#36). High confidence on the concentration; the contested part is which failure-regime materializes. Seizure most likely yields shells: EUV is Dutch and undeliverable under sanctions, and tacit process knowledge walks out with engineers (#13,#25).",
+      "trajectory": "Direction: slow diversification but the insurance matures AFTER the risk window \u2014 greenfield leading-edge fabs need 4-7 years and cost 2-3x, so reshoring peaks post-2030 vs a 2027-2030 conflict window (#39,#44). Catch-up on fab CAPABILITY (not buildings) is the hardest factor in the graph: synthetic-dye monopoly rebuilt in 3-5 yrs but leading-edge fabs estimated 8-15 yrs even with state direction (#A9); Murano-style tacit-knowledge concentration persisted centuries (#A21).",
+      "leverage": "high",
+      "base_rate": "Concentrated critical-input chokepoints (oil #A1,#A13; German chemistry #A9; Abadan/Osirak #A19,#A41) are historically reversed or rebuilt only over years, and the prize is usually destroyed rather than transferred in a kinetic grab (#A7). Analogy breaks: chips are stockpilable and non-consumable unlike oil, but fab capability is far less replicable than any prior monopoly.",
+      "note_ids": [
+        1,
+        10,
+        13,
+        25,
+        35,
+        36,
+        37,
+        38,
+        39,
+        44,
+        45,
+        46,
+        83,
+        84
+      ],
+      "analogy_ids": [
+        1,
+        7,
+        9,
+        13,
+        19,
+        21,
+        41,
+        42
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "Beijing's Taiwan-action calculus and trigger class",
+      "state_space": [
+        "economically-deterred (silicon shield holds)",
+        "strategic-window exploitation (from strength)",
+        "diversionary aggression (from weakness)",
+        "succession/leadership-shock driven"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "The decision-maker; utility function is the single load-bearing unknown (#2,#40). Use-it-or-lose-it logic activates if Beijing concludes chip controls permanently cap it (#A1). Confidence low by construction."
+        },
+        {
+          "actor": "US",
+          "reading": "Deterrence architecture assumes a cost-calculating rational aggressor (#87); it has no lever against a diversionary or succession-shock trigger, and a domestic US constitutional/election crisis is a pure credibility gap military posture cannot hedge (#89)."
+        }
+      ],
+      "current_reading": "Deterred at present but the governing utility function is unknown and unverifiable (#2). The two live trigger classes are observationally similar ex ante but have opposite deterrence implications: strength-driven windows say act when strong; diversionary logic says act when weakest (property crisis, youth unemployment, demographics) (#86,#87,#92). Analysts using capability/economic indicators will systematically misread a weakness-driven trigger. Confidence low \u2014 this is the deepest irreducible uncertainty.",
+      "trajectory": "Direction indeterminate; Xi's 2027 PLA readiness target and 2027-2032 elevated-risk window are the clock (#8). A collapsing China is simultaneously more dangerous (diversionary) and more deterrable (less able to absorb sanctions/protracted war) \u2014 dual-valenced (#92). Xi succession is a maximum-variance single-point-of-failure (#88).",
+      "leverage": "high",
+      "base_rate": "Fait-accompli grabs by nuclear-armed revisionists succeed and stick when fast and below overt-war threshold (Crimea #A49, Georgia #A51, Cyprus #A53, Paracels #A54, Manchuria #A52). But each unchallenged step emboldens the next (#A52), and over-generalizing 'the West won't fight' failed catastrophically for Russia in 2022 (#A51). Taiwan breaks the analogies on execution difficulty (opposed 180km amphibious assault) and economic centrality.",
+      "note_ids": [
+        2,
+        8,
+        40,
+        86,
+        87,
+        88,
+        89,
+        92
+      ],
+      "analogy_ids": [
+        1,
+        25,
+        49,
+        51,
+        52,
+        54
+      ]
+    },
+    {
+      "id": "V3",
+      "name": "Decisive AI capability threshold and its durability",
+      "state_space": [
+        "no threshold (scaling plateaus, #80)",
+        "threshold but fast diffusion (4-10 yr, MAD-like parity)",
+        "threshold with durable moat",
+        "capped by open-weight floor (permanent treadmill)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Current frontier leader; conversion to strategic effect gated by exploitation-pipeline timeline (years to integrate into doctrine/systems) which may exceed the diffusion window, making 'decisive' irrelevant in practice (#79). Winner's-curse and reveal/conceal incentives may keep a US lab below visible threshold (#61,#68)."
+        },
+        {
+          "actor": "China",
+          "reading": "Near-frontier and closing (#A3 disanalogy: already at frontier). Structural deployment advantages \u2014 mandated data, no consent friction, unified direction \u2014 may offset compute deficits on some metrics (#76); CCP faces no reveal/conceal dilemma, compressing its exploitation window (#77)."
+        }
+      ],
+      "current_reading": "Unresolved and possibly non-existent. The 'nuclear moment' structure requires a qualitative jump that quantity/time cannot offset (#3), but the demonstration problem breaks the analogy \u2014 AI advantage is opaque; revealing it invites countermeasures, concealing it forfeits geopolitical effect (#14,#68). Compute concentration is the one genuine structural barrier with no historical analogue (#5), but efficiency gains and open weights continuously erode it (#94,#96,#103). Medium confidence that if a threshold exists, it diffuses within years.",
+      "trajectory": "Direction: capability rising; durability shrinking. Historical decisive leads collapsed faster than owners expected \u2014 Soviet Joe-1 in 4 yrs vs assumed 7-10 (#A3). Revealed architecture accelerates followers below base-rate (#28,#A8 Dreadnought reset). Algorithmic efficiency diffuses in weeks vs hardware in years (#102). Counter: jet-engine/x86 moats persisted 20-30+ yrs where tacit complexity compounded (#A22,#A23).",
+      "leverage": "high",
+      "base_rate": "Major military-relevant tech diffuses in 5-10 yrs (#4,#A3,#A6 COCOM). Analogy breaks two ways: hardware chokepoint is harder to diffuse than nuclear blueprints (#5), but weights are trivially copyable and open-weight release is a one-way irreversibility event with no nuclear parallel (#59,#96). Strategic analysis structurally over-predicts discontinuities (#78,#A39 missile gap).",
+      "note_ids": [
+        3,
+        4,
+        5,
+        14,
+        28,
+        61,
+        68,
+        76,
+        77,
+        79,
+        80,
+        96,
+        97,
+        102,
+        103
+      ],
+      "analogy_ids": [
+        3,
+        6,
+        8,
+        14,
+        22,
+        23,
+        39
+      ]
+    },
+    {
+      "id": "V4",
+      "name": "Compute chokepoint durability (export controls + EUV + EDA vs leakage/efficiency)",
+      "state_space": [
+        "US/allied-controlled durable",
+        "eroding via third-country leakage",
+        "circumvented by algorithmic efficiency",
+        "China-indigenized (EUV-equivalent + domestic EDA)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Controls the EDA + FDPR + allied-coordination levers \u2014 the durable moat (#33). But overreach risks accelerating exactly the indigenization it aims to prevent (#A39 residue effect)."
+        },
+        {
+          "actor": "China",
+          "reading": "This is China's binding constraint (minimum stave): even a seized TSMC cannot advance nodes without EUV (#13,#25). Escape routes are efficiency-first research (#95,#99) and slow indigenization on a decade clock."
+        },
+        {
+          "actor": "Netherlands/EU",
+          "reading": "ASML is the tightest single chokepoint (#25) \u2014 gives the Netherlands genuine veto leverage over both US policy and Chinese catch-up (#38)."
+        },
+        {
+          "actor": "Gulf (UAE/Saudi)",
+          "reading": "Both a leakage conduit (#15) and a potential out-of-accord sovereign-compute defector (#74); its own capability is gated by continued US chip access."
+        }
+      ],
+      "current_reading": "Layered and currently holding: ASML EUV (Dutch), Cadence/Synopsys EDA (US), BIS controls form a multi-jurisdiction stack more resilient than any single point (#25,#33). But post-2022 Russia sanctions showed heavy leakage via UAE/Turkey (#15), and export controls perversely select for the efficiency research (DeepSeek-class) most able to defeat them (#94,#95,#99). Medium confidence the stack holds this decade for the hardest node (EUV) but leaks at the margin.",
+      "trajectory": "Direction: eroding at the algorithmic margin, holding at the physical-tooling margin. COCOM slowed the USSR 10-20 yrs but did not stop military-relevant catch-up (#A6); British textile-machinery embargo held ~50 yrs on embodied tech but failed on knowledge-in-heads (#A24). The clock hinges on whether efficiency gains plateau (restoring the compute moat, #100) before restricted hardware reaches decisive-class capability (#99).",
+      "leverage": "high",
+      "base_rate": "Embodied-technology export controls buy a decade-plus of lead; personnel/knowledge controls fail on a 10-20 yr horizon (#A24,#A6). Analogy breaks: China starts far closer (SMIC at 7nm) than the 1980s USSR, and Moore's-law complexity cuts both ways \u2014 higher barrier, but Chinese engineering resources are vast.",
+      "note_ids": [
+        5,
+        15,
+        25,
+        33,
+        94,
+        95,
+        98,
+        99,
+        100,
+        102
+      ],
+      "analogy_ids": [
+        6,
+        24,
+        39
+      ]
+    },
+    {
+      "id": "V5",
+      "name": "Safety-catastrophe clampdown regime",
+      "state_space": [
+        "no clampdown (defection dominates)",
+        "unilateral democratic-only (asymmetric, displaces to China)",
+        "durable global regime",
+        "emergency mobilization that accelerates capability"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US/EU",
+          "reading": "A democratic rule-of-law clampdown binds US/EU frontier labs while leaving state-directed Chinese development unconstrained \u2014 asymmetric regulation functions as competitive displacement, narrowing the Western lead (#17). EU acts first (Brussels effect #A36)."
+        },
+        {
+          "actor": "China",
+          "reading": "Can implement a full domestic clampdown unilaterally with no coordination problem (#19), and would face none of the reveal/conceal friction \u2014 but has strategic incentive NOT to, absent its own catastrophe."
+        }
+      ],
+      "current_reading": "No durable brake currently plausible. A clampdown most likely triggers on a single high-salience acute event \u2014 military delegation failure or mass-casualty misuse (#6,#18) \u2014 not gradual accumulation. But causal diffuseness of AI harm makes clean legal/political triggers structurally hard (#24), and competitive dynamics ensure defectors undercut any restrained actor (#7). Low-medium confidence that any clampdown is durable or symmetric.",
+      "trajectory": "Direction: clampdowns decay unless the trigger destroys the defector's capacity, not just willingness (#7). Post-catastrophe governance repeatedly failed to become durable \u2014 COVID treaty collapsed (#A43), 1918 flu produced no regime despite 50-100M dead (#A45), Fukushima fragmented nations (#A46). Emergency mobilization historically accelerates capability (Manhattan/Apollo, #31,#A11,#A12).",
+      "leverage": "medium",
+      "base_rate": "Self-governance persists for DECADES past demonstrated harm (leaded gas 60 yrs #A34; autos 66 yrs #A35; Section 230 ~30 yrs #A36). Clean reform requires a visible near-miss + intact institutions (Thalidomide #A10, Comet #A16). Analogy breaks: AI harm attribution is contested unlike radiation/birth-defects, and no Kelsey-style pre-deployment gatekeeper exists.",
+      "note_ids": [
+        6,
+        7,
+        12,
+        17,
+        18,
+        19,
+        24,
+        29,
+        30,
+        31,
+        34
+      ],
+      "analogy_ids": [
+        4,
+        10,
+        16,
+        31,
+        34,
+        35,
+        36,
+        43,
+        45,
+        46
+      ]
+    },
+    {
+      "id": "V6",
+      "name": "Great-power war scope and duration (scenario amplifier)",
+      "state_space": [
+        "no conflict",
+        "gray-zone/blockade/cable+ASAT coercion",
+        "short decisive (weeks-months)",
+        "protracted (years)",
+        "nuclear escalation"
+      ],
+      "actor_readings": [],
+      "current_reading": "Currently at gray-zone baseline. War is not one tail among many but a superposition that transforms the probability space of all other discontinuities \u2014 destroying compute, fracturing talent, triggering national-security AI programs, and making safety norms untenable simultaneously (#9). Duration is the governing sub-variable: short conflict may COMPRESS AI timelines via emergency investment; protracted conflict destroys the compute foundation (#23). Blockade and undersea-cable/ASAT rungs offer sub-threshold coercion windows (#27,#49,#52). Medium confidence conflict stays sub-kinetic this decade.",
+      "trajectory": "Escalation pathways are getting faster and less human-controlled: autonomous systems compress decision windows below nuclear-authorization timelines (#55), and ASAT/space use follows use-before-lose logic that can INITIATE conflict on orbital-mechanics timescales (#49). Multi-theater coordination (Russia-China-DPRK) is newly available (#90).",
+      "leverage": "high",
+      "base_rate": "Limited conflicts trigger permanent institutional restructuring far exceeding their geography (Korea\u2192NSC-68/NATO #A11; Sputnik\u2192DARPA/NASA #A12). Chokepoint wars are long and escalation-prone with probable third-party entry (#A2). Analogy breaks: 2020s has mutual second-strike and A2/AD, unlike 1950-91 US superiority (#A25,#A7).",
+      "note_ids": [
+        8,
+        9,
+        20,
+        23,
+        27,
+        45,
+        49,
+        52,
+        53,
+        54,
+        55,
+        56,
+        90
+      ],
+      "analogy_ids": [
+        2,
+        11,
+        12,
+        18,
+        25,
+        49,
+        50,
+        52
+      ]
+    },
+    {
+      "id": "V7",
+      "name": "Nuclear firebreak integrity",
+      "state_space": [
+        "holds (crisis stability)",
+        "breaks under conventional defeat (NFU abandoned)",
+        "inadvertent entanglement escalation",
+        "AI-mediated miscalculation / degraded signaling"
+      ],
+      "actor_readings": [],
+      "current_reading": "Holds today but rests on load-bearing assumptions that erode under a Taiwan conventional defeat. China's NFU pledge may break if PLA faces catastrophic conventional humiliation tied to Xi's legitimacy (#48). Conventional-nuclear C2 entanglement (DF-26 dual-capable) creates inadvertent-escalation paths independent of intent (#47). AI-fused ISR may make mobile nuclear forces trackable, tipping deterrence from assured-retaliation to strike-before-tracked (#50). Confidence that firebreak holds: medium, declining under stress.",
+      "trajectory": "Direction: destabilizing. Decisive AI advantage inverts nuclear MAD into first-strike/use-it-or-lose-it instability (#26). De-escalation signaling becomes unreliable in an AI-deepfake-saturated information environment (#57). NFU/no-first-use is untested under peer conventional defeat.",
+      "leverage": "high",
+      "base_rate": "The firebreak HAS held under active conventional combat between nuclear states (Kargil #A26, Sino-Soviet 1969 #A27) \u2014 but only with a viable off-ramp for the losing side and a credible third-party mediator. Petrov (#A28) and Checkpoint Charlie (#A30) show near-misses turned on individual judgment and pre-existing back-channels \u2014 both absent US-China today. DPRK is an independent second escalation ladder (#91).",
+      "note_ids": [
+        26,
+        47,
+        48,
+        50,
+        51,
+        55,
+        57,
+        91
+      ],
+      "analogy_ids": [
+        26,
+        27,
+        28,
+        30
+      ]
+    },
+    {
+      "id": "V8",
+      "name": "State-capture / control structure of decisive AI advantage",
+      "state_space": [
+        "private lab",
+        "FFRDC/quasi-gov hybrid",
+        "hyperscaler-captured",
+        "formal nationalization",
+        "CCP-directed (operational control without ownership)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Faces a reveal/conceal game (#68) and a talent-flight discount (#65); modal path is FFRDC + energy/antitrust soft levers, not nationalization. Rents likely flow to the hyperscaler/compute layer, not the lab (#62)."
+        },
+        {
+          "actor": "China",
+          "reading": "CCP legal architecture (NSL Art.7, Party committees, Didi/Ant reversals) enables operational direction within weeks \u2014 no principal-agent or reveal/conceal friction, an asymmetric expropriation-speed advantage (#64,#77)."
+        }
+      ],
+      "current_reading": "Currently private-lab with de facto hyperscaler leverage \u2014 Microsoft/Google/Amazon hold the compute and distribution that is the binding cost input (#58,#62), and classified gov cloud contracts already establish partial quasi-nationalization (#63). US modal outcome is FFRDC-hybrid, not formal nationalization (#60). Whether capture is effective hinges on whether the bottleneck is compute (commandeerable) or weights/talent (not) (#67). Medium confidence the US route is soft (energy/antitrust/FFRDC) not seizure.",
+      "trajectory": "Direction: toward soft control levers. US prefers energy-bottleneck commandeering (DPA/FPA, #69), antitrust mandatory-access unbundling (#66), and hyperscaler contract direction (#58) over formal expropriation that triggers talent flight (#65). Bell breakup precedent: forced separation carries real innovation cost and partially self-reverses (#A20).",
+      "leverage": "medium",
+      "base_rate": "US has consistently chosen hybrid structures (RAND/Mitre/Lincoln/NatLab) over expropriation to preserve talent (#60). Analogy breaks: model weights are copyable/exfiltrable unlike oil fields or fabs (#59), so capture may get a shell.",
+      "note_ids": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        77
+      ],
+      "analogy_ids": [
+        20
+      ]
+    },
+    {
+      "id": "V9",
+      "name": "Talent / tacit-knowledge mobility (the non-commandeerable core)",
+      "state_space": [
+        "retained in place",
+        "extracted non-kinetically (China poaching route)",
+        "flight/emigration under nationalization or conflict",
+        "dispersed by evacuation/diaspora protocol"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "Non-kinetic talent extraction (#22) is its lowest-risk catch-up route and partially substitutes for the Taiwan military option; but liberal-democratic engineers cannot be coercively retained by China."
+        },
+        {
+          "actor": "US/Taiwan",
+          "reading": "Engineer evacuation + knowledge-dispersal is the credible scorched-earth deterrent (destroying capability by removing people, not just buildings) (#11,#32,#A42)."
+        }
+      ],
+      "current_reading": "The under-priced cross-cutting variable. Leading-edge fabrication and frontier AI are researcher-concentrated: a small number of architects and engineers hold the why-it-works knowledge (#13,#59,#65). China runs sustained non-kinetic extraction of TSMC/Korean engineers \u2014 a slower, lower-risk route to capability that reduces the military necessity (#22). Seizure or nationalization captures shells if talent flees (#13,#65). High confidence this is decisive over a 10-20 yr horizon.",
+      "trajectory": "Direction: slow, hard to govern. Personnel controls fail at the margin over decades (Slater/Lowell #A24; Colbert poaching Murano artisans #A21). Talent-flight discount is structural: a lab losing 10 key researchers captures <50% of its advantage even with weights secured (#65). Diaspora/evacuation is the primary TSMC deterrent, more than kinetic denial (#A41,#A42).",
+      "leverage": "high",
+      "base_rate": "Every tacit-knowledge monopoly ultimately leaked through people, not conquest (Murano #A21, British textiles #A24, Soviet atomic espionage #A3). Coercive retention worked only for autocracies/wartime (#65). Analogy holds strongly.",
+      "note_ids": [
+        11,
+        13,
+        22,
+        32,
+        59,
+        65
+      ],
+      "analogy_ids": [
+        3,
+        21,
+        24,
+        41,
+        42
+      ]
+    },
+    {
+      "id": "V10",
+      "name": "Exogenous / natural chokepoint disruption (zero-deterrence class)",
+      "state_space": [
+        "no event",
+        "partial recurring (drought/water 10-40% for months)",
+        "seismic fab damage (M7+)",
+        "global grid/compute reset (Carrington-class or HEMP)"
+      ],
+      "actor_readings": [],
+      "current_reading": "A structurally distinct tail with no decision-maker to deter \u2014 all chokepoint vulnerabilities (TSMC, cables, data centers) are equally exploitable by nature, but none of the deterrence levers apply (#82). Taiwan seismic risk is quantified (Chi-Chi M7.6 precedent, 15km from active faults, 30-60 yr recurrence \u2192 non-trivial within-decade probability, #83). Ultrapure-water drought creates recurring partial disruptions independent of geopolitics (#84). Medium confidence a partial event occurs within the decade; low for a full reset.",
+      "trajectory": "Direction: rising frequency for climate-amplified water/drought events (#84); flat but non-zero for seismic (#83) and Carrington-class (~0.7-1%/decade, #85). HEMP is a plausible sub-nuclear coercive tool below perceived escalation thresholds (#51).",
+      "leverage": "medium",
+      "base_rate": "Chi-Chi 1999 damaged fabs and spiked DRAM prices (#83); seismic supply shocks are systematically underpriced. Unlike every intentional scenario, a natural TSMC disruption or Carrington event is non-zero-sum \u2014 all actors lose together, uniquely enabling a US-China-Japan restoration-coordination window (#85,#93).",
+      "note_ids": [
+        51,
+        82,
+        83,
+        84,
+        85,
+        93
+      ],
+      "analogy_ids": [
+        37,
+        38
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "V2",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "China",
+      "note": "Beijing's utility function/trigger determines which fab-regime materializes (status quo vs blockade vs seizure vs destruction) (#2,#10,#27)."
+    },
+    {
+      "source": "V9",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "China",
+      "note": "China-seized-FUNCTIONAL requires the talent; without engineers seizure yields only shells (#13,#25,#A9,#A21)."
+    },
+    {
+      "source": "V1",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "",
+      "note": "Leading-edge fab continuity underpins the compute needed for any decisive-advantage threshold; a Taiwan shock resets compute access for whoever crosses it (#8,#20,#5)."
+    },
+    {
+      "source": "V1",
+      "target": "V6",
+      "kind": "gates",
+      "actor": "US",
+      "note": "US/NATO military readiness depends on commercial leading-edge chips; a fab shock degrades the capacity needed to fight the war it triggers (#45)."
+    },
+    {
+      "source": "V4",
+      "target": "V3",
+      "kind": "chokepoint_controlled_by",
+      "actor": "China",
+      "note": "US/allied EUV+EDA+export controls cap China's frontier compute \u2014 China's minimum stave on reaching the AI threshold (#5,#25,#33)."
+    },
+    {
+      "source": "V4",
+      "target": "V3",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Algorithmic efficiency (DeepSeek-class) substitutes for restricted compute, potentially reaching decisive-class capability below the control threshold and defeating the chokepoint (#94,#95,#99)."
+    },
+    {
+      "source": "V6",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "",
+      "note": "Great-power war is the superposition that can destroy/seize/blockade the fabs \u2014 it transforms V1's regime directly (#9,#23)."
+    },
+    {
+      "source": "V6",
+      "target": "V5",
+      "kind": "gates",
+      "actor": "",
+      "note": "War makes safety norms politically untenable and triggers emergency national-security AI programs (#9,#31)."
+    },
+    {
+      "source": "V6",
+      "target": "V7",
+      "kind": "gates",
+      "actor": "",
+      "note": "Conventional Taiwan conflict is the stressor that can break the nuclear firebreak (NFU under defeat, C2 entanglement) (#48,#47)."
+    },
+    {
+      "source": "V3",
+      "target": "V7",
+      "kind": "gates",
+      "actor": "",
+      "note": "Decisive AI advantage inverts MAD into first-strike/use-it-or-lose-it instability and AI-ISR makes nuclear forces trackable (#26,#50)."
+    },
+    {
+      "source": "V3",
+      "target": "V5",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Capability-trap: a convincing capability jump raises BOTH clampdown demand and the competitive pressure that makes clampdown infeasible; racing to deploy also raises near-term catastrophe probability (#12,#29)."
+    },
+    {
+      "source": "V5",
+      "target": "V3",
+      "kind": "correlates",
+      "actor": "US",
+      "note": "Asymmetric democratic-only clampdown constrains US/EU labs while leaving CCP-directed development free, narrowing the Western lead (#17,#19)."
+    },
+    {
+      "source": "V10",
+      "target": "V1",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Natural events (quake/drought/Carrington/HEMP) produce the same fab/compute disruption as kinetic action but with no actor to deter and a non-zero-sum, coordination-enabling character (#82,#83,#84,#93)."
+    },
+    {
+      "source": "V9",
+      "target": "V8",
+      "kind": "gates",
+      "actor": "",
+      "note": "State capture of a lab captures a shell if key researchers resign/emigrate \u2014 talent-flight discount applies even when weights are secured (#65,#59)."
+    },
+    {
+      "source": "V9",
+      "target": "V4",
+      "kind": "substitutes_for",
+      "actor": "China",
+      "note": "Non-kinetic talent extraction transfers leading-edge process knowledge, partially substituting for both the Taiwan military option and indigenous tooling (#22)."
+    },
+    {
+      "source": "V8",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "",
+      "note": "Whether decisive advantage is exploitable depends on control structure: CCP operational direction (no reveal/conceal friction) compresses China's exploitation window vs US FFRDC/hyperscaler frictions (#64,#77,#68)."
+    },
+    {
+      "source": "V3",
+      "target": "V6",
+      "kind": "gates",
+      "actor": "",
+      "note": "Order-of-discontinuities: if AI threshold precedes Taiwan conflict, the possessor enters with war-determining asymmetry; if conflict precedes it, the shock may prevent anyone reaching it (#8,#20)."
+    },
+    {
+      "source": "V4",
+      "target": "V4",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Open-weight release + distillation cascade establish a jurisdiction-independent capability floor that bypasses every hardware/lab-level control simultaneously (#96,#97,#98,#103)."
+    },
+    {
+      "source": "V2",
+      "target": "V6",
+      "kind": "correlates",
+      "actor": "China",
+      "note": "Diversionary trigger (China from weakness) is dual-valenced: raises aggression probability while raising deterrability/cost-sensitivity \u2014 ambiguous for war scope (#86,#92)."
+    }
+  ],
+  "forecast_signals": [
+    {
+      "id": "F1",
+      "binary_question": "Will China initiate an overt kinetic action or declared blockade against Taiwan before 1 Jan 2031?",
+      "measures": "V2",
+      "probability": 0.2,
+      "resolution_criteria": "YES if PLA conducts an amphibious landing, missile strike on Taiwan-controlled territory, or officially-declared naval/air blockade, per DoD/Reuters/AP reporting, before 2031-01-01."
+    },
+    {
+      "id": "F2",
+      "binary_question": "Will TSMC leading-edge (<5nm) output fall by more than 50% for 3+ consecutive months from any cause before 1 Jan 2032?",
+      "measures": "V1",
+      "probability": 0.2,
+      "resolution_criteria": "YES if TSMC quarterly reporting or credible industry trackers (TrendForce/SEMI) confirm >50% <5nm capacity reduction sustained \u22653 months before 2032-01-01."
+    },
+    {
+      "id": "F3",
+      "binary_question": "Will a US or Taiwan government official publicly confirm a verifiable TSMC fab-denial/scorched-earth pre-commitment before 1 Jan 2029?",
+      "measures": "V1",
+      "probability": 0.15,
+      "resolution_criteria": "YES if a named senior US or ROC official on the record confirms installed demolition/remote-disable capability or an explicit denial protocol for TSMC leading-edge fabs, per major-wire reporting, before 2029-01-01."
+    },
+    {
+      "id": "F4",
+      "binary_question": "Will China (SMIC/Huawei) reach volume production at a \u22645nm node without EUV before 1 Jan 2029?",
+      "measures": "V4",
+      "probability": 0.3,
+      "resolution_criteria": "YES if independent teardown (TechInsights) confirms a Chinese-fabbed \u22645nm logic chip in volume commercial shipment before 2029-01-01."
+    },
+    {
+      "id": "F5",
+      "binary_question": "Will an open-weight model reach within 12 months of frontier closed-model capability on a standard benchmark suite before 1 Jan 2028?",
+      "measures": "V3",
+      "probability": 0.7,
+      "resolution_criteria": "YES if a publicly downloadable open-weight model matches the best closed model of \u226512 months prior on a recognized aggregate benchmark (e.g. LMArena/MMLU-Pro composite) before 2028-01-01."
+    },
+    {
+      "id": "F6",
+      "binary_question": "Will a G7 government impose an emergency AI deployment pause triggered by a specific high-salience AI-attributed harm event before 1 Jan 2031?",
+      "measures": "V5",
+      "probability": 0.2,
+      "resolution_criteria": "YES if a G7 state issues a binding suspension of a class of AI deployment explicitly citing a named triggering incident (mass-casualty misuse, military delegation failure, or critical-infrastructure event), per official gazette/major-wire reporting, before 2031-01-01."
+    },
+    {
+      "id": "F7",
+      "binary_question": "Will a binding US-China bilateral AI or compute-governance accord containing any verification mechanism be signed before 1 Jan 2031?",
+      "measures": "V5",
+      "probability": 0.1,
+      "resolution_criteria": "YES if the US and PRC governments sign a bilateral agreement with any monitoring/inspection provision covering frontier AI or advanced compute, per State Dept/MFA release, before 2031-01-01."
+    },
+    {
+      "id": "F8",
+      "binary_question": "Will the US invoke emergency authority (DPA/FPA) to direct compute or grid/energy allocation to a specific AI developer before 1 Jan 2031?",
+      "measures": "V8",
+      "probability": 0.3,
+      "resolution_criteria": "YES if a US federal action under the Defense Production Act or Federal Power Act explicitly allocates compute, data-center power, or cooling resources to a named AI lab/hyperscaler for model development, per Federal Register, before 2031-01-01."
+    },
+    {
+      "id": "F9",
+      "binary_question": "Will any nuclear weapon be detonated (including demonstrative/test use) in a US-China or Taiwan-linked crisis before 1 Jan 2033?",
+      "measures": "V7",
+      "probability": 0.03,
+      "resolution_criteria": "YES if any nuclear detonation occurs in connection with a Taiwan or US-China military crisis, per IAEA/USGS-seismic confirmation and government acknowledgment, before 2033-01-01."
+    },
+    {
+      "id": "F10",
+      "binary_question": "Will a natural event (M7+ earthquake or severe drought) materially reduce TSMC leading-edge output before 1 Jan 2032?",
+      "measures": "V10",
+      "probability": 0.3,
+      "resolution_criteria": "YES if a seismic or drought event causes a documented \u226510% reduction in TSMC leading-edge output for \u22651 month, per TSMC disclosure or industry trackers, before 2032-01-01."
+    },
+    {
+      "id": "F11",
+      "binary_question": "Will TSMC Arizona reach leading-edge (N3 or better) volume production sufficient to cover >20% of US AI-accelerator demand before 1 Jan 2031?",
+      "measures": "V1",
+      "probability": 0.3,
+      "resolution_criteria": "YES if TSMC Arizona reports N3-or-better volume output and independent analysis estimates it covers >20% of US-based AI-accelerator wafer demand, before 2031-01-01."
+    },
+    {
+      "id": "F12",
+      "binary_question": "Will a frontier lab or government publicly claim an AI system has crossed a decisive/AGI-class capability threshold with broad expert recognition before 1 Jan 2030?",
+      "measures": "V3",
+      "probability": 0.2,
+      "resolution_criteria": "YES if a major lab or government formally declares a decisive/AGI-class threshold crossed AND \u22653 of the top-5 independent frontier labs publicly concur, per major-wire reporting, before 2030-01-01."
+    }
+  ],
+  "binding_constraint_by_actor": [
+    {
+      "actor": "US",
+      "reading": "Minimum stave = leading-edge fab/compute continuity through TSMC (V1). Everything routes through it: frontier AI training, defense systems, and the very military capacity to respond to a shock all depend on it (#45,#38), and reshoring matures only AFTER the conflict window (#39,#44). Secondary stave: an asymmetric domestic safety clampdown (V5) that could self-narrow the lead (#17). Confidence high."
+    },
+    {
+      "actor": "China",
+      "reading": "Minimum stave = the upstream compute chokepoint (V4): ASML EUV + Cadence/Synopsys EDA + BIS controls (#5,#25,#33). Even a successful Taiwan seizure yields shells without these (#13,#25). This clears only slowly (indigenization, decade-scale, #A6) unless an algorithmic-efficiency shock shortcuts it (#94,#99) or non-kinetic talent extraction transfers know-how (#22). Confidence high."
+    },
+    {
+      "actor": "EU / Netherlands",
+      "reading": "Not gated on inputs \u2014 the Netherlands HOLDS the tightest chokepoint (ASML EUV, #25) giving it structural veto leverage over both US policy and Chinese catch-up (#38). Its binding constraint is instead frontier-capability scale: the EU is choosing the Gaullist independent path (AI Act, Mistral) over dependence (#A59), leaving it a capability follower behind the US-China frontier. Confidence medium."
+    },
+    {
+      "actor": "Gulf (UAE/Saudi)",
+      "reading": "Minimum stave = continued access to US-controlled advanced chips (V4). It is simultaneously a leakage conduit for controlled hardware (#15) and a potential out-of-accord sovereign-compute defector that could undermine any bilateral US-China accord (#74). Its capability is entirely gated by US export-control posture. Confidence medium."
+    }
+  ],
+  "summary": "The graph resolves into a layered mutual-chokepoint structure, not a single race. The West (US + allies) holds the *upstream* chokepoints \u2014 ASML EUV, Cadence/Synopsys EDA, BIS export controls (#5,#25,#33,V4) \u2014 which are China's binding constraint on frontier compute. China holds the *physical* chokepoint \u2014 the Taiwan Strait and the ability to seize, blockade, or destroy TSMC (#1,#10,#27,V1) \u2014 which is the West's binding constraint, since a kinetic shock resets compute for everyone and degrades US military readiness simultaneously (#45,#9). Critically, neither chokepoint transfers cleanly: seizure yields shells without EUV and talent (#13,#25,#A9,#A21), and controls leak or are circumvented by algorithmic efficiency (#15,#94,#99). The decisive question is a race of clocks \u2014 Chinese indigenization/efficiency (decade+, but efficiency can shortcut it) vs Western reshoring (matures ~post-2030, after the conflict window \u2014 timing mismatch #39,#A9) vs the arrival (or non-arrival) of an AI capability threshold (#3,#80) and its collision-order with a Taiwan shock (#8,#20). The honest read is contested and sequencing-dependent: no actor has an uncontested path, and an open-weight capability floor (#96,#97,#103) plus the historical base rate of gradual adaptation (#78,#A3,#A6) both argue against any durable decisive advantage crystallizing at all."
+}

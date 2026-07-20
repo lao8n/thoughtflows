@@ -1,0 +1,641 @@
+{
+  "variables": [
+    {
+      "id": "V1",
+      "name": "Compute access regime (chips + CUDA + cloud infrastructure)",
+      "state_space": [
+        "US/allied-controlled leading edge",
+        "bifurcating dual-supply",
+        "China-indigenized at trailing node",
+        "efficiency-commoditized (chokepoint routed around)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "Most binding constraint \u2014 blocked from H100-class chips and EUV; Ascend/SMIC catching up but a generation behind. High confidence (#25,#A32,#A6)."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Chip access gated by US bilateral deals (Stargate-analog); capital and energy abundant but compute is permission-based. Medium confidence (#34,#110)."
+        },
+        {
+          "actor": "EU",
+          "reading": "Constrained less by chips than by data-center energy/grid and permitting (Ireland/NL moratoria), a physical ceiling money cannot buy through unilaterally. Medium confidence (#129)."
+        },
+        {
+          "actor": "US",
+          "reading": "Holds the chokepoint; frontier compute is not the binding limit. High confidence (#25,#A31)."
+        }
+      ],
+      "current_reading": "US/allied-controlled at the leading edge and bifurcating. The NVIDIA GPU + CUDA middleware + TSMC/ASML fab stack is US-leverageable end-to-end (#25,#126,#A31,#A32); BIS controls keep China ~7nm-equivalent (#A32). High confidence this is the most operationally direct protection layer (#25).",
+      "trajectory": "Single-node chokepoints are among the most durable rents but reliably accelerate adversary indigenization; catch-up window 5-7yr (#A32,#A6). Efficiency gains (V5) can partially route around within that window. Clock: 2-5yr. Analogy breaks because model weights/software are copyable at near-zero cost unlike fabs (#A22).",
+      "leverage": "high",
+      "base_rate": "ASML/EUV (#A32) and ITAR/Wassenaar/BIS (#A6) show input-layer chokepoints impose multi-year delays and function as geopolitical weapons; Wintel/CUDA (#A31) shows rent accretes to the irreplaceable interface layer. Breaks: software workarounds (distillation, sparsity) historically route around hardware chokepoints faster than fabs can be replicated.",
+      "note_ids": [
+        25,
+        34,
+        126,
+        129,
+        7
+      ],
+      "analogy_ids": [
+        32,
+        6,
+        31,
+        22
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "Training-data legality regime",
+      "state_space": [
+        "fair-use permissive",
+        "collective/compulsory licensing market",
+        "rights-holder holdout / injunctive moat",
+        "ex-ante property exclusion (EU TDM opt-out)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "EU",
+          "reading": "Art.4 TDM opt-out is a distinct ex-ante exclusion that protects home publishers/media groups and blocks future EU scraping regardless of copyright subsistence (#113,#A8). Medium-high confidence."
+        },
+        {
+          "actor": "US",
+          "reading": "Fair-use lineage (Betamax\u2192Google Books) plus CFAA/ToS and DMCA \u00a71201 sub-layers govern access; likely resolves to a licensing market that grandfathers first-movers (#106,#112,#120,#A3,#A13). Medium confidence."
+        }
+      ],
+      "current_reading": "Contested and litigated. US trending toward fair-use + emerging bilateral licensing deals; EU already has an ex-ante opt-out property right (#113). Whichever way it resolves, incumbents who trained pre-2023/pre-Aug-2025 are grandfathered (#4,#43) \u2014 the temporal ratchet is the load-bearing fact, not the eventual doctrine. Medium confidence (#8).",
+      "trajectory": "Backward-looking ratchet: enforcement is prospective, so delay enlarges the moat (#4). Licensing markets historically do emerge (ASCAP #A33, SoundExchange #A34, Hatch-Waxman #A2) but grandfather incumbents. Synthetic/RLHF/AI-output-provenance routes (#13,#26,#40,#119) may moot the pretraining-corpus question entirely. Clock: 2-4yr litigation.",
+      "leverage": "high",
+      "base_rate": "Betamax #A3, Google Books #A13, news bargaining #A12, ASCAP/BMI #A33, SoundExchange #A34, Hatch-Waxman #A2 all converge: the technology survives, a blanket-license regime emerges, first-movers keep permanently cheaper model lineages. Breaks: web-scale corpus can't be un-published (unlike discrete clinical/song catalogs) and authorship is diffuse, making 'exclusivity' economically odd.",
+      "note_ids": [
+        4,
+        8,
+        21,
+        43,
+        106,
+        112,
+        113,
+        119,
+        120,
+        13,
+        26,
+        40
+      ],
+      "analogy_ids": [
+        2,
+        3,
+        13,
+        33,
+        34,
+        12
+      ]
+    },
+    {
+      "id": "V3",
+      "name": "EU regulatory trajectory (AI Act durability & enforcement)",
+      "state_space": [
+        "full enforcement as written",
+        "soft-law hollowing via Code of Practice",
+        "formal legislative rollback",
+        "selective enforcement (domestic actors only)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "EU",
+          "reading": "Faces a self-deregulation dilemma: rolling back removes its own drag but also dissolves the moat thesis; four intervention points (rule text/CoP/enforcement capacity/member-state lobbying) each produce different winners (#93,#99,#100). Medium confidence."
+        },
+        {
+          "actor": "US",
+          "reading": "Hyperscalers' rational position is selective enforcement (rules on EU players, not themselves), not repeal \u2014 consistent with observed CoP shaping (#97). Medium-high confidence."
+        }
+      ],
+      "current_reading": "Active rollback/softening vector, not a stable constraint. Draghi report + 2025 digital-omnibus + successive CoP softening on copyright/eval/incident thresholds (#94,#95); GDPR under-enforcement base rate suggests rules survive on paper while enforcement lags years (#28,#96). Medium confidence the Act does NOT bite as written.",
+      "trajectory": "Softening; extraterritorial enforceability against non-EU-hosted models is doubtful (#15,#27). Clock: 2025-2027 live legislative process (#95). Downside case (GMO #A28) is unrecoverable domestic-industry loss; upside case (REACH #A27) is a working compliance moat contingent on ~25%+ market share driving a Brussels Effect.",
+      "leverage": "high",
+      "base_rate": "OSI #A5 (govt frameworks arrive after the network-effects winner is deployed and lose), REACH #A27 (fixed compliance cost entrenches incumbents IF share is high enough), GMO #A28 (precaution destroys domestic capability while consumption continues via imports), cultural exception #A15 (rules survive trade challenge but don't close the capability gap). Breaks: AI compounds via data flywheel, making early disadvantage geometrically worse than in static-good precedents.",
+      "note_ids": [
+        2,
+        15,
+        27,
+        28,
+        43,
+        93,
+        94,
+        95,
+        96,
+        97,
+        99,
+        100
+      ],
+      "analogy_ids": [
+        5,
+        27,
+        28,
+        15,
+        8,
+        30
+      ]
+    },
+    {
+      "id": "V4",
+      "name": "Compliance-as-product / infrastructure bundling moat",
+      "state_space": [
+        "hyperscaler-consolidated",
+        "contested by independent compliance SaaS",
+        "commoditized third-party attestation"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Hyperscalers own this layer and convert regulation from cost into revenue + lock-in; cloud-exclusivity clauses foreclose vertically (#59,#60,#71,#61). High confidence."
+        },
+        {
+          "actor": "EU",
+          "reading": "Sovereign-cloud/procurement rules (#41) partly wall a domestic segment but do not produce a competing bundle at scale. Medium confidence."
+        }
+      ],
+      "current_reading": "Currently hyperscaler-bundled and sticky: Azure/Bedrock/Vertex ship compliance posture as a feature (#59,#60), FedRAMP High is a de facto federal duopoly (#61), IP indemnification adds procurement stickiness only large legal reserves can offer (#107). Independent compliance SaaS (Credo/Holistic) is nascent (#64,#66). Medium-high confidence.",
+      "trajectory": "Consolidation is the default (cloud-security tooling acquisition history #66); antitrust attention could interrupt but is timeline-mismatched (V8). Critically, requires an EU/regulated rule to exist (#97) \u2014 so it co-moves with V3. Clock: slow, contract-cycle sticky.",
+      "leverage": "medium",
+      "base_rate": "Basel III #A26, REACH #A27, SOX #A29: fixed per-entity compliance cost structurally entrenches scale and legitimizes the largest players. Breaks: third-party attestation accepted as regulatory-equivalent would commoditize the bundle (#64,#68).",
+      "note_ids": [
+        1,
+        23,
+        59,
+        60,
+        61,
+        64,
+        66,
+        71,
+        107,
+        41,
+        29
+      ],
+      "analogy_ids": [
+        26,
+        27,
+        29
+      ]
+    },
+    {
+      "id": "V5",
+      "name": "Open-weight + efficiency trajectory",
+      "state_space": [
+        "closed frontier pulls decisively ahead",
+        "open commoditizes the model layer, value migrates one layer up",
+        "efficiency collapses compute + regulatory thresholds"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "Open weights are the primary escape from compute/data moats and export control (DeepSeek; RISC-V-style neutral-stack logic) (#6,#A22). Medium-high confidence."
+        },
+        {
+          "actor": "EU",
+          "reading": "Open-weight release is a regulatory-arbitrage lever (AI Act OSS-GPAI exemption) and Mistral's model, not altruism (#109). Medium confidence."
+        },
+        {
+          "actor": "US",
+          "reading": "Meta/Llama commoditize rivals' model layer deliberately to protect adjacent (ads/cloud) revenue; value re-accretes to hyperscaler inference (#A19,#A20). Medium-high confidence."
+        }
+      ],
+      "current_reading": "Open weights trail the closed frontier by roughly one generation but track closely (DeepSeek R1 near-zero cost #6); efficiency is actively pressuring the EU 10^25-FLOP systemic-risk threshold (#130,#9). Model-collapse (#40) vs synthetic-data-works (#13) is unresolved, but RLHF/preference data (#26) and national-language corpora (#101) remain non-commoditized. Medium confidence.",
+      "trajectory": "History is emphatic: openness breaks the layer-N moat but value re-accretes to layer N+1 (managed inference/infra) \u2014 Linux #A19, Android #A20, Kubernetes #A21, Firefox\u2192Chrome #A23. RISC-V #A22 shows neutral-jurisdiction escape can't beat the chokepoint one layer up (inference compute). Clock: FAST \u2014 12-18mo generations, the quickest-moving variable in the graph.",
+      "leverage": "high",
+      "base_rate": "#A19-A23: open-source reliably commoditizes a proprietary standards moat, and the funder/distributor (not the builder) captures the value. Breaks: AI carries copyright/geopolitical attack surface browsers/OSes lacked (#A23), and permissive licenses allow proprietary forks that weaken the commons (#A19).",
+      "note_ids": [
+        6,
+        9,
+        13,
+        26,
+        40,
+        101,
+        109,
+        130,
+        33
+      ],
+      "analogy_ids": [
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "id": "V6",
+      "name": "Protocol / interface standard control",
+      "state_space": [
+        "proprietary incumbent capture",
+        "open standard resists enclosure",
+        "SEP/FRAND toll layer"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Anthropic (MCP), OpenAI (API shape), Google (A2A) are positioned to seed the mandated interface; MCP-as-open-standard-proprietary-ecosystem is the Android play (#3,#11). Medium confidence."
+        },
+        {
+          "actor": "China",
+          "reading": "5G playbook (state-backed standards-body capture) is available for AI protocols moving through IEEE/ISO (#44). Low-medium confidence."
+        }
+      ],
+      "current_reading": "Early and unsettled. MCP / function-calling schemas are emerging as de facto integration standards (#3,#11); the open-protocol historical record is genuinely mixed \u2014 TCP/IP resisted capture (#14) but 5G/ITU was captured by a state-backed actor (#44). Low-medium confidence on direction.",
+      "trajectory": "Interface capture works but is legally contestable (Oracle v. Google favored interoperability #A24); SEP-into-standard is the durable rent path (Qualcomm #A36, Rambus #A16). If EU AI Act / CEN-CENELEC mandates a standard, FRAND obligations attach and a transatlantic licensing arbitrage opens. Clock: 3-7yr.",
+      "leverage": "medium",
+      "base_rate": "Qualcomm #A36 and Rambus #A16 show standards-embedded IP yields 60-70% margins and survives antitrust; IBM PCM #A9 and SWIFT #A11 show interface control is durable but eventually cracked by a new layer or commoditization; TCP/IP #A5/#14 is the counter. Breaks: post-Alice software/protocol patents are harder to enforce, and weightless distribution makes 'no license, no chips' hard to replicate.",
+      "note_ids": [
+        3,
+        11,
+        14,
+        44,
+        118,
+        132
+      ],
+      "analogy_ids": [
+        36,
+        16,
+        24,
+        9,
+        11,
+        17
+      ]
+    },
+    {
+      "id": "V7",
+      "name": "Talent geography / mobility",
+      "state_space": [
+        "US-concentrated",
+        "brain-circulation (leaky container)",
+        "EU/China-reversed"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Concentrated via \u00a716600 non-compete asymmetry (#49), visa-tied leverage (#48), trade-secret/DTSA barriers (#50); but a leaky moat \u2014 returnees transfer knowledge to China (#53,#57). Medium-high confidence."
+        },
+        {
+          "actor": "EU",
+          "reading": "BINDING constraint. Blue Card/Researcher Directive structurally failed (#52); equity-comp/tax gap likely unaddressable by regulation alone (#58); founders leave for US (Mistral ex-DeepMind) (#51). High confidence this dominates the capability gap over regulation."
+        },
+        {
+          "actor": "China",
+          "reading": "Explicit state pipeline capture (CSC scholarships) + return programs make talent a contested resource it is partially winning back (#53,#55). Medium confidence."
+        }
+      ],
+      "current_reading": "US-concentrated but leaky. Bay Area cluster anchored by California's non-compete near-ban (#49) plus H-1B/green-card lock-in leverage (#48); but returnee flows to China are material (DeepSeek/Baidu teams #53) and EU suffers persistent outflow (#51,#52). Medium-high confidence.",
+      "trajectory": "Sticky and slow (generational). EU deficit is structural \u2014 equity/tax wedge, 27 fragmented labor markets (#58,#52). US leaks via returnees; remote work partially decouples geography from visas (#54). Clock: slowest-moving variable alongside V9.",
+      "leverage": "high",
+      "base_rate": "Minitel #A14 (a state-backed closed system delays adoption of the superior open standard and accelerates brain drain \u2014 the sharpest EU warning); Airbus #A25 is the counter-case (patient, CONSOLIDATED public capital can overcome US incumbency, but EU AI funding is fragmented across Mistral/Aleph Alpha/etc., resembling pre-1970 European aviation). Breaks: remote/contractor work weakens visa-as-chokepoint (#54).",
+      "note_ids": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "analogy_ids": [
+        14,
+        25
+      ]
+    },
+    {
+      "id": "V8",
+      "name": "Antitrust / structural intervention capacity",
+      "state_space": [
+        "ineffective (timeline mismatch)",
+        "behavioral remedies (decaying)",
+        "structural remedies (divestiture)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "EU",
+          "reading": "Structural-remedy bias + Art.22 referral catch-net + retrospective market studies (CMA) \u2014 the most threatening avenue but slow (#72,#75,#76). Medium confidence."
+        },
+        {
+          "actor": "US",
+          "reading": "Behavioral-remedy regime (decays as APIs change), HSR gap on acqui-hires (#69,#75), but CFIUS one-way inbound wall channels exits to domestic hyperscalers (#103). Medium confidence."
+        }
+      ],
+      "current_reading": "Mostly ineffective against AI velocity: CMA/FTC/DG-Comp investigations run 12-24mo, remedies 3-7yr, vs 12-18mo model generations (#79). EU/UK gained below-threshold call-in (Art.22, DMCC #75) while the US HSR framework leaves acqui-hires/sub-$119M deals unreviewable; 'foundation model market' definition unresolved (#77). Medium confidence.",
+      "trajectory": "Timeline mismatch is structural (#79); aggressive scrutiny can perversely concentrate by foreclosing the VC exit path (#74,#78). Multi-jurisdiction divergence lets incumbents forum-shop (#80). Clock: 3-7yr \u2014 too slow to bind.",
+      "leverage": "medium",
+      "base_rate": "Standard Oil #A35 (infrastructure-layer rent survives even a 34-way breakup), Computer Inquiries/Carterfone #A17 (how the infra/service line is drawn compounds for decades), EU energy unbundling #A18 and IBM #A9 (partial success over 13-18yr, incumbents survive). Breaks: AI generations are an order of magnitude faster than any enforcement cycle.",
+      "note_ids": [
+        69,
+        70,
+        72,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        103,
+        73
+      ],
+      "analogy_ids": [
+        35,
+        17,
+        18,
+        9
+      ]
+    },
+    {
+      "id": "V9",
+      "name": "Fragmentation regime structure (bloc count)",
+      "state_space": [
+        "bipolar US/China",
+        "tripartite +EU",
+        "multipolar +India/Gulf/Japan/havens",
+        "harmonized floor (convergence)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "Full walled-stack endpoint is viable because domestic market is large enough to sustain an independent ecosystem (#16,#A10). Medium-high confidence."
+        },
+        {
+          "actor": "EU",
+          "reading": "Lacks China's scale and decoupling willingness \u2014 fragmentation likely yields compliance-overhead asymmetry, not a genuine alternative ecosystem (#A10,#A5). Medium confidence."
+        }
+      ],
+      "current_reading": "Trending multipolar. US/China/EU tripartite plus India as a distinct fourth regime (#31), Japan light-touch fifth pole (#108), and UAE/Singapore/UK arbitrage havens (#17). Convergence vectors exist (CoE Convention #32, ISO 42001 #68, adequacy tracks #65) but are advisory/uneven. Medium confidence.",
+      "trajectory": "Deliberate fragmentation provides medium-term (\u2248decade) protection but is dissolved by a new tech layer OR sustained only by a large domestic market (#A1,#A4,#A7,#A10). Convergence toward a common floor is possible only after a catastrophic incident \u2014 and even then jurisdictions likely diverge (#38 vs #39,#46). Clock: decade+.",
+      "leverage": "medium",
+      "base_rate": "GSM/CDMA #A1, rail gauge #A4, NTSC/PAL/SECAM #A7, Great Firewall #A10, SWIFT #A11: fragmentation redistributes hardware/infrastructure rent and persists where switching costs and market scale are high, but rarely blocks the application-layer winner. Breaks: software forking cost is near-zero, lowering fragmentation pressure vs physical-standard precedents.",
+      "note_ids": [
+        10,
+        16,
+        17,
+        31,
+        32,
+        38,
+        39,
+        46,
+        65,
+        68,
+        108
+      ],
+      "analogy_ids": [
+        1,
+        4,
+        7,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "V10",
+      "name": "Vertical / sectoral regulated-entity value capture",
+      "state_space": [
+        "horizontal foundation models win across verticals",
+        "per-vertical oligopolies (domain incumbents capture)",
+        "EHR/platform intermediaries capture the toll"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Regulated-entity structural position (FDA clearance holder, SR 11-7 owner) captures value above the horizontal AI layer; incumbents cannot be substituted away because they hold the regulator relationship and liability (#81,#82,#84). Medium confidence."
+        }
+      ],
+      "current_reading": "Strong per-vertical moats today: FDA 510(k) predicate lock-in and HIPAA/clinical-dataset control in medical (#82,#87), SR 11-7 in banking (#84), DO-178C exclusion of ML in aviation (#86); but RWE/De Novo/synthetic pathways are already eroding the medical moat (#124,#90), and EHR vendors intermediate the hospital data moat (#88). Medium confidence.",
+      "trajectory": "Depends whether foundation-model general capability outpaces domain-specific regulated-data advantage (#91 crux). Vertical certification cycles move slowly (FAA 5-10yr) and predate/ignore the AI Act (#85). Clock: 3-5yr; erosion via RWE is live (#124).",
+      "leverage": "medium",
+      "base_rate": "Hatch-Waxman #A2 (clinical-trial-data exclusivity as the direct analog \u2014 data, not formula, is protected; grandfathers originators). Aviation certification durably excludes new methods. Breaks: FDA De Novo pathway needs no predicate and RWE authorizations already issued (#124), so the vertical moat is empirically softening.",
+      "note_ids": [
+        81,
+        82,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        124
+      ],
+      "analogy_ids": [
+        2
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "V1",
+      "target": "V5",
+      "kind": "gates",
+      "actor": "China",
+      "note": "Leading-edge compute is a prerequisite to train even efficient/open models at frontier scale; export controls gate China's open-weight ambitions (#25,#A32)."
+    },
+    {
+      "source": "V5",
+      "target": "V1",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Efficiency gains + open pre-trained weights relieve compute scarcity \u2014 DeepSeek-class models route around the GPU chokepoint (#6,#130,#A22)."
+    },
+    {
+      "source": "V1",
+      "target": "V4",
+      "kind": "chokepoint_controlled_by",
+      "actor": "US",
+      "note": "Hyperscalers control both GPU allocation and the compliance bundle; cloud-exclusivity clauses convert compute control into vertical foreclosure of the model layer (#71,#59,#60)."
+    },
+    {
+      "source": "V1",
+      "target": "V9",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Compute bifurcation (BIS controls + weight-export framework) is the upstream driver of bloc fragmentation (#25,#125,#A6)."
+    },
+    {
+      "source": "V2",
+      "target": "V10",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Same data-exclusivity logic \u2014 protect the expensive curated input, not the model \u2014 operates in copyright (V2) and in HIPAA/FDA regulated-data moats (#87,#4,#A2)."
+    },
+    {
+      "source": "V5",
+      "target": "V2",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Open weights trained on pre-enforcement data, plus synthetic/RLHF routes, bypass the training-data licensing moat entirely (#6,#109,#13)."
+    },
+    {
+      "source": "V5",
+      "target": "V6",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "A commoditized open base model weakens protocol/interface capture because the high-value layer is no longer scarce (#6,#14)."
+    },
+    {
+      "source": "V5",
+      "target": "V3",
+      "kind": "correlates",
+      "actor": "EU",
+      "note": "Efficiency erodes the EU 10^25-FLOP systemic-risk threshold faster than the Act adapts, potentially reversing 'GPAI rules entrench incumbents' (#130,#9)."
+    },
+    {
+      "source": "V3",
+      "target": "V4",
+      "kind": "gates",
+      "actor": "",
+      "note": "Compliance-as-product requires the rule to exist \u2014 if the EU rolls back (V3), the hyperscaler compliance moat (V4) loses its premise (#97,#100)."
+    },
+    {
+      "source": "V3",
+      "target": "V9",
+      "kind": "correlates",
+      "actor": "EU",
+      "note": "EU self-deregulation would collapse the tripartite fragmentation premise, pulling toward US/Japan voluntary-norm convergence (#93,#95,#108)."
+    },
+    {
+      "source": "V7",
+      "target": "V5",
+      "kind": "gates",
+      "actor": "EU",
+      "note": "The EU cannot build a competitive frontier/open model without reversing its talent deficit; talent gates capability more than regulation does (#51,#56,#A14)."
+    },
+    {
+      "source": "V7",
+      "target": "V5",
+      "kind": "chokepoint_controlled_by",
+      "actor": "US",
+      "note": "US non-compete asymmetry + visa lock-in concentrate the researchers needed to push the frontier, though the container leaks via returnees (#49,#48,#53)."
+    },
+    {
+      "source": "V8",
+      "target": "V4",
+      "kind": "gates",
+      "actor": "",
+      "note": "Antitrust access/structural remedies are the only tool that could pry open the compute+compliance bundle \u2014 but the enforcement clock is too slow to bind (#73,#79,#A35)."
+    },
+    {
+      "source": "V8",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "US",
+      "note": "Structural remedies could in principle break hyperscaler compute self-preferencing, but Standard Oil shows infra rent survives breakup (#A35,#A18)."
+    },
+    {
+      "source": "V6",
+      "target": "V4",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Protocol capture and compliance bundling are the same infrastructure-layer enclosure move; SEP/FRAND rents and certified-envelope lock-in reinforce each other (#11,#A36,#60)."
+    },
+    {
+      "source": "V2",
+      "target": "V5",
+      "kind": "correlates",
+      "actor": "",
+      "note": "If model collapse is a real ceiling (#40), incumbents' pre-collapse high-quality corpora become permanent \u2014 strengthening V2's ratchet and weakening V5's substitution."
+    }
+  ],
+  "forecast_signals": [
+    {
+      "id": "F1",
+      "binary_question": "Will China achieve volume production of a domestically-fabbed AI training accelerator at a 7nm-or-better node by 31 Dec 2027?",
+      "measures": "V1",
+      "probability": 0.6,
+      "resolution_criteria": "Public disclosure (company earnings, credible teardown e.g. TechInsights, or government statement) that a China-fabbed AI accelerator at \u22647nm is shipping in >10,000-unit volume by 2027-12-31."
+    },
+    {
+      "id": "F2",
+      "binary_question": "Will a US court ruling or major settlement establish a compulsory or collective training-data licensing mechanism by 31 Dec 2027?",
+      "measures": "V2",
+      "probability": 0.4,
+      "resolution_criteria": "A US federal ruling or a settlement in the NYT/authors/Getty class of cases that creates an ongoing blanket/collective license or rate-setting body for AI training data, reported by a major legal outlet, by 2027-12-31."
+    },
+    {
+      "id": "F3",
+      "binary_question": "Will the EU formally adopt legislation or an implementing act that materially reduces AI Act GPAI provider obligations by 31 Dec 2026?",
+      "measures": "V3",
+      "probability": 0.5,
+      "resolution_criteria": "An EU digital-omnibus or amending act entering into force by 2026-12-31 that delays or lightens GPAI transparency/evaluation/copyright obligations relative to the 2024 text, per the Official Journal."
+    },
+    {
+      "id": "F4",
+      "binary_question": "As of 31 Dec 2026, will at least one open-weight model rank in the top 5 of a major public capability leaderboard (e.g. LMArena)?",
+      "measures": "V5",
+      "probability": 0.7,
+      "resolution_criteria": "A freely downloadable open-weight model occupies a top-5 position on a widely-cited public leaderboard (LMArena or equivalent) on 2026-12-31."
+    },
+    {
+      "id": "F5",
+      "binary_question": "Will a US-origin AI interface protocol (MCP, function-calling schema, or A2A) be incorporated by reference into an EU-harmonized or ISO/IEEE AI standard by 31 Dec 2027?",
+      "measures": "V6",
+      "probability": 0.4,
+      "resolution_criteria": "A CEN-CENELEC/ISO/IEEE published standard or EU harmonized-standard citation referencing a US-origin agent/tool-use protocol by name, by 2027-12-31."
+    },
+    {
+      "id": "F6",
+      "binary_question": "Will net migration of top-tier AI researchers between the EU and the US remain in US favor (EU net outflow) over calendar 2026?",
+      "measures": "V7",
+      "probability": 0.8,
+      "resolution_criteria": "A credible tracker (e.g. MacroPolo/Interconnected, Stanford AI Index, or LinkedIn migration data) reporting net EU\u2192US flow of top-tier AI researchers exceeding net US\u2192EU flow for 2026."
+    },
+    {
+      "id": "F7",
+      "binary_question": "Will the CMA, FTC, or DG COMP impose a binding structural or mandated-access remedy on a hyperscaler\u2013AI-lab investment by 31 Dec 2027?",
+      "measures": "V8",
+      "probability": 0.2,
+      "resolution_criteria": "A legally binding remedy (divestiture, mandated API/data access, or equivalent) targeting Microsoft-OpenAI, Amazon/Google-Anthropic, or similar, published by the authority by 2027-12-31 (voluntary commitments excluded)."
+    },
+    {
+      "id": "F8",
+      "binary_question": "Will an EU or member-state authority accept a non-hyperscaler third-party attestation (e.g. ISO 42001 or a compliance-SaaS report) as presumptive AI Act conformity evidence by 31 Dec 2027?",
+      "measures": "V4",
+      "probability": 0.4,
+      "resolution_criteria": "Official EU/NMSA guidance or a harmonized-standard designation recognizing a model-agnostic third-party attestation as presumption-of-conformity for AI Act obligations, by 2027-12-31."
+    },
+    {
+      "id": "F9",
+      "binary_question": "By 31 Dec 2026, will a model trained below the 10^25-FLOP threshold match top-tier frontier performance on a major public benchmark?",
+      "measures": "V5",
+      "probability": 0.6,
+      "resolution_criteria": "A model with credibly reported/estimated training compute below 10^25 FLOP scores within 3 points of the leading model on a recognized benchmark (e.g. MMLU-Pro, GPQA, or LMArena Elo top tier) by 2026-12-31."
+    },
+    {
+      "id": "F10",
+      "binary_question": "Will the US impose enforceable export controls on frontier AI model weights (reviving/replacing the Diffusion Framework) by 31 Dec 2027?",
+      "measures": "V1",
+      "probability": 0.3,
+      "resolution_criteria": "A BIS rule in force by 2027-12-31 that controls export of frontier model weights above a capability/compute threshold to specified countries, per the Federal Register."
+    }
+  ],
+  "binding_constraint_by_actor": [
+    {
+      "actor": "US",
+      "reading": "Binding stave = V5 (open-weight + efficiency). The US is not compute-, talent-, or capital-constrained; the one variable that erodes its frontier/market-protection position is commoditization of the model layer by open weights and efficiency gains (DeepSeek), against which history says value merely re-accretes to the compute/compliance infrastructure the US still controls (#6,#130,#A19-A23). Secondary: self-inflicted regulatory volatility (#45). Medium confidence."
+    },
+    {
+      "actor": "China",
+      "reading": "Binding stave = V1 (compute access). Chips + EUV + CUDA are the chokepoint the US directly controls; everything else (talent-return #53, open weights #6, domestic market scale #A10) China can supply. Clears only on a 5-7yr indigenization clock (#25,#A32,#A6). High confidence."
+    },
+    {
+      "actor": "EU",
+      "reading": "Binding stave = V7 (talent) \u2014 NOT its own regulation (V3). The causal chain runs through the equity-comp/tax structural deficit and researcher outflow (#51,#52,#58); sovereign compute (V1 energy, #129) is a secondary compounding constraint; the AI Act is something the EU is actively hollowing, so it cannot be the binding moat/drag. Minitel #A14 is the warning, Airbus #A25 the only escape (consolidated patient capital), which the fragmented EU startup field lacks. Medium-high confidence."
+    },
+    {
+      "actor": "Gulf",
+      "reading": "Binding stave = V7 + V1 jointly. Capital (SWF equity capture #110) and energy/data-center capacity (#34) are abundant; what is missing is indigenous talent and US-permissioned chip access. Its strategy is financial capture and haven-positioning (#17,#110), not domestic capability. Medium confidence."
+    },
+    {
+      "actor": "India",
+      "reading": "Binding stave = V7 + capital/compute. India protects domestic data without blocking foreign models and leads with procurement/subsidy rather than regulation (#31); its constraint is building frontier capability and compute, not a regulatory moat. Language-corpus advantage (#101) is a genuine but narrow home-field asset. Medium confidence."
+    }
+  ],
+  "summary": "The graph shows a topic with no single \"winner\" but a clear division of labor among binding constraints operating on very different clocks. Compute (V1) is simultaneously China's binding stave and a US-controlled mutual chokepoint that clears only on a 5-7yr indigenization clock (#25,#A32,#A6). Training-data legality (V2) is not decisive for *who* leads \u2014 it is a backward-looking ratchet that grandfathers whoever trained first regardless of how litigation resolves (#4,#43,#A2,#A13). The single most important cross-cutting variable is open-weight + efficiency (V5): it substitutes for compute scarcity, bypasses the data-legality moat, undercuts the EU's own FLOP threshold, and commoditizes protocol capture \u2014 historically breaking the layer-N moat while value re-accretes one layer up to infrastructure/compliance bundling (V4) that hyperscalers control (#A19-A23,#59-61). The structurally surprising read is on the EU: its binding constraint is talent (V7), not its own regulation (V3) \u2014 which it is actively hollowing (#93-100) \u2014 so the whole \"regulatory moat vs regulatory drag\" frame is contingent on a rule the EU may not keep. Net: the US frontier moat erodes on a fast open/efficiency clock; China's compute constraint clears on a slow indigenization clock; the EU's talent constraint barely clears at all; value tends to settle at the compute + compliance-bundling infrastructure layer regardless of who wins the model layer."
+}

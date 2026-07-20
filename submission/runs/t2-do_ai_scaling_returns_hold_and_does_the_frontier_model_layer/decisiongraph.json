@@ -1,0 +1,493 @@
+{
+  "variables": [
+    {
+      "id": "V1",
+      "name": "Dominant scaling axis (where capability gains originate)",
+      "state_space": [
+        "pre-training-compute-dominant",
+        "multi-axis: post-training + test-time search + agent orchestration",
+        "saturated / architecture-reset required (SSM/Mamba/hybrid)"
+      ],
+      "actor_readings": [],
+      "current_reading": "Multi-axis is the strongest current read (moderate-high confidence): recent GPT-4\u2192o3-class jumps are plausibly dominated by RLHF/RLAIF, inference-time search and distillation rather than raw parameter/compute scale (#2,#8,#25). Classic benchmarks are saturated (#10) yet agentic/long-horizon evals still show large frontier leads (#21). Emergence may be a measurement artifact, weakening the discontinuity bet (#17). Pre-training still bends slowly rather than walling (#1).",
+      "trajectory": "Moving fast toward test-time + post-training + agent-count axes (#2,#32). Post-training/inference techniques are cheap and replicable \u2192 catch-up clock is months. Pre-training infra advantage is years. Architecture reset (Mamba/SSM, #14) is low-probability but would reset curves in favour of entrants \u2014 cf. Intel\u2192ARM where a big enough efficiency gap eventually broke a 30yr ISA moat (A17), and mainframe\u2192PC architectural displacement (A3). Eroom's Law (A4) warns marginal returns per dollar can fall as 'easy' gains exhaust even as spend rises; Moore's Law (A1) shows scaling can persist 30yr.",
+      "leverage": "high",
+      "base_rate": "Tech-race base rate: dominant paradigms persist ~1-3 decades (A1 Moore) but face negative-learning surprises (A4 Eroom, A10 nuclear). Analogy breaks because AI failures are partly predictable from loss curves, making course-correction faster than pharma/nuclear.",
+      "note_ids": [
+        1,
+        2,
+        8,
+        10,
+        14,
+        17,
+        21,
+        31,
+        32
+      ],
+      "analogy_ids": [
+        1,
+        3,
+        4,
+        10,
+        17
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "Data wall & synthetic/distillation substitutability",
+      "state_space": [
+        "real-human-data binding (compute buys little)",
+        "synthetic data viable (wall dissolves)",
+        "synthetic collapses (wall worsens) but distillation still ratchets capability down"
+      ],
+      "actor_readings": [],
+      "current_reading": "Genuinely unresolved (low-moderate confidence). If high-quality human text exhausts in 1-3 generations, extra compute buys little (#7). Synthetic self-generated data may propagate gains or trigger mode collapse (#13). Distillation of *post-trained reasoning* is empirically robust (unlike pre-training synthetic data) \u2014 DeepSeek R1 distilled o1-class traces (#25), so capability leaks downward regardless of the pre-training data ceiling.",
+      "trajectory": "Distillation path is proven and one-way (#25) \u2192 each frontier advance becomes cheap within 12-18mo. Synthetic-for-pretraining is contested. Direction: the wall matters less for *diffusion* than feared, more for *frontier* advance. Clock: distillation catch-up is fast (months); genuinely novel pre-training data is slow/maybe impossible to catch up on. cf. German dye trade-secret recipes took years to reverse-engineer (A12) \u2014 AI diffuses in days.",
+      "leverage": "high",
+      "base_rate": "GPT eras exhausted 'easy' internet text much as pharma exhausted easy drug targets (A4) and steel exhausted easy scrap-grades before moving upmarket (A8). Analogy breaks: text is not evenly distributed like steel scrap; proprietary RLHF pipelines (#16) have no mini-mill analog.",
+      "note_ids": [
+        7,
+        13,
+        16,
+        25
+      ],
+      "analogy_ids": [
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "id": "V3",
+      "name": "Frontier training-cost trajectory (efficiency compression)",
+      "state_space": [
+        "capex barrier durable ($100M+ moat holds)",
+        "compresses 10-100x per 12-18mo (moat erodes)",
+        "bifurcated: cheap for fast-followers, expensive at true frontier"
+      ],
+      "actor_readings": [],
+      "current_reading": "Bifurcated, trending toward compression (moderate-high confidence). DeepSeek trained ~GPT-4-class for $5-6M vs ~$100M+ (MoE, FP8, engineering) (#3) \u2014 strong disconfirmation of durable capital moats. But the moving frontier still needs large synchronized clusters. API prices fell ~100x 2023-25 (#23) \u2014 the market's revealed forecast of commoditization.",
+      "trajectory": "Efficiency improving fast (algorithmic + hardware); catch-up on cost is highly achievable (#3,#23). Clock: fast-follower cost compresses in <18mo; frontier absolute spend still rises. cf. cloud/EC2 unit price fell with 67 cuts yet oligopoly margins held by moving up-stack (A20); DRAM capex necessary-but-insufficient for pricing power (A13); HFT edges compressed as capital entered but ~5 players survived (A11).",
+      "leverage": "high",
+      "base_rate": "Capital-intensive scaling races consolidate to 3-6 players (A1,A11,A13,A16) but capex alone rarely secures rent (A13 DRAM boom-bust). Analogy breaks: model weights are copyable/distillable \u2014 no fab/engine/DRAM has that (A1 'single most important asymmetry').",
+      "note_ids": [
+        3,
+        4,
+        23,
+        31
+      ],
+      "analogy_ids": [
+        1,
+        11,
+        13,
+        20
+      ]
+    },
+    {
+      "id": "V4",
+      "name": "Open-weight capability gap vs closed frontier",
+      "state_space": [
+        "large durable gap (frontier stays proprietary)",
+        "narrow lagging gap (open trails 12-18mo \u2014 Linux/server pattern)",
+        "parity (open matches frontier \u2014 full commoditization)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "Leads open-weight frontier (DeepSeek/Qwen) with implied state support (#26); open Chinese models routinely top public leaderboards. High confidence they sustain open releases. #3,#6,#26"
+        },
+        {
+          "actor": "US",
+          "reading": "Split: Meta/Mistral-adjacent push open to erode rivals (#6); OpenAI/Anthropic defend closed premium tier. Medium confidence the closed premium holds only at the agentic frontier. #6,#21"
+        },
+        {
+          "actor": "EU",
+          "reading": "Mistral uses open weights as its wedge given sub-scale capital; open is a competitive necessity, not choice. #26"
+        }
+      ],
+      "current_reading": "Narrow-and-closing (moderate-high confidence). Llama 3.1 405B reached near-GPT-4 (#6); distillation ratchets capability down fast (#25); LoRA/PEFT commoditizes application-layer adaptation (#28); 'good-enough' plateau at GPT-3.5/Llama-3-70B for most enterprise work (#30). Meta's ad-defense incentive guarantees continued open investment regardless of ROI (#6).",
+      "trajectory": "Gap closing on a compressed 12-18mo lag (vs 5-8yr in browser wars) (A6). Downstream giants deliberately commoditize the layer they don't monetize (Meta/Google = Microsoft-with-Chrome / Linux play) (A6,A24,A23). Clock: bottom 60% of capability spectrum likely lost to open within ~5yr (A8 Nucor), top reasoning/agentic tier proprietary longer (#21).",
+      "leverage": "high",
+      "base_rate": "Infrastructure layers commoditize under open-source pressure (A6,A9,A18,A24,A23) \u2014 but a premium tier can persist (Windows-vs-Linux, Oracle niche A9). Analogy breaks: open AI models may keep improving via scale, unlike a static kernel; and open-sourcing is a reversible strategy, not a philosophical commitment.",
+      "note_ids": [
+        6,
+        25,
+        28,
+        30
+      ],
+      "analogy_ids": [
+        6,
+        8,
+        9,
+        23,
+        24
+      ]
+    },
+    {
+      "id": "V5",
+      "name": "Leading-edge compute access (chip chokepoint)",
+      "state_space": [
+        "US/allied-controlled (export-control leverage holds)",
+        "bifurcated (China indigenizes on Ascend/domestic)",
+        "China-indigenized at frontier node"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Holds the chokepoint; abundant leading-edge access. This is NOT a US binding constraint. High confidence. #18"
+        },
+        {
+          "actor": "China",
+          "reading": "Binding constraint: restricted from top NVIDIA parts, forced onto domestic silicon; partially relieved by efficiency (#3) and smuggling. Medium confidence indigenization reaches frontier node within ~3yr. #3,#18"
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Access gated by US diplomatic approval of chip shipments (G42-type deals); conditional, not sovereign. Medium confidence. #26"
+        }
+      ],
+      "current_reading": "US/allied-controlled but bifurcating (moderate-high confidence). Export controls (H100/A100) force a separate Chinese ecosystem (Huawei Ascend, DeepSeek on restricted HW) (#18). DeepSeek shows engineering efficiency partially defeats the constraint (#3). ASML-style tacit-knowledge chokepoint upstream reinforces US leverage (A14).",
+      "trajectory": "Bifurcation deepening; Chinese indigenization is the slow, hard-to-catch-up variable (fab/tooling physics) \u2014 cf. no new leading-edge fab entrant in 30yr (A1), ASML EUV unreplicated in 25yr (A14). Clock: chips are the SLOWEST stave to clear for China (years); efficiency workarounds (V3) partially relieve on a fast clock. Geopolitical shock is the classic forcing mechanism (A12 WWI dye mobilization).",
+      "leverage": "high",
+      "base_rate": "Physical semiconductor moats are the most durable in industrial history (A1,A14). Analogy breaks: the *output* (weights) is copyable even if the *tool* (chips) is not \u2014 so chip control gates training but not diffusion of already-trained capability.",
+      "note_ids": [
+        3,
+        18
+      ],
+      "analogy_ids": [
+        1,
+        12,
+        14
+      ]
+    },
+    {
+      "id": "V6",
+      "name": "Energy & physical infrastructure (grid, datacenter, power)",
+      "state_space": [
+        "ample secured capacity",
+        "interconnection-queue constrained (4-7yr)",
+        "hard ceiling / grid-limited buildout"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Binding constraint (minimum stave): capital, chips and talent are present; grid interconnection and power are the gating scarcity. High confidence. #19"
+        },
+        {
+          "actor": "China",
+          "reading": "Power/grid buildout is state-directed and fast \u2014 NOT China's binding constraint (chips are). Medium-high confidence. #18,#19"
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Abundant cheap energy is a comparative advantage; can offer power+capital to attract compute. Medium confidence. #26"
+        }
+      ],
+      "current_reading": "Interconnection-constrained and increasingly binding for scaled US buildout (moderate-high confidence). US grid interconnection queues run 4-7yr, purpose-built DC construction 2-3yr; early movers who secured capacity hold a physical moat money cannot accelerate (#19).",
+      "trajectory": "Tightening as inference OPEX (V1 shift, #20) drives sustained power demand. Clock: energy is the SLOWEST catch-up variable for the US \u2014 largely irreversible for late entrants (#19). Contrast France/China state-directed standardized buildout achieving genuine learning curves (A10) \u2014 advantages state-coordinated actors.",
+      "leverage": "high",
+      "base_rate": "Physical-infrastructure moats (grid, fabs) are durable and non-arbitrageable (A1,A10). Analogy breaks: unlike nuclear's negative learning (A10), AI has offsetting algorithmic-efficiency gains (V3) that reduce energy per unit capability.",
+      "note_ids": [
+        19,
+        20
+      ],
+      "analogy_ids": [
+        1,
+        10
+      ]
+    },
+    {
+      "id": "V7",
+      "name": "Value-capture layer (where durable rent accrues)",
+      "state_space": [
+        "model-layer rent (labs win)",
+        "hyperscaler bundle / cloud + distribution (aggregation wins)",
+        "application / workflow / data layer wins",
+        "sovereign-bifurcated (no single rent capture)"
+      ],
+      "actor_readings": [],
+      "current_reading": "Migrating away from the pure model layer (moderate-high confidence). Aggregation theory: abundant undifferentiated supply \u2192 demand-controllers capture margin (#5). Vertical hyperscaler bundles (Azure+OpenAI, TPU+Gemini+Workspace, Trainium+Anthropic+AWS) are hard to replicate (#9). Inference-OPEX shift favours cloud owners over trainers (#20). Counterforces: enterprise switching costs (#15), ecosystem lock-in (#29), proprietary RLHF feedback flywheel (#16).",
+      "trajectory": "Rent moving up-stack on a fast clock \u2014 base layer commoditizes (electricity/GPS/Linux/cloud/backbone: A19,A23,A24,A20,A21) while ecosystem/service moats persist 10-15yr (Oracle A9, Bloomberg A15, Cisco-Meraki pivot A18, jet-engine LTSA A5). Direction contested between hyperscaler-bundle and app-layer capture; Jevons expansion (A19,A22,A23) grows total pie regardless.",
+      "leverage": "high",
+      "base_rate": "In general-purpose-tech commoditization, value migrates to distribution + data + application, NOT the commodity core (A19,A21,A22,A23,A24) \u2014 strong, repeated base rate. Analogy breaks: AI apps run on the *same* stack as the model, so model providers can integrate forward more easily than a utility could integrate into refrigerators (A19).",
+      "note_ids": [
+        5,
+        9,
+        15,
+        16,
+        20,
+        29,
+        30
+      ],
+      "analogy_ids": [
+        2,
+        3,
+        5,
+        9,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "id": "V8",
+      "name": "Frontier researcher/talent concentration",
+      "state_space": [
+        "hyper-concentrated (hundreds of people, few institutions)",
+        "diffusing (talent spreads via mobility + open research)",
+        "commoditized know-how"
+      ],
+      "actor_readings": [
+        {
+          "actor": "Gulf",
+          "reading": "Binding constraint: has capital and energy, can buy chips conditionally, but lacks the concentrated frontier-research talent base. Medium confidence. #24,#26"
+        },
+        {
+          "actor": "EU",
+          "reading": "Talent present (DeepMind-origin, Mistral) but drained toward US pay/compute; talent+scale jointly bind. Medium confidence. #24,#26"
+        },
+        {
+          "actor": "US",
+          "reading": "Deepest talent pool \u2014 not the US binding constraint. High confidence. #24"
+        }
+      ],
+      "current_reading": "Hyper-concentrated but diffusing (moderate confidence). The population able to train/align frontier models is small and institutionally concentrated (#24), operating independently of compute/data/energy moats. Distillation and open research accelerate diffusion of methods (#25).",
+      "trajectory": "Diffusing steadily as methods publish and talent circulates; a tacit-knowledge moat like ASML/dye (A12,A14) but far more portable because AI papers diffuse in days. Clock: medium \u2014 harder to catch up than physical resources for the true frontier, but faster than any physical moat.",
+      "leverage": "medium",
+      "base_rate": "Tacit-knowledge + trade-secret moats can last 25-60yr in science-intensive industries (A12 dye, A14 ASML). Analogy breaks: those relied on suppressed diffusion + language/geographic friction absent in AI; methods here propagate near-instantly.",
+      "note_ids": [
+        16,
+        24,
+        25
+      ],
+      "analogy_ids": [
+        12,
+        14
+      ]
+    },
+    {
+      "id": "V9",
+      "name": "Regulatory / IP regime (artificial moat vs commoditization force)",
+      "state_space": [
+        "light-touch (commoditization proceeds)",
+        "tiered compliance moat (EU AI Act / licensing raises entry cost)",
+        "IP/copyright shock (retraining/licensing liability resets incumbency)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "EU",
+          "reading": "Uses regulation as strategic moat/leverage given capability lag (AI Act); double-edged \u2014 also raises cost on its own Mistral/open ecosystem. Medium confidence. #22"
+        },
+        {
+          "actor": "US",
+          "reading": "Light-touch; copyright litigation is the main swing risk to incumbents' data moat. Low-moderate confidence on direction. #27"
+        },
+        {
+          "actor": "China",
+          "reading": "State-directed regime; compliance not a market entry barrier internally. Medium confidence. #18,#26"
+        }
+      ],
+      "current_reading": "Fragmented and contingent (low-moderate confidence). EU AI Act tiering + potential US licensing impose fixed compliance costs incumbents absorb but that bar small labs/open source (#22). Copyright litigation is a live two-way crux: could destroy incumbents' scraped-data moat OR grandfather them against new entrants (#27).",
+      "trajectory": "Regulatory barriers rising fastest in EU (works against commoditization/open source), nascent in US. Clock: regulation is exogenous and lumpy \u2014 a single ruling can flip incumbency (#27), like Bell's MFJ commoditizing the premium tier while infra retained value (A7). Certification-style moats build slowly (A5,A16).",
+      "leverage": "medium",
+      "base_rate": "Regulation reliably creates entry barriers that favour incumbents (A7 Bell, A10 nuclear, A5/A16 certification) and is often the true disruption trigger (A12 geopolitics, A7 antitrust). Analogy breaks: AI certification is far weaker/less specific than FAA/FDA/telecom regimes today.",
+      "note_ids": [
+        22,
+        27
+      ],
+      "analogy_ids": [
+        5,
+        7,
+        10,
+        16
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "V2",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "",
+      "note": "Data wall gates the pre-training axis: if high-quality human data binds, additional compute buys little and gains must come from the test-time/post-training axes instead (#7,#1,#8)."
+    },
+    {
+      "source": "V2",
+      "target": "V2",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Synthetic data and (robustly) distillation of post-trained reasoning substitute for exhausted real data \u2014 distillation is a proven one-way ratchet, synthetic-for-pretraining is contested (#13,#25)."
+    },
+    {
+      "source": "V1",
+      "target": "V7",
+      "kind": "correlates",
+      "actor": "",
+      "note": "As the axis shifts from training CAPEX to inference OPEX (test-time compute), rent migrates from model trainers to cloud/GPU-fleet owners (#2,#20,A20)."
+    },
+    {
+      "source": "V3",
+      "target": "V7",
+      "kind": "gates",
+      "actor": "",
+      "note": "Frontier cost compression erodes the capital moat that underpins model-layer rent \u2014 if cost falls 10-100x per cycle, capex barriers cannot hold rent at the model layer (#3,#23,A13)."
+    },
+    {
+      "source": "V4",
+      "target": "V7",
+      "kind": "gates",
+      "actor": "",
+      "note": "A closing open-weight gap forces base-model commoditization, so durable rent can only sit up-stack (aggregation/cloud/app/ecosystem) \u2014 the Linux/GPS/electricity pattern (#5,#6,A19,A23,A24)."
+    },
+    {
+      "source": "V2",
+      "target": "V4",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Distillation lets open/small models absorb frontier capability cheaply, narrowing V4 regardless of the data wall (#25,A8)."
+    },
+    {
+      "source": "V5",
+      "target": "V1",
+      "kind": "chokepoint_controlled_by",
+      "actor": "China",
+      "note": "Leading-edge compute is a US/allied-controlled chokepoint that gates China's ability to push the pre-training/scaling axis (#18,A14)."
+    },
+    {
+      "source": "V3",
+      "target": "V5",
+      "kind": "substitutes_for",
+      "actor": "China",
+      "note": "Engineering/efficiency gains (MoE, FP8) partially relieve China's chip scarcity \u2014 DeepSeek reached frontier-class on restricted hardware (#3,#18)."
+    },
+    {
+      "source": "V6",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "US",
+      "note": "Power/grid capacity gates the scaled buildout needed to run both training and the inference-heavy test-time axis; interconnection queues cap the US on a multi-year clock (#19,#20)."
+    },
+    {
+      "source": "V8",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "",
+      "note": "Concentrated frontier talent gates who can execute the efficiency breakthroughs and frontier runs that set the cost frontier (#24,#3)."
+    },
+    {
+      "source": "V9",
+      "target": "V4",
+      "kind": "gates",
+      "actor": "EU",
+      "note": "Compliance/licensing costs raise entry barriers against small labs and open-source releases, slowing commoditization (regulatory moat opposing V4) (#22)."
+    },
+    {
+      "source": "V9",
+      "target": "V7",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Regulation can manufacture an artificial moat where natural-monopoly economics fail, and an IP/copyright ruling can flip incumbency either way (#22,#27,A7)."
+    },
+    {
+      "source": "V7",
+      "target": "V4",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Enterprise switching costs, ecosystem lock-in and proprietary RLHF flywheels (#15,#16,#29) partially offset a closing open-weight gap by keeping value sticky above the model even when base capability commoditizes (A9,A15)."
+    },
+    {
+      "source": "V5",
+      "target": "V4",
+      "kind": "chokepoint_controlled_by",
+      "actor": "",
+      "note": "Bifurcation means open weights from the Chinese ecosystem may not freely transfer/serve into the US-allied stack and vice versa \u2014 two parallel commoditization tracks, not one global one (#18)."
+    }
+  ],
+  "forecast_signals": [
+    {
+      "id": "F1",
+      "binary_question": "Will an open-weight model rank within the top 3 of a major public frontier leaderboard (e.g., LMArena/Chatbot Arena) at any point before 31 Dec 2026?",
+      "measures": "V4",
+      "probability": 0.7,
+      "resolution_criteria": "YES if, on any snapshot of the LMArena text leaderboard before 2026-12-31, an openly downloadable-weights model appears in the top 3 overall. Single-source: lmarena.ai leaderboard."
+    },
+    {
+      "id": "F2",
+      "binary_question": "Will a Chinese lab publicly release a frontier-class model (\u2265 GPT-4-class on standard benchmarks) trained predominantly on domestic (non-NVIDIA) accelerators before 31 Dec 2027?",
+      "measures": "V5",
+      "probability": 0.5,
+      "resolution_criteria": "YES if a Chinese lab releases a model it credibly documents as trained primarily on Huawei Ascend or other domestic chips, scoring \u226580% on MMLU (or equivalent frontier eval), verified by a published technical report before 2027-12-31."
+    },
+    {
+      "id": "F3",
+      "binary_question": "Will the cheapest API price for a GPT-4-class model fall by a further ~10x (to under $0.30/1M input-equivalent tokens at that tier) before 31 Dec 2026?",
+      "measures": "V3",
+      "probability": 0.6,
+      "resolution_criteria": "YES if any provider lists a GPT-4-class-or-better model at \u2264$0.30 per 1M input tokens (blended) before 2026-12-31, per public pricing pages. Baseline: #23."
+    },
+    {
+      "id": "F4",
+      "binary_question": "Will a top-5 lab publicly state that synthetic/model-generated data is a primary component of its pre/post-training corpus before 31 Dec 2026?",
+      "measures": "V2",
+      "probability": 0.6,
+      "resolution_criteria": "YES if an official model/technical report from OpenAI, Google, Anthropic, Meta, or DeepSeek states synthetic or distilled data is a primary (not incidental) training-data source, before 2026-12-31."
+    },
+    {
+      "id": "F5",
+      "binary_question": "Through 2026, will frontier labs publicly attribute the majority of their SOTA gains to test-time compute / post-training rather than pre-training scale?",
+      "measures": "V1",
+      "probability": 0.7,
+      "resolution_criteria": "YES if, in official 2026 release communications for the leading model of \u22652 of the top-4 labs, the headline capability gains are framed primarily as reasoning/test-time/post-training rather than pre-training scale-up."
+    },
+    {
+      "id": "F6",
+      "binary_question": "Will a US frontier lab or hyperscaler bring a single AI datacenter campus of \u22651 GW dedicated power online (energized) before 31 Dec 2027?",
+      "measures": "V6",
+      "probability": 0.6,
+      "resolution_criteria": "YES if a US operator publicly confirms \u22651 GW of power energized at one AI datacenter campus before 2027-12-31, per company announcement or utility interconnection record."
+    },
+    {
+      "id": "F7",
+      "binary_question": "Will a pure-play frontier model company be acquired by or brought under majority operational control of a hyperscaler before 31 Dec 2027?",
+      "measures": "V7",
+      "probability": 0.5,
+      "resolution_criteria": "YES if a hyperscaler (Microsoft, Google, Amazon, Meta) acquires >50% economic/voting control, or an equivalent acqui-hire/IP-license transfer of operational control, of a frontier model lab before 2027-12-31, per regulatory filing or company statement."
+    },
+    {
+      "id": "F8",
+      "binary_question": "Will the EU AI Act's GPAI/systemic-risk obligations be publicly cited by an open-source model project as a material barrier to release before 31 Dec 2026?",
+      "measures": "V9",
+      "probability": 0.6,
+      "resolution_criteria": "YES if a recognized open-weight project (e.g., Mistral, EleutherAI, Hugging Face, LAION) publicly states in an official statement that EU AI Act GPAI obligations materially delayed, restricted, or blocked an EU model release before 2026-12-31."
+    },
+    {
+      "id": "F9",
+      "binary_question": "Before 31 Dec 2027, will a US court or legislature issue a ruling/statute establishing that unlicensed training on copyrighted web data creates retroactive liability for model developers?",
+      "measures": "V9",
+      "probability": 0.3,
+      "resolution_criteria": "YES if a US federal court final ruling (or enacted statute) holds that pre-training on copyrighted material without license is infringing in a way that creates retroactive damages/injunction exposure for model developers, before 2027-12-31."
+    }
+  ],
+  "binding_constraint_by_actor": [
+    {
+      "actor": "US",
+      "reading": "Energy & physical infrastructure (V6) is the minimum stave: capital, leading-edge chips (V5) and talent (V8) are abundant, so the 4-7yr grid-interconnection/power ceiling gates the scaled training+inference buildout. Read from edges V6\u2192V1 and the absence of a binding chip/talent constraint. High confidence. #19,#20,A10"
+    },
+    {
+      "actor": "China",
+      "reading": "Leading-edge compute access (V5) is the minimum stave: state-directed energy and talent are available, so the US-controlled chip chokepoint binds \u2014 partially, and only partially, relieved by the efficiency shock (V3\u2192V5). Read from chokepoint edge V5\u2192V1 and substitution edge V3\u2192V5. Medium-high confidence. #3,#18,A14"
+    },
+    {
+      "actor": "EU",
+      "reading": "Talent + capital scale (V8) is the binding stave; it compensates via open weights (V4) and regulatory leverage (V9). Sub-scale compute/capital and talent drain leave it a fast-follower, not frontier-setter. Medium confidence. #24,#26,#22"
+    },
+    {
+      "actor": "Gulf",
+      "reading": "Frontier research talent (V8) is the minimum stave: abundant energy (V6 advantage) and capital, plus conditional chip access (V5), but the concentrated know-how to train/align frontier models is the scarce input. Medium confidence. #24,#26"
+    }
+  ],
+  "summary": "The graph reveals a two-front structure, not a single race. FRONT 1 (does scaling hold): the data wall (V2) gates the pre-training axis (V1), but test-time compute, post-training, distillation and multi-agent orchestration route around it \u2014 so capability progress continues even as the *pre-training* lever saturates, shifting cost from training CAPEX toward inference OPEX (#2,#8,#20,#32). FRONT 2 (does the model layer commoditize): efficiency compression (V3, DeepSeek #3), a closing open-weight gap (V4, #6,#25) and the distillation ratchet jointly erode model-layer rent, pushing value up-stack toward aggregation/cloud/application and ecosystem lock-in \u2014 the electricity/GPS/Linux/cloud pattern (A19,A20,A23,A24) \u2014 while differentiation-persistence, ecosystem depth (Oracle/Bloomberg A9,A15), physical infrastructure and the chip chokepoint hold an oligopoly together (HFT/DRAM/airframe A11,A13,A16). The decisive mutual chokepoint: the US controls leading-edge compute (V5) and chokes China, but China's efficiency shock plus open weights choke US model-layer rent \u2014 neither side faces full global competition (#18). Honest read: outcome is contested and clock-dependent \u2014 commoditization of the *base* layer looks near-inevitable on a 3\u20137yr horizon, but WHERE durable rent lands (hyperscaler bundle vs. sovereign bifurcation vs. app layer) turns on whether each actor's binding stave (US=energy, China=chips, EU/Gulf=talent+scale) clears first."
+}

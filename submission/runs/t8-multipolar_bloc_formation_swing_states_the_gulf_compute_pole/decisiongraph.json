@@ -1,0 +1,661 @@
+{
+  "variables": [
+    {
+      "id": "V1",
+      "name": "Leading-edge AI chip access (the near-term chokepoint)",
+      "state_space": [
+        "US/allied-licensed supply",
+        "grey-market/transshipment-supplemented",
+        "Chinese-substitute-available",
+        "indigenized (none currently)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "Gulf",
+          "reading": "Access exists but is licensed, monitored (#70) and capped (#71); binding today, cite #3 #5 #7 #139."
+        },
+        {
+          "actor": "China",
+          "reading": "Cut off from top-tier NVIDIA; forced onto Ascend and smuggling \u2014 driving indigenization pressure, cite #60 #66."
+        },
+        {
+          "actor": "Population-scale swing states",
+          "reading": "Constrained by capital not licenses \u2014 cannot afford scale even when allowed, cite #100 #11."
+        }
+      ],
+      "current_reading": "Gulf access is US-licensed and conditional: G42/HUMAIN NVIDIA deals were approved only under geopolitical pressure and remain revocable (#5, #7). Grey-market transshipment through UAE/Singapore/Malaysia is documented and material (#139). No indigenous supply. Confidence high that access = US-gated today.",
+      "trajectory": "Widening but on-sufferance. Chinese substitute (Ascend 910C ~A100-tier) is closing, raising the credible outside option (#60, #12). Architectural downgrades (H20 NVLink caps, #71) and on-chip attestation (#70) mean licensed chips carry immutable/monitored ceilings. Clock: like oil scarcity (A3) it is POLICY-determined, so reversible in weeks by Washington \u2014 unlike geological scarcity \u2014 making the lever fragile but fast-moving.",
+      "leverage": "high",
+      "base_rate": "Resource-chokepoint leverage (A3 OPEC, A21 Shinkolobwe uranium) is real but time-boxed to ~7\u201320 years until diversification/substitution; analogy breaks because compute is policy-scarce not geologically scarce, so the window can close by decision, not depletion.",
+      "note_ids": [
+        3,
+        5,
+        7,
+        12,
+        60,
+        66,
+        70,
+        71,
+        112,
+        139,
+        144
+      ],
+      "analogy_ids": [
+        3,
+        21,
+        7,
+        25
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "Upstream silicon stack (fab / EUV / EDA / packaging / CUDA)",
+      "state_space": [
+        "fully US-allied-controlled",
+        "partial geographic diversification",
+        "credible third-party capacity"
+      ],
+      "actor_readings": [
+        {
+          "actor": "China",
+          "reading": "THIS is China's minimum stave \u2014 blocked at EUV/EDA regardless of Ascend progress, cite #66 #127 #134."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Zero indigenous fab; any 'pole' holds chips-on-sufferance from Taiwan (#17), unresolvable by capital."
+        },
+        {
+          "actor": "US",
+          "reading": "Controls the stack via allies (NL/Japan/Korea/Taiwan) \u2014 the durable source of all downstream leverage."
+        }
+      ],
+      "current_reading": "Fully US-allied-controlled and the deepest lock. ASML EUV monopoly (#127), Synopsys/Cadence EDA (#134), TSMC/SK-Hynix CoWoS+HBM packaging (#117), and NVIDIA CUDA software moat (#135) each sit upstream of any 'fab independence.' TSMC makes ~90% of leading-edge (A7). No non-US-allied path exists. Confidence very high.",
+      "trajectory": "Slowly diversifying geographically (TSMC Arizona, JASM Japan, Germany 2026\u20132030, #49) but CHIPS Act conditionality means diversification = dependency-transfer, not independence (#124). Clock: slowest-moving variable \u2014 decade-scale, catch-up historically hardest layer (A5 Japan shows even an ally with real fabs was subordinated; A13 shows software/messaging layers fragment faster than hardware).",
+      "leverage": "high",
+      "base_rate": "Semiconductor leadership (A5) took Japan 20+ years to build and was reversed by trade policy in a decade; fab/tooling is the least catch-up-able input in tech-race history. Analogy breaks only if algorithmic efficiency (#123) collapses the compute threshold.",
+      "note_ids": [
+        17,
+        117,
+        124,
+        127,
+        134,
+        135,
+        48,
+        49
+      ],
+      "analogy_ids": [
+        7,
+        5,
+        13
+      ]
+    },
+    {
+      "id": "V3",
+      "name": "Export-control regime durability (the US policy chokepoint)",
+      "state_space": [
+        "tightening (adds API/service + packaging controls)",
+        "stable",
+        "eroding via domestic lobbying/deals",
+        "traded away for basing/oil/finance"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Owns the lever but faces internal erosion (NVIDIA revenue #136, #129 reverse-entanglement) \u2014 leverage is self-undermining."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Primary route to relax the chip constraint via energy/basing/finance bargaining (#13 #52) \u2014 partial success already (#5)."
+        }
+      ],
+      "current_reading": "Contested and softening at the margin. BIS diffusion rule + Tier caps are the live chokepoint (#5), but G42/HUMAIN approvals show relaxation under pressure (#5, #7). NVIDIA lobbying + transactional US politics erode it from within (#136); WTO challenge adds a third contest channel (#151). Confidence medium \u2014 direction genuinely uncertain.",
+      "trajectory": "Two opposing vectors: hardening options unused (API/service-layer controls #116, packaging #117, attestation mandates #70) vs. erosion (lobbying #136, deal-making, secondary-sanctions only if Taiwan crisis, #56). Clock: fast \u2014 a single administration can flip it. A25 petrodollar shows the US will trade access for structural integration.",
+      "leverage": "high",
+      "base_rate": "Ally strategic-sector controls (A5 Japan STA) held when they served US commercial interest and were relaxed when politically bought (A25); base rate is that the hegemon keeps the lever but sells exceptions transactionally.",
+      "note_ids": [
+        5,
+        26,
+        70,
+        116,
+        117,
+        136,
+        151,
+        56
+      ],
+      "analogy_ids": [
+        5,
+        25,
+        13
+      ]
+    },
+    {
+      "id": "V4",
+      "name": "Training-capability breakout threshold",
+      "state_space": [
+        "inference-only customer",
+        "mid-scale training",
+        "frontier-training-capable pole"
+      ],
+      "actor_readings": [
+        {
+          "actor": "Gulf",
+          "reading": "Inference-only now; incentive structure may produce Potemkin capability not a training trajectory (#77) \u2014 but breakout is a live tail (#43)."
+        },
+        {
+          "actor": "EU",
+          "reading": "Already training-capable via Mistral + EuroHPC (#82 #85) \u2014 the bipolar frame is descriptively wrong on this axis."
+        },
+        {
+          "actor": "Population-scale swing states",
+          "reading": "Fiscally capped at government-use-case depth, not commercial/frontier scale (#100)."
+        }
+      ],
+      "current_reading": "Gulf sits at inference-hosting + early mid-scale; not frontier-training-capable (#4, #77). This is THE crux separating real pole from sophisticated customer \u2014 'nuclear plant vs. the bomb' (#4). EU (Mistral + EuroHPC) already crosses into mid/frontier-adjacent (#82, #85). Confidence high for Gulf, medium for EU.",
+      "trajectory": "Threshold is FALLING fast: MoE, distillation, synthetic data cut capex (#123, #142); breakout may be discontinuous \u2014 pre-positioned inference assets convert 'overnight' on a chip/fab/smuggling trigger (#43). But permanent silicon caps (#71) and talent (#8) can keep it a moat. Clock: contested \u2014 could arrive at an order-of-magnitude lower capex than 2023 estimates.",
+      "leverage": "high",
+      "base_rate": "Meiji Japan (A19) and Sweden (A28) show indigenous capability is buildable but requires domesticating knowledge, not just hosting advisors; NPT (A27) shows the 'civilian-access' tier is easy to enter and hard to graduate from. Analogy breaks if algorithmic deflation makes training cheap.",
+      "note_ids": [
+        4,
+        40,
+        43,
+        77,
+        82,
+        85,
+        107,
+        123,
+        142,
+        100
+      ],
+      "analogy_ids": [
+        19,
+        28,
+        27,
+        5
+      ]
+    },
+    {
+      "id": "V5",
+      "name": "Great-power bidding / credibility of a second pole (China as outside option)",
+      "state_space": [
+        "genuine two-sided auction",
+        "one-sided US gravity",
+        "collapsing to unipolar post-AGI"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "US's leverage-through-access DEPENDS on China staying non-credible; DeepSeek-class parity at the application layer (#64) is the crux that could void US AI-access leverage."
+        },
+        {
+          "actor": "China",
+          "reading": "Active suitor via DSR/open-weights (#58 #59 #61) but hobbled by upstream silicon (V2) and export playbook deficit (#33)."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Extracts rent from the rivalry (#35 #58); needs a credible Chinese backup to keep the threat live (#12)."
+        }
+      ],
+      "current_reading": "Currently a genuine auction: DSR is physically installed in 100+ countries (#59), Ascend is an A100-tier fallback (#60), China's deliberate open-weight strategy (DeepSeek/Qwen) diffuses its stack under export controls (#61, #64). BUT China is a weak third-country AI exporter (#33) and its conditionality is not obviously lower (gallium controls #66, e-CNY #125). Confidence medium that the auction is real NOW.",
+      "trajectory": "Sustained near-term by active Chinese suitorship (#58) \u2014 the one NAM condition that historically worked (A1/A10/A14 Tito/Nasser/Vargas extracted from BOTH sides). Erodes if US pulls decisively ahead (A2/A10/A22 endpoint = forced alignment). Clock: tied to relative US-China capability gap; the swing window is inherently ~2024\u20132030 (#10).",
+      "leverage": "high",
+      "base_rate": "NAM leverage (A1) survived exactly as long as competitive superpower bidding did and collapsed with the USSR (1991); Thailand (A22) and Egypt (A10) bent fully once one pole dominated. Base rate: auction leverage is real but ends abruptly when bidding becomes one-sided.",
+      "note_ids": [
+        1,
+        10,
+        33,
+        58,
+        59,
+        60,
+        61,
+        62,
+        64,
+        68,
+        112,
+        125
+      ],
+      "analogy_ids": [
+        1,
+        10,
+        14,
+        22,
+        2
+      ]
+    },
+    {
+      "id": "V6",
+      "name": "Financial + hard-security umbrella binding (US leverage over the Gulf)",
+      "state_space": [
+        "hard binding to US",
+        "partial issue-specific decoupling",
+        "alternative-sponsor / diversified"
+      ],
+      "actor_readings": [
+        {
+          "actor": "Gulf",
+          "reading": "MINIMUM STAVE near-term \u2014 finance/security is a harder constraint than compute (#6 #15 #46 #55); self-undermining hedging loop (#55) may foreclose stable semi-alignment."
+        },
+        {
+          "actor": "EU",
+          "reading": "NATO Art.5 / post-Ukraine US dependence binds EU digital autonomy at least as tightly (#86)."
+        }
+      ],
+      "current_reading": "Hard binding today and the likeliest true Gulf minimum stave. Dollar/SWIFT embeds SWF solvency (#15, #32, #141); CENTCOM basing + Patriot/THAAD + Iran deterrence create existential security dependence (#46); arms-sale conditionality is a repeatable lever (#47, F-35/G42 episode #6); Abraham Accords deepen the compact (#51). The 2024 G42 Huawei divestiture is the concrete data point that binary pressure forced a choice (#6). Confidence high.",
+      "trajectory": "Structurally sticky but not deterministic: Turkey/Egypt (#54) show issue-specific defection at manageable cost; e-CNY/mBridge offers partial settlement escape (#125); reverse-entanglement (US tech revenue + SWF stakes, #129) constrains the constrainer. Clock: slow-moving, changes over decades (A25 petrodollar = 50 years).",
+      "leverage": "high",
+      "base_rate": "Finlandisation (A18) and petrodollar (A25) show formally sovereign states accommodate the security/finance hegemon for decades; Sweden (A28) shows 210 years of neutrality can end in 18 months under one large shock. Base rate strongly favors binding; analogy breaks because the Gulf is a capital EXPORTER (unlike Djibouti A23), inverting the usual dependency.",
+      "note_ids": [
+        6,
+        15,
+        32,
+        46,
+        47,
+        51,
+        52,
+        53,
+        54,
+        55,
+        125,
+        129
+      ],
+      "analogy_ids": [
+        18,
+        25,
+        28,
+        23,
+        54
+      ]
+    },
+    {
+      "id": "V7",
+      "name": "Complementary inputs \u2014 talent, data flywheel, operational workforce",
+      "state_space": [
+        "shallow / import-dependent",
+        "niche moat (Arabic/regional)",
+        "population-scale organic flywheel"
+      ],
+      "actor_readings": [
+        {
+          "actor": "Gulf",
+          "reading": "Long-run capability CEILING (#8 #24 #34 #74); niche Arabic moat is real but sub-frontier (#41)."
+        },
+        {
+          "actor": "EU",
+          "reading": "Has talent but hemorrhages it to US labs (#87) \u2014 worse than Gulf because it has capability to lose."
+        },
+        {
+          "actor": "Population-scale swing states",
+          "reading": "Data/language moats (Hindi/Bahasa/Portuguese/Hausa #95; genomic #149) are their structural advantage; diaspora entangles India with US (#96)."
+        }
+      ],
+      "current_reading": "Gulf is shallow and import-dependent: no deep research community (#8), ~80\u201390% expatriate ops workforce on revocable visas (#74), ~45M people = no proprietary data flywheel (#24, #34). Partial fixes exist: Arabic/Islamic niche moat (#41), compute-for-data swaps (#37), federated learning (#148). Population-scale states have the inverse profile \u2014 data-rich, capital-poor (#138, #95). Confidence high.",
+      "trajectory": "Structural ceiling capital cannot fully buy (#8, #24); but synthetic data (#142) and bilateral data swaps (#37, #114) could convert it from ceiling to procurement problem. Population-scale states' organic flywheel COMPOUNDS over 10\u201320 yrs while Gulf deficit persists (#138). Clock: slowest, human-capital compounding is the least catch-up-able factor (A19 Meiji required mass education).",
+      "leverage": "high",
+      "base_rate": "Every historical pole (US/China) rested on a large domestic market driving data/talent flywheels; A19 Meiji shows knowledge must be domesticated, not hosted. Analogy breaks if synthetic data (#142) makes organic data optional \u2014 the single biggest uncertainty here.",
+      "note_ids": [
+        8,
+        24,
+        34,
+        37,
+        41,
+        74,
+        87,
+        95,
+        96,
+        138,
+        142,
+        148,
+        149
+      ],
+      "analogy_ids": [
+        19,
+        28,
+        26
+      ]
+    },
+    {
+      "id": "V8",
+      "name": "Neutrality-premium / dual-stack hub viability (rent from bifurcation)",
+      "state_space": [
+        "self-reinforcing neutral hub",
+        "fragile semi-alignment",
+        "forced binary / captured"
+      ],
+      "actor_readings": [
+        {
+          "actor": "Gulf",
+          "reading": "Core value proposition and most defensible asset (#35 #42 #44); but requires verifiable neutrality governance it has not yet built (A15/A16), else it is a leased venue not a trusted one."
+        }
+      ],
+      "current_reading": "Operative and partially self-reinforcing: Gulf hosts US hyperscalers + (formerly) Chinese stacks; the worse the bifurcation the more valuable the neutral venue (#35, #42). Hyperscaler energy/land hunger inverts dependency into supplier power (#39). BUT hosting Western hyperscalers = latent Five Eyes exposure (#137, #22), and G42 showed the dual-stack broke under pressure (#6). Confidence medium.",
+      "trajectory": "Self-reinforcing IF neutrality is proven not just declared (#42, Swiss-banking logic) \u2014 but disciplined by asset hyperconcentration/kinetic-cyber vulnerability (#78) and the security-logic that forbids stable semi-alignment (#55). Clock: leverage peaks now; switching-cost moats (#45) may outlast the training-race window even if training leverage collapses.",
+      "leverage": "medium",
+      "base_rate": "Neutral-hub precedents are the MOST optimistic: Venice ~800 yrs (A26), Hansa ~300 yrs (A17), Singapore/Austria/BIS durable (A15/A16/A24) \u2014 but all required institutional credibility that A11 (Hong Kong) shows evaporates when the stronger neighbor no longer needs the interface. Analogy breaks: compute hubs need a non-neutral GPU supplier (A6 \u2014 'no neutral accelerator supplier').",
+      "note_ids": [
+        35,
+        39,
+        42,
+        44,
+        45,
+        77,
+        78,
+        137,
+        22,
+        6
+      ],
+      "analogy_ids": [
+        26,
+        17,
+        15,
+        16,
+        24,
+        11,
+        6
+      ]
+    },
+    {
+      "id": "V9",
+      "name": "Capability-diffusion shape (the leverage clock)",
+      "state_space": [
+        "winner-take-all AGI singularity",
+        "plateau / decelerating",
+        "S-curve broad diffusion",
+        "fragmented multi-AGI (linguistic/domain)"
+      ],
+      "actor_readings": [
+        {
+          "actor": "US",
+          "reading": "Winner-take-all is the US's best case (leverage concentrates); its policy (export controls) implicitly bets on singularity."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Needs plateau/diffusion/fragmentation for the pole to survive; winner-take-all makes it a supplicant (#10)."
+        }
+      ],
+      "current_reading": "Genuinely undetermined \u2014 this is the master variable governing how long all leverage lasts. Winner-take-all (#10, #21) collapses swing-state leverage; plateau (#67) or S-curve diffusion (#63) or fragmentation (#21) preserves/expands it. Open-source (#16, #61) + algorithmic deflation (#123) currently push toward diffusion. Confidence low on which regime wins.",
+      "trajectory": "Trend leans toward diffusion/plateau near-term (open weights, DeepSeek, 100\u00d7 inference-cost fall #110) \u2014 which SUSTAINS multipolarity; but a decisive lab breakthrough would flip to winner-take-all. Clock: the ~2024\u20132030 window (#10) is only valid under the singularity assumption (#21); under S-curve, scarcity-as-lever is structurally impossible to sustain 15 yrs (#63).",
+      "leverage": "high",
+      "base_rate": "General-purpose techs (steel, electricity, internet) diffused and eroded first-mover leverage within 15\u201325 yrs (#63/A4 railroad gauge shows lock-in also persists). Base rate favors diffusion \u2192 pole framing dissolves; analogy breaks only if AI is uniquely winner-take-all.",
+      "note_ids": [
+        10,
+        21,
+        63,
+        67,
+        16,
+        61,
+        110,
+        123
+      ],
+      "analogy_ids": [
+        4,
+        1
+      ]
+    },
+    {
+      "id": "V10",
+      "name": "Regulatory / standards & values sovereignty (the governance pole)",
+      "state_space": [
+        "US/EU-set (Brussels + benchmark + trust-stack)",
+        "contested / regional standards emerge",
+        "Gulf/swing-state-set regional gravity"
+      ],
+      "actor_readings": [
+        {
+          "actor": "EU",
+          "reading": "Its ONLY credible pole axis (regulatory/values, #79 #84 #89) \u2014 but a toll-booth (#80) that collapses if both superpowers refuse EU market simultaneously; GAIA-X underdelivery (#88) mirrors BRICS failure (#18)."
+        },
+        {
+          "actor": "Gulf",
+          "reading": "Can build exportable regional dependency (#38) and ethics-arbitrage verticals (#105); faces CFIUS/FSR asymmetric barriers outbound (#145)."
+        },
+        {
+          "actor": "Population-scale swing states",
+          "reading": "Demand-side monopsony (#91 #101) + forum-presidency agenda-setting (#99) = governance leverage without compute."
+        }
+      ],
+      "current_reading": "Currently US/EU-set. Brussels Effect via AI Act imposes extraterritorial compliance (#79, #83); benchmarks (#106), safety red-team certification (#150), trust stack (#113) and PQC/crypto standards (#132) are Western-concentrated. Gulf can export regional regulation (#38) and be a values/regulatory-arbitrage zone (#105). EU is a genuine third pole ONLY at this layer, not compute (#80, #84). Confidence high.",
+      "trajectory": "Timing crux: if norms crystallize while US/EU dominate the frontier they embed Western assumptions as universal (#111); if regional poles reach deployment scale first they arrive as standard-setters (#111, #99). India/Brazil G20 + population-scale monopsony (#91, #101) push contestation. Clock: standards lock in on a ~5\u201310 yr horizon, possibly before Gulf buildouts mature (#132).",
+      "leverage": "medium",
+      "base_rate": "NWICO (A12) and WCIT-12/ITU-vs-ICANN (A29) show governance-first non-alignment campaigns consistently FAIL against infrastructure facts; GDPR shows the Brussels Effect is real but imperfect (#83). Base rate: regulation captures rents (#80) but does not substitute for capability.",
+      "note_ids": [
+        38,
+        79,
+        80,
+        83,
+        84,
+        88,
+        89,
+        91,
+        99,
+        101,
+        105,
+        106,
+        111,
+        113,
+        132,
+        145,
+        150
+      ],
+      "analogy_ids": [
+        12,
+        29,
+        16
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "V3",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "Gulf",
+      "note": "US export-control policy gates leading-edge chip access; relaxation (G42/HUMAIN approvals) is the mechanism that opens the pole path (#5 #7)."
+    },
+    {
+      "source": "V3",
+      "target": "V1",
+      "kind": "chokepoint_controlled_by",
+      "actor": "US",
+      "note": "BIS licenses, EUCs and attestation (#26 #70 #116) mean the US holds the on/off switch for Gulf and Chinese chip supply."
+    },
+    {
+      "source": "V2",
+      "target": "V1",
+      "kind": "gates",
+      "actor": "",
+      "note": "No leading-edge chip exists without EUV/EDA/packaging/CUDA; the upstream stack gates all downstream chip supply (#17 #127 #134 #135)."
+    },
+    {
+      "source": "V2",
+      "target": "V1",
+      "kind": "chokepoint_controlled_by",
+      "actor": "US",
+      "note": "US+NL+Japan+Taiwan+Korea control the deepest layer; CHIPS Act conditionality (#124) makes even diversification a dependency transfer."
+    },
+    {
+      "source": "V1",
+      "target": "V4",
+      "kind": "gates",
+      "actor": "",
+      "note": "Frontier training requires 10k+ sustained top-tier GPU clusters; chip access gates the training-breakout threshold (#4 #43)."
+    },
+    {
+      "source": "V7",
+      "target": "V4",
+      "kind": "gates",
+      "actor": "",
+      "note": "Training needs continuous talent, data and workforce, not just chips; the Gulf's thin complementary inputs cap breakout independent of hardware (#8 #24 #74)."
+    },
+    {
+      "source": "V5",
+      "target": "V1",
+      "kind": "substitutes_for",
+      "actor": "Gulf",
+      "note": "A credible Chinese chip supply (Ascend #60) substitutes for US-gated NVIDIA, relieving V1 scarcity and blunting the coercive force of V3 (#12)."
+    },
+    {
+      "source": "V5",
+      "target": "V3",
+      "kind": "gates",
+      "actor": "US",
+      "note": "US leverage-through-access only holds while China is non-credible; DeepSeek-class parity (#64) voids AI-access leverage and undercuts export-control value."
+    },
+    {
+      "source": "V6",
+      "target": "V5",
+      "kind": "gates",
+      "actor": "Gulf",
+      "note": "Finance/security umbrella caps how far the Gulf can actually EXERCISE the Chinese outside option \u2014 G42 divestiture shows binary pressure overrode dual-stack (#6 #46 #47)."
+    },
+    {
+      "source": "V6",
+      "target": "V3",
+      "kind": "correlates",
+      "actor": "Gulf",
+      "note": "Security-for-tech and energy-leverage bargaining (#13 #52) plus reverse-entanglement (US tech revenue in Gulf, #39 #129) let Gulf trade for export-control carve-outs."
+    },
+    {
+      "source": "V9",
+      "target": "V8",
+      "kind": "gates",
+      "actor": "",
+      "note": "Winner-take-all AGI collapses the neutrality premium (customers become supplicants #10); plateau/diffusion sustains it (#63 #67)."
+    },
+    {
+      "source": "V9",
+      "target": "V5",
+      "kind": "gates",
+      "actor": "",
+      "note": "Diffusion shape sets the auction clock: a decisive lead ends two-sided bidding and forces alignment (A1/A22 endpoint); fragmentation preserves it (#21)."
+    },
+    {
+      "source": "V4",
+      "target": "V8",
+      "kind": "substitutes_for",
+      "actor": "",
+      "note": "Training breakout upgrades a neutral hub into a genuine pole; but inference-at-scale governance (#40) gives V8 real sovereignty even absent V4."
+    },
+    {
+      "source": "V7",
+      "target": "V7",
+      "kind": "substitutes_for",
+      "actor": "Gulf",
+      "note": "Synthetic data (#142) and compute-for-data swaps (#37 #114) substitute for the absent domestic data flywheel \u2014 converting a ceiling into a procurement problem."
+    },
+    {
+      "source": "V10",
+      "target": "V8",
+      "kind": "gates",
+      "actor": "",
+      "note": "Western trust-stack/benchmark/AI-Act certification (#83 #113 #150) gates market access for any Gulf/China-hosted model, capping the hub's addressable demand."
+    },
+    {
+      "source": "V5",
+      "target": "V8",
+      "kind": "correlates",
+      "actor": "",
+      "note": "Active two-sided bidding is what makes neutrality valuable and defection costly (#42 #58); if bidding is one-sided the neutrality premium evaporates."
+    },
+    {
+      "source": "V2",
+      "target": "V5",
+      "kind": "chokepoint_controlled_by",
+      "actor": "US",
+      "note": "China's inability to indigenize the upstream stack (gallium aside, #66) is exactly why its second-pole credibility (V5) is capped \u2014 the two variables are linked at China's binding constraint."
+    }
+  ],
+  "forecast_signals": [
+    {
+      "id": "F1",
+      "binary_question": "Will US BIS rules still impose country-tier caps on advanced-GPU exports to the UAE and Saudi Arabia (not fully rescinded) as of 31 Dec 2027?",
+      "measures": "V3",
+      "probability": 0.6,
+      "resolution_criteria": "YES if, on 31 Dec 2027, the operative US export-control framework retains any per-country volume/licensing cap on advanced AI GPUs to UAE or KSA per the Federal Register / BIS rule text. Single-source: BIS published rules."
+    },
+    {
+      "id": "F2",
+      "binary_question": "Will a Gulf-owned entity (G42, HUMAIN, MGX or affiliate) have taken licensed delivery of \u2265100,000 Blackwell-class GPUs to domestically-sited data centers by 31 Dec 2027?",
+      "measures": "V1",
+      "probability": 0.6,
+      "resolution_criteria": "YES on credible reporting (company announcement or NVIDIA disclosure) of \u2265100k GB200/B200-class units delivered to Gulf-sited facilities by 31 Dec 2027."
+    },
+    {
+      "id": "F3",
+      "binary_question": "Will Huawei Ascend (910C or successor) be independently benchmarked at \u226580% of the contemporaneous NVIDIA flagship's cluster-scale training throughput by 31 Dec 2027?",
+      "measures": "V5",
+      "probability": 0.4,
+      "resolution_criteria": "YES if a reputable third-party benchmark (MLPerf or equivalent) reports \u226580% throughput parity at \u22651k-accelerator scale by 31 Dec 2027."
+    },
+    {
+      "id": "F4",
+      "binary_question": "Will any Gulf-owned entity train a model placing top-10 on a major public leaderboard (e.g., LMArena/Chatbot Arena) on domestically-sited clusters by 31 Dec 2028?",
+      "measures": "V4",
+      "probability": 0.3,
+      "resolution_criteria": "YES if a Gulf-state-owned lab's model, trained on Gulf-sited compute, ranks top-10 on a recognized public leaderboard snapshot on/before 31 Dec 2028."
+    },
+    {
+      "id": "F5",
+      "binary_question": "Will any Gulf state face a public US security/arms-linked penalty tied to Chinese-tech ties (analogous to the 2021 F-35 episode) between now and 31 Dec 2027?",
+      "measures": "V6",
+      "probability": 0.3,
+      "resolution_criteria": "YES on documented (official statement or major-outlet reporting) US suspension/conditioning of an arms or security commitment citing Chinese tech ties, before 31 Dec 2027."
+    },
+    {
+      "id": "F6",
+      "binary_question": "Will a Gulf data-center operator simultaneously host a US hyperscaler stack AND a mainland-Chinese cloud/AI stack in the same jurisdiction as of 31 Dec 2027?",
+      "measures": "V8",
+      "probability": 0.4,
+      "resolution_criteria": "YES if, on 31 Dec 2027, public records show one Gulf jurisdiction hosting live commercial services from both a US hyperscaler and a PRC cloud/AI provider (post-G42-divestiture reversal counts)."
+    },
+    {
+      "id": "F7",
+      "binary_question": "Will a widely-recognized 'decisive AGI lead / winner-take-all' event be declared by a US or Chinese lab by 31 Dec 2028?",
+      "measures": "V9",
+      "probability": 0.2,
+      "resolution_criteria": "YES if by 31 Dec 2028 a major lab announces, and \u22652 of {Nature/Science, a G7 government, a top-3 AI lab} publicly acknowledge, a transformative/decisive capability discontinuity. Otherwise NO."
+    },
+    {
+      "id": "F8",
+      "binary_question": "Will leading-edge (\u22643nm) logic GPUs be fabricated at commercial volume outside Taiwan and South Korea by 31 Dec 2030?",
+      "measures": "V2",
+      "probability": 0.5,
+      "resolution_criteria": "YES if TSMC Arizona (or any fab) reports commercial-volume \u22643nm GPU/logic output outside Taiwan/Korea by 31 Dec 2030 per company disclosure."
+    },
+    {
+      "id": "F9",
+      "binary_question": "Will EU AI Act GPAI obligations force at least one US frontier lab to ship an EU-specific model variant or documented architectural change by 31 Dec 2027?",
+      "measures": "V10",
+      "probability": 0.4,
+      "resolution_criteria": "YES on documented (company statement/regulatory filing) EU-specific model tier or systemic-model modification made to satisfy AI Act GPAI obligations by 31 Dec 2027."
+    },
+    {
+      "id": "F10",
+      "binary_question": "Will China initiate a blockade or kinetic action against Taiwan disrupting TSMC leading-edge output by 31 Dec 2027?",
+      "measures": "V5",
+      "probability": 0.1,
+      "resolution_criteria": "YES on confirmed (multiple major outlets + government acknowledgment) PRC blockade/kinetic action materially disrupting TSMC advanced-node production before 31 Dec 2027."
+    }
+  ],
+  "binding_constraint_by_actor": [
+    {
+      "actor": "US",
+      "reading": "Minimum stave is V5 (credibility of a Chinese second pole). US chokepoint leverage (V3\u2192V1, V6) is only as strong as China stays non-credible; DeepSeek-class application-layer parity (#64) and Ascend progress (#60) erode it, compounded by internal export-control erosion (#136 #129). Medium confidence."
+    },
+    {
+      "actor": "China",
+      "reading": "Minimum stave is V2 (upstream silicon: EUV/EDA/CUDA). No amount of open-weight diffusion (#61) or Ascend throughput (#60) clears the fab/tooling lock; this is why its second-pole credibility (V5) is structurally capped (#66 #127 #134). High confidence."
+    },
+    {
+      "actor": "Gulf",
+      "reading": "Near-term minimum stave is V6 (finance+security umbrella) \u2014 the hardest-to-substitute coercion channel (#6 #15 #46 #55); long-run binding ceiling is V7 (talent/data/workforce) that capital cannot buy (#8 #24 #74). Chips (V1) are a real but tradeable constraint (#5 #139). Medium-high confidence."
+    },
+    {
+      "actor": "EU",
+      "reading": "Minimum stave is V7/V4 (indigenous capability): it has the governance pole (V10) and some training capability (Mistral/EuroHPC #82 #85) but bleeds talent to the US (#87), depends on NATO security (#86), and its sovereign-cloud efforts underdeliver (#88). High confidence."
+    },
+    {
+      "actor": "Population-scale swing states",
+      "reading": "Minimum stave is V1/capital (fiscal ceiling #100) \u2014 they hold the data/language moats (V7: #95 #138 #149) and demand-side monopsony (V10: #91 #101) the Gulf lacks, but cannot fund commercial-scale compute, and trade-portfolio ties (#98) plus US bilateral capture (#102) constrain neutrality. Medium confidence."
+    }
+  ],
+  "summary": "The graph is a chokepoint lattice, not a race with one finish line. The Gulf's pole ambition is gated in series by three US-controlled locks \u2014 export-control policy (V3) \u2192 leading-edge chip access (V1), and the finance+security umbrella (V6) \u2014 plus its own thin complementary inputs (V7: talent, data, workforce). Its genuine asset, the neutrality/dual-stack hub (V8), is real and self-reinforcing (#42, A11/A15/A24) but is conditional on two things staying true: that the great-power auction (V5) remains two-sided (a credible Chinese outside option, #58/#60/#68/A1/A10) and that capability diffusion (V9) does NOT go winner-take-all. China's binding constraint is orthogonal: the deep silicon stack (V2 \u2014 EUV/EDA/CUDA, #127/#134/#135), which no amount of Gulf capital relieves, so the Gulf cannot buy its way to a non-US chip supply that is itself sovereign. The decisive mutual chokepoint is that the US controls chips+finance while the Gulf controls energy+land+sited capital that hyperscalers need (#39/#129), producing partial reverse-entanglement rather than pure dependency. The honest read is contested and clock-dependent: two windows (pre-AGI training race and pre-TSMC-diversification) both close ~2027\u20132030 (#10/#49), and whether a durable Gulf/EU/swing-state pole exists in 2030 depends on which constraint clears first \u2014 training-capex thresholds falling (#123/#142) versus US chokepoints hardening (#70/#71/#116) versus the auction collapsing to unipolar (A2/A22 endpoint)."
+}
