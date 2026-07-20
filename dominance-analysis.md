@@ -1,0 +1,146 @@
+# Dominance analysis — which chokepoint wins, and when (Liebig + the GPT reference class)
+
+**Decisive chokepoint:** POWER & GRID EXECUTION, binding 2026–2030 — the deployment phase that captures the decade's durable value. The sequence is the whole answer: chips + EUV are the binding minimum in the 2024–26 training frenzy (US wins that phase), but that phase's prize — the frontier model — commoditizes on a 3–6 month clock. The binding minimum then migrates to electrons at precisely the moment value migrates to inference/deployment, and stays there. EUV is the hardest gate in the entire stack and it is NOT the decisive one, because it guards the fastest-decaying prize. The decisive gate is the slowest-clearing, least-substitutable input that binds when the money is made: power.
+
+**Who wins the value:** A split, sequenced verdict — not a tie. (1) The US wins the TRAINING battle and books frontier-capability prestige (2024–26), but that is the least-durable prize. (2) Within the US, durable rent migrates OFF the chip layer: NVIDIA's margin gets ground by custom ASICs + hyperscaler monopsony + open-weight commoditization, and accrues to the POWER layer (utilities, IPPs, behind-the-meter generators) + the AGGREGATION layer (hyperscaler cloud + whoever owns application distribution) — exactly as electrification's rent went to grid/utilities+GE and the internet's went to fiber+hyperscalers. (3) Geopolitically, the actor coupling power abundance + absorptive manufacturing + open-weight diffusion (China) is structurally positioned to capture disproportionate DEPLOYMENT-phase value (2028–30+), the phase where recurring revenue lives. Net: the durable winners are the owners of ELECTRONS and DISTRIBUTION during the deployment decade. The EUV/chip monopoly is the hardest gate guarding the least-durable prize — winning the battle no one should want to be winning.
+
+**Committed conclusion:** Replace 'a symmetric lattice, depends on relative clearing speed' with a directional, sequenced bet: The binding minimum MIGRATES — chips/EUV (2024–26) → power/minerals (2026–28) → power + aggregation (2028–30+) — and it migrates TOWARD the value, not away from it. The GPT reference class is decisive and unanimous: in electrification, internet, railroads, telegraph, and steam, the clever core commoditized and durable rent accrued to physical distribution + aggregation. AI is running the same play — open weights are its TCP/IP moment (Chinese models already ~61% of routed tokens, ≤3–6 months behind). Therefore the hardest gate (EUV) guards the least-durable prize (the frontier model), while the slowest, least-substitutable, value-aligned gate (power/electrons) plus thestickiest moat class (standards/aggregation: CUDA, hyperscaler cloud) capture the decade. Committed call: durable value goes to the owners of ELECTRONS + DISTRIBUTION during the deployment phase; within the US that is utilities/IPPs + hyperscaler-aggregators (not NVIDIA's chip margin), and geopolitically the edge tilts to the power-abundant-AND-absorptive builder (China's structural advantage) over the tooling-monopoly holder (the US) — because energy dominance is durable only when coupled with absorptive capacity, and China is the sole actor holding both at scale. This holds UNLESS RSI takeoff re-freezes the frontier (→ chips/EUV/US win), and is VOIDED ENTIRELY by a demand/ROI bust (→ capital burns, no one wins). Bet the deployment layer, hedge the RSI tail, and size for the demand-bust void.
+
+**Inverts if:** RSI takeoff — the R1 reinforcing loop beats the R3 diffusion flywheel. If a self-improving frontier model crosses a decisive-capability threshold BEFORE open weights erase the lead, the training frontier STOPS commoditizing and becomes a self-widening, field-freezing moat. Then the whole ladder inverts: compute, leading-edge chips, EUV tooling, and talent concentration re-elevate to decisive, because whoever holds the frontier at the moment of closure captures everything downstream. In that world the US chip + EUV + export-control complex wins the value, and power becomes a mere enabler rather than the prize. Watch the RSI gauges: today every one reads diffusion-winning, which is why this is the inverts-if and not the base case.
+**Voided if:** Demand / ROI bust — the capex frenzy collides with B1 (revenue validation) before deployment scales. If Jevons fails to materialize and AI revenue does not justify the buildout, NO chokepoint 'wins' because the contested asset loses value: power comes online into stranded take-or-pay contracts, chips glut, neocloud/VC-funded demand collapses, and the capital simply burns. In that scenario the entire ranking is moot — there is no durable rent to capture, only losses to allocate, and the question of who controls the binding input becomes the question of who is least exposed to the write-down.
+
+*Method: Liebig binding-minimum sequencing × GPT reference class × the dominance test. (1) LIEBIG: don't ask "which chokepoint wins" — trace how the binding minimum MIGRATES across the decade, then ask which input binds during the phase that CAPTURES DURABLE VALUE. (2) GPT REFERENCE CLASS: in every prior general-purpose-technology buildout the clever core commoditized and durable rent accrued to the physical-distribution + aggregation layer (dynamo→grid/utilities; TCP/IP→fiber+hyperscalers; locomotive→right-of-way). So rank each constraint on slowness-to-replicate × non-substitutability × share-of-DURABLE-value-gated — NOT on isolated difficulty. EUV is the hardest gate but guards the training frontier, which commoditizes: hardest gate, least-durable prize. (3) DOMINANCE TEST: for every constraint, did controlling it ever confer DURABLE dominance? Classify each historical case durable / caught-up / routed-around-by-tech, build a durability ladder, and map the AI chokepoints onto it.*
+
+## Binding-constraint sequence (the Liebig migration)
+- **early_training_frenzy (2024–2026)** → binds: **Leading-edge fabrication + EUV/EDA tooling (compute-bound training)** — Frontier training is bottlenecked on advanced-node GPU supply and the tooling behind it; export controls make this the acute gate. _(favors US / TSMC / NVIDIA / ASML — the incumbents holding the chip and tooling monopolies. US wins THIS phase and books the frontier-capability prestige.)_
+- **buildout (2026–2028)** → binds: **Power & grid execution + transformers/critical minerals** — Chips arrive faster than electrons: 2,300 GW in interconnection queues, 4–7yr waits, 128–144wk transformer lead times. The minimum migrates from silicon to megawatts. Minerals bind here as an input-tax on the power buildout. _(favors Structurally favors China (power-abundant + absorptive + controls grid-equipment minerals); the US is execution-gated and only partially relieves by 2030. Behind-the-meter gas/SMR is the US escape hatch.)_
+- **late_deployment (2028–2030+)** → binds: **Power (inference at scale) + aggregation/distribution lock-in** — Model layer is commoditized (open weights ≤3–6mo behind, Chinese models ~61% of routed tokens). Durable rent lands in inference-power and the aggregation seat — the GPT pattern. Whoever delivers cheap electrons + owns distribution captures the decade's value. _(favors The power-rich, absorptive builder + the aggregation incumbents (hyperscalers domestically). This is the value-capture phase — and it does NOT favor the pure chip/EUV holder.)_
+- **tail (throughout)** → binds: **Demand/ROI validation (B1) OR a decisive-capability RSI threshold** — Two exogenous switches sit over the whole sequence: a demand/ROI bust voids the value question entirely; an RSI takeoff re-elevates compute/chips and freezes the field. _(favors ROI bust → nobody (capital burns). RSI takeoff → whoever holds the frontier compute at the moment of closure (US).)_
+
+## Constraints ranked by decisiveness for VALUE capture
+
+### Power & grid execution (electrons, transformers, interconnection) — 0.9 · binds late_deployment
+- slow to replicate: Slowest of all — grid buildout is decade-scale. 2026 reality: ~2,300 GW stuck in US interconnection queues (>total installed capacity), 4–7yr waits in NoVa/Phoenix/Dallas, large-transformer lead times 128–144 weeks. A campus queuing in 2026 may not draw utility power before 2030–33. Cannot be bought forward with capital — it is an execution/permitting/skilled-labor wall.
+- non-substitutable: Near-total. Electrons are fungible but the delivery of them is not; behind-the-meter gas/SMR only partially route around, and the transformer/turbine supply chain is itself gated. No substitute for the physical constraint.
+- value gated: Gates DEPLOYMENT/INFERENCE at scale — the phase where GPT value historically lands (utilities+grid in electrification). Inference is where recurring revenue accrues once the model layer commoditizes. High and rising share of durable value.
+- GPT precedent: Electrification's grid/utilities + GE/Westinghouse — the dynamo commoditized, the network captured the rent.
+- dominance history: Coal→British primacy and oil→US hegemony: DURABLE, but ONLY coupled with absorptive/industrial capacity. Petrostate resource curse + Soviet energy abundance that still lost: control WITHOUT absorptive capacity = no dominance. China is power-abundant AND absorptive (unlike petrostates); the US is absorptive but power-constrained. Durability class: durable-when-coupled.
+
+### Value-capture locus / aggregation layer (CUDA lock-in + hyperscaler monopsony + application aggregation) — 0.85 · binds throughout
+- slow to replicate: Network/standards moats replicate slowly by definition — CUDA ecosystem, hyperscaler-cloud aggregation, and emerging app-layer aggregation compound. Custom ASIC + open weights are eroding NVIDIA's specific rent, but the aggregation position (who sits between commoditized models and end demand) is stickier.
+- non-substitutable: Medium-high at the aggregation layer, falling at the chip layer. Monopsony (MSFT/Google/AWS/Meta) gives structural pricing power over NVIDIA and TSMC; the aggregation seat is the hardest to dislodge.
+- value gated: This IS the durable-value layer. In every GPT buildout the aggregator/distributor captured rent. As the base-model layer commoditizes, rent migrates here + to power. Highest share of durable value alongside power.
+- GPT precedent: Wintel / dollar-SWIFT / Western Union — network + standards lock-in; and hyperscaler aggregation of free TCP/IP.
+- dominance history: Standards/networks (railway gauge, AC power standard, Wintel, dollar/SWIFT): the MOST durable advantage class historically — weaponizable, decades-long. Durability class: durable.
+
+### Leading-edge logic fabrication (sub-5nm capacity & indigenization) — 0.55 · binds early_training_frenzy
+- slow to replicate: Slow but replicable on a ~decade horizon. SMIC at 5nm-class on DUV multipatterning with ~20–40% yield in 2026 — uneconomic but improving. Capacity is the near-term training bottleneck.
+- non-substitutable: High short-term (no substitute for advanced nodes in training), but manufacturing capability historically diffuses.
+- value gated: Gates the TRAINING frontier — which commoditizes fastest (open weights ≤3–6 months behind). Hard gate, decaying prize. Falling share of durable value.
+- GPT precedent: DRAM/semiconductor manufacturing — clever, capital-intensive, and repeatedly caught up.
+- dominance history: DRAM leadership US→Japan→Korea→China; shipbuilding Britain→Japan→Korea→China; steel; solar PV (US-invented→China-dominant): manufacturing capacity gets CAUGHT UP within a generation. WWII arsenal-of-democracy conferred wartime dominance but was contingent. Durability class: caught-up.
+
+### Critical minerals & grid-equipment refining (China counter-lever) — 0.45 · binds throughout
+- slow to replicate: Processing capacity (~90% REE, ~94% magnets, ~99% heavy-REE in China, 2026) is slow to stand up ex-China (~15–20% by 2028), but doable.
+- non-substitutable: Low-to-medium over a decade — materials chokepoints invite substitution/synthesis/thrifting. Near-term it gates the POWER buildout (transformers, magnets, motors), which raises its transient decisiveness.
+- value gated: Gates the power/grid buildout as an input tax; does not itself capture end value. A tax, not a wall.
+- GPT precedent: Chile nitrate monopoly; natural rubber (British Malaya).
+- dominance history: Chile nitrate→Haber-Bosch; natural rubber→synthetic (Buna); 2010 China–Japan REE embargo→Lynas/Mountain Pass; 1973 OPEC→efficiency+non-OPEC+shale: materials chokepoints get ROUTED AROUND by synthesis/substitution over 5–15yr — sticky but not permanent. Durability class: routed-around-by-tech (a tax, not a wall).
+
+### EUV / EDA tooling (the gate behind the fab gate) — 0.4 · binds early_training_frenzy
+- slow to replicate: Slowest to replicate of the semiconductor stack — ASML remains ~100% of sub-5nm EUV (>90% prob the gate holds to 2028); Zeiss optics + decades of tacit integration. China has a prototype but not usable volume.
+- non-substitutable: Highest of all in the near term — genuinely one supplier on Earth. THE hardest physical gate.
+- value gated: Gates the training frontier one level up from fabs — i.e. it guards the SAME commoditizing prize. Hardest gate, LEAST-durable prize. Low share of durable value despite maximal difficulty.
+- GPT precedent: Zeiss optics / machine-tool leadership — rare durable tooling monopolies.
+- dominance history: Precision-tooling monopolies (Zeiss, ASML; machine tools Britain→Germany→US→Japan): DURABLE when they exist, but rare and slow-shifting. Yet Nikon/Canon losing lithography to ASML shows even tooling leadership migrates. Durability class: durable-but-rare (guarding the wrong prize).
+
+### Capital / finance primacy (incl. Gulf sovereign capital) — 0.4 · binds throughout
+- slow to replicate: Financial primacy migrates over ~a century (Amsterdam→London→NY). Abundant now; Gulf SWFs accepting sub-market returns distort economics.
+- non-substitutable: Low — capital is the most fungible input; it flows to the binding physical constraint but cannot clear it.
+- value gated: Enabling, not sufficient. Funds the buildout; captures value only where it also holds the aggregation/network seat.
+- GPT precedent: Britain's 19c capital exports funding others' railways — financed rivals' networks.
+- dominance history: Amsterdam(VOC)→London→New York financial primacy; reserve-currency/dollar status: enabling and fairly durable, but never sufficient ALONE — the financier often bankrolls the rival who captures the physical rent. Durability class: durable-but-insufficient.
+
+### Frontier AI talent concentration & mobility — 0.35 · binds early_training_frenzy
+- slow to replicate: Medium — US hosts ~55–60% of elite researchers by work location (ecosystem gravity + $100M comp). Container holds near-term.
+- non-substitutable: Low over time — knowledge diffuses; open weights ARE the diffusion made concrete.
+- value gated: Enabling input, not a value-capture layer. Gates the pace of frontier progress, which commoditizes.
+- GPT precedent: Manhattan Project concentration undone by diffusion (USSR 1949).
+- dominance history: Operation Paperclip (partial, durable-ish rocketry lead); Manhattan Project + Fuchs espionage→USSR 1949; émigré scientist flows: knowledge concentration confers a LEAD but DIFFUSES. Durability class: diffuses/caught-up.
+
+### Chip-access export-control regime (BIS controls + coalition + circumvention) — 0.35 · binds early_training_frenzy
+- slow to replicate: Policy construct — tightening/cohesive to 2028 (~70%), but reversible and leaky (circumvention, indigenization pressure).
+- non-substitutable: Medium — buys TIME on the training gate; does not create durable value, and accelerates the very indigenization it aims to stop.
+- value gated: Gates the pace at which the chip/EUV advantage decays; a clock, not a value layer.
+- GPT precedent: COCOM/strategic embargoes — bought time, spurred indigenization.
+- dominance history: 1941 oil embargo on Japan (decisive denial); COCOM Cold-War tech controls (slowed, didn't stop): denial-of-input confers leverage and buys years, but provokes substitution. Durability class: time-buying, self-eroding.
+
+### Efficiency compression & open-weight commoditization (the diffusion clock) — 0.2 · binds throughout
+- slow to replicate: Fast and accelerating — base-model layer decisively commoditized by 2028; best open weights ≤3–6 months and <40 Elo behind, pricing down 5–8×.
+- non-substitutable: N/A — this is the value-DESTROYER, not a controllable chokepoint. It erodes rent at the model layer and pushes it up-stack to power + aggregation.
+- value gated: Negatively decisive: it collapses value at the model/training layer, which is exactly why chips/EUV guard a decaying prize.
+- GPT precedent: TCP/IP going free; the dynamo becoming a commodity.
+- dominance history: Every GPT core that leaked (steam engine post-patent, TCP/IP, dynamo): the clever core commoditizes and value flees to distribution+aggregation. Durability class: routes-around all model-layer moats — it is the diffusion itself.
+
+## Durability ladder — which controls last, which erode
+Ranking constraint TYPES by the historical durability of the advantage they confer (most→least), then mapping the AI chokepoints on:
+1. STANDARDS / NETWORKS — DURABLE (decades, weaponizable): AC-power standard, railway gauge, Wintel, dollar/SWIFT, Western Union. → AI: CUDA lock-in, hyperscaler-cloud aggregation, emerging app-layer aggregation. THE top tier.
+2. ENERGY + ABSORPTIVE CAPACITY — DURABLE WHEN COUPLED (curse when not): coal/Britain, oil/US, hydro/aluminium; vs. petrostate/Soviet disconfirmers. → AI: power & grid execution. Durable IF the holder is also absorptive.
+3. PRECISION TOOLING — DURABLE-BUT-RARE, and displaceable by a coordinated bet: Zeiss/ASML (held), Nikon/Canon→ASML (lost). → AI: EUV/EDA. Real moat — guarding the wrong (commoditizing) prize.
+4. CAPITAL / FINANCE — DURABLE-BUT-INSUFFICIENT: Amsterdam→London→NY, dollar. Enables; the financier often funds the rival who captures physical rent. → AI: hyperscaler/Gulf capital.
+5. MANUFACTURING CAPACITY — CAUGHT UP within a generation: DRAM US→Japan→Korea→China, steel, shipbuilding, solar. → AI: leading-edge fabrication (SMIC is the catch-up in progress).
+6. TALENT / KNOWLEDGE — DIFFUSES: Manhattan→USSR'49, Paperclip. → AI: talent concentration; open weights ARE the diffusion made concrete.
+7. MATERIALS / MINERALS — ROUTED-AROUND by synthesis/substitution (a tax, not a wall): nitrate→Haber-Bosch, rubber→synthetic, 2010 REE→Lynas. → AI: critical minerals (sticky, slow route-around; near-term taxes the power buildout).
+KEY INVERSION: difficulty and durability are ANTI-correlated with the value at stake. The hardest gates (EUV, chips) sit in the middle/lower tiers because they guard the fastest-commoditizing prize. The most durable value sits in tiers 1–2 (standards + power) — the layers that also won electrification and the internet.
+
+## Has controlling each constraint won before? (by constraint)
+
+**energy**
+- Coal & British industrial primacy, 1780–1850 — control→dominance? **yes** · *durable*. Coal abundance COUPLED with the factory system, machine tools, and skilled labor (absorptive capacity) — energy alone was not the cause, the coupling was.
+- Oil & US 20th-century hegemony — control→dominance? **yes** · *durable*. Oil abundance + the largest industrial/consumer base + Bretton-Woods finance — coupling again decisive; the petrodollar tied energy to standards.
+- 1941 oil embargo on Japan — control→dominance? **yes** · *durable*. Denial of an energy input was strategically decisive — control of the chokepoint (US/allied oil) crippled the adversary; shows energy as a binding minimum.
+- Hydropower & US aluminium (TVA / Pacific NW, WWII) — control→dominance? **yes** · *durable*. Cheap electrons converted directly into war-decisive aluminium output — electrons→physical throughput, the deployment-phase logic.
+- OPEC petrostates (Saudi, Nigeria, Venezuela) resource curse — control→dominance? **no** · *routed_around_by_tech*. Energy abundance WITHOUT absorptive/industrial capacity produced rent extraction, not dominance — the disconfirming case that defines the coupling requirement.
+- Soviet energy abundance yet Cold-War defeat — control→dominance? **no** · *routed_around_by_tech*. Vast energy without allocative efficiency/absorptive capacity did not confer durable dominance — abundance is necessary, not sufficient.
+
+**manufacturing capacity**
+- WWII 'arsenal of democracy' (US) — control→dominance? **yes** · *caught_up*. Manufacturing scale was war-decisive but contingent; the postwar manufacturing lead was progressively caught up by rebuilt/rising economies.
+- DRAM leadership US→Japan→Korea→China — control→dominance? **partial** · *caught_up*. Canonical case: memory-manufacturing dominance migrated every ~15 years. Capacity leadership is repeatedly competed away — the template for SMIC catching sub-5nm.
+- Shipbuilding & steel Britain→US→Japan→Korea→China — control→dominance? **partial** · *caught_up*. Heavy-manufacturing primacy consistently migrates to the next absorptive low-cost builder; no permanent moat.
+- Solar PV: US-invented, China-dominant — control→dominance? **partial** · *caught_up*. Invention and early manufacturing lead in the US; scale/cost dominance captured by China — manufacturing catch-up plus energy-buildout coupling.
+
+**precision tooling / gate-behind-the-gate**
+- Zeiss optics / ASML EUV monopoly — control→dominance? **yes** · *durable*. Genuine single-supplier monopoly on decades of tacit optical+systems integration — the rare durable tooling gate. But it guards the commoditizing training frontier.
+- Machine-tool leadership Britain→Germany→US→Japan — control→dominance? **partial** · *caught_up*. Tooling leadership is stickier than commodity manufacturing but still migrated over a century — durable-but-not-permanent.
+- Lithography: Nikon/Canon → ASML — control→dominance? **partial** · *caught_up*. Even a tooling incumbent (Japanese steppers) lost the lead to a focused consortium (ASML+Zeiss+EUV) — tooling monopolies can be displaced by a coordinated bet.
+
+**materials/minerals**
+- Chile nitrate monopoly → Haber-Bosch — control→dominance? **no** · *routed_around_by_tech*. A near-total natural monopoly on fixed nitrogen was made worthless by chemical synthesis — the paradigm 'routed-around' case.
+- Natural rubber (British Malaya) → synthetic rubber — control→dominance? **no** · *routed_around_by_tech*. Wartime denial of natural rubber spurred synthetic (Buna/GR-S) at scale — substitution dissolved the chokepoint within years.
+- 2010 China–Japan REE embargo — control→dominance? **partial** · *routed_around_by_tech*. Price spike triggered Lynas/Mountain Pass, thrifting, and stockpiles; China still ~90% in 2026, so the route-around is SLOW and sticky — a heavy tax, not a permanent wall.
+- 1973 OPEC oil embargo — control→dominance? **partial** · *routed_around_by_tech*. Delivered a real short-run shock but induced efficiency, non-OPEC supply, and eventually shale — chokepoint eroded over decades.
+
+**talent/knowledge**
+- Operation Paperclip — control→dominance? **partial** · *caught_up*. Seizing German rocket scientists gave the US an early lead, but the USSR built a parallel program — concentration accelerates, doesn't monopolize.
+- Manhattan Project + Fuchs espionage → USSR 1949 — control→dominance? **partial** · *caught_up*. The tightest talent concentration in history still saw the knowledge diffuse within ~4 years via espionage — knowledge leaks.
+- Silicon Valley immigrant talent gravity — control→dominance? **yes** · *caught_up*. Ecosystem gravity is real and durable-ish, but the knowledge embodied in open weights diffuses globally — the container holds people, not the capability.
+
+**capital/finance**
+- Amsterdam(VOC)→London→New York financial primacy — control→dominance? **yes** · *durable*. Financial primacy is durable and enabling but migrates over ~a century and is never sufficient alone — the financier often funds the rival.
+- Britain's 19c capital exports funding foreign railways — control→dominance? **partial** · *caught_up*. British capital financed the US/Argentine/Indian railway networks whose physical rent accrued locally — capital enables, physical control captures.
+- US dollar / reserve-currency status — control→dominance? **yes** · *durable*. Reserve-currency + SWIFT is a durable, weaponizable standard — but it is a standards/network advantage as much as a capital one.
+
+**standards/networks**
+- AC power standard (Westinghouse/Tesla vs Edison DC) — control→dominance? **yes** · *durable*. Winning the current-standard war set the architecture of the entire electrical century — network/standards lock-in is the most durable class.
+- Railway gauge standardization — control→dominance? **yes** · *durable*. Gauge lock-in created enduring network advantage and switching costs — physical-network standards persist for generations.
+- Wintel (Windows + Intel) — control→dominance? **yes** · *durable*. Platform+ISA lock-in captured PC-era rent for two decades — the direct analog to CUDA + hyperscaler aggregation.
+- Dollar/SWIFT financial rails — control→dominance? **yes** · *durable*. Network control of settlement is durable and coercive — the strongest evidence that aggregation/standards, not the underlying invention, hold rent.
+
+*Energy verdict:* Yes — conditionally, and it is the decisive long card. Energy is BOTH necessary (no electrons, no inference) AND, uniquely among physical inputs, coupled to absorptive capacity in the one power that can exploit it. The history is unambiguous: energy abundance conferred DURABLE dominance for Britain (coal) and the US (oil, hydro) precisely because it was coupled with industrial/absorptive capacity — and it produced the resource curse (Gulf petrostates) or strategic failure (USSR) wherever that coupling was absent. Mapped onto the AI race: China is the rare actor that is BOTH power-abundant (adding grid capacity at multiples of US pace) AND absorptive (largest manufacturing base, controls grid-equipment minerals, ships the world's dominant open-weight models — ~61% of routed tokens). The US is absorptive but power-constrained (2,300 GW queued, 4–7yr interconnection, 128–144wk transformers). So the US chip/EUV lead dominates the EARLY training phase (2024–26), but the binding minimum migrates to power exactly as the value migrates to deployment (2028–30+). The energy-rich absorptive power is therefore positioned to capture disproportionate deployment-phase value — UNLESS (a) US behind-the-meter gas/SMR relieves the grid gate faster than expected, or (b) RSI takeoff freezes the field while the US still holds the frontier. Energy does not win by itself; energy × absorptive capacity wins, and China is the only actor holding both at scale.
+
+## GPT-buildout precedents (invention commoditizes; distribution+aggregation wins)
+- **Electrification, 1880–1930**: The dynamo / AC induction motor — the clever core became a purchasable commodity within a generation. commoditized → value landed at The grid + utilities, and the aggregators GE/Westinghouse who owned generation, distribution standards (AC), and equipment.. *AI lesson:* The direct AI analog: the model (dynamo) commoditizes; durable rent accrues to the electricity-delivery network + the aggregation layer. Power and the grid are not a metaphor here — they are literally the same layer that won last time.
+- **Internet / TCP-IP, 1990s–2010s**: TCP/IP and HTTP — free, open, non-excludable protocols. commoditized → value landed at Fiber/physical backbone + hyperscaler aggregation (AWS, Google) sitting between commodity protocol and end demand.. *AI lesson:* Open weights are AI's TCP/IP moment. Value flees the protocol/model to physical infrastructure (power/compute) and the aggregation seat. Betting on the model layer is betting on TCP/IP licensing.
+- **Railroads, 19th century**: The locomotive and rolling stock — replicable, competed hardware. commoditized → value landed at Right-of-way, land grants, gauge standards, and network density — the geographic/physical monopoly.. *AI lesson:* The scarce, non-replicable asset (right-of-way ↔ interconnection + siting + power) captures rent, not the vehicle (GPU/model).
+- **Telegraph, 1840s–1900**: Morse's patent and the telegraph key — quickly worked around and licensed away. commoditized → value landed at Western Union's network + the transatlantic cable-layers — physical distribution + standards lock-in.. *AI lesson:* Network + standards (CUDA, aggregation) plus physical distribution capture value; the signalling invention does not.
+- **Steam / mechanized industry, 1770–1850**: Watt's engine once the patent lapsed — the prime mover became a commodity. commoditized → value landed at Those coupling coal (energy) with the factory system + skilled labor (absorptive capacity) — i.e. Britain, until others acquired the absorptive capacity too.. *AI lesson:* Energy confers dominance ONLY when coupled with absorptive capacity. Pure abundance is the resource curse; abundance × absorption is British/US primacy.
