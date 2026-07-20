@@ -1,0 +1,124 @@
+{
+  "rejected": [
+    {
+      "title": "Weaponized interdependence and the fragmentation of global finance",
+      "reason": "Folded up into T9 as the core sub-question \u2014 kept as one financial-statecraft area rather than split from dollar hegemony."
+    },
+    {
+      "title": "Dollar hegemony in the AI investment era: entrenchment or multipolar fracture?",
+      "reason": "Folded into T9; the reserve-currency trajectory is a sub-question of financial fragmentation, not a standalone slot."
+    },
+    {
+      "title": "Critical-mineral and energy nationalism as structural AI infrastructure risk",
+      "reason": "Folded into T7 \u2014 minerals/grid/energy leverage is inseparable from the physical buildout topic."
+    },
+    {
+      "title": "The AI industrial-policy subsidy race: who wins, who misallocates",
+      "reason": "Folded into T7 as the capital/subsidy sub-question of the buildout."
+    },
+    {
+      "title": "Semiconductor manufacturing geography: TSMC dependence, packaging chokepoints, fab reshoring",
+      "reason": "Folded into T7; physical fab/packaging geography sits with the buildout, distinct from export-control policy (T5)."
+    },
+    {
+      "title": "Datacenter geography and grid politics: where AI physically runs",
+      "reason": "Folded into T7 \u2014 siting, grid, nuclear, and subsea cables are facets of the buildout topic."
+    },
+    {
+      "title": "Gulf state AI ambitions: petrodollar capital meets AI infrastructure",
+      "reason": "Folded into T7 as the Gulf-SWF actor lens within the buildout."
+    },
+    {
+      "title": "The hyperscaler-state nexus: cloud as contested sovereign terrain",
+      "reason": "Folded into T7 (quasi-sovereign infra) with overlap into T8 (localization/sovereignty law)."
+    },
+    {
+      "title": "Multilateral trade architecture under AI-age industrial policy: can WTO rules survive?",
+      "reason": "Duplicative of T4 \u2014 WTO survival is the central sub-question there."
+    },
+    {
+      "title": "Political economy of AI-driven labor displacement",
+      "reason": "Folded into T3 as the protectionism/redistribution backlash sub-question."
+    },
+    {
+      "title": "Regulatory and standards fragmentation as AI market protectionism",
+      "reason": "Became the spine of T8; listed here only because data sovereignty and device-layer candidates were merged into it."
+    },
+    {
+      "title": "Data sovereignty and cross-border flow restrictions",
+      "reason": "Folded into T8 as the data-stockpile sub-question."
+    },
+    {
+      "title": "Device and OS distribution layer as AI's next mercantilist battleground",
+      "reason": "Folded into T8; the distribution chokepoint is a facet of the non-tariff/standards barrier area, not yet material enough for its own slot."
+    },
+    {
+      "title": "AI as a force-multiplier for financial and currency statecraft",
+      "reason": "Folded into T9 as the AI-crossing that makes that topic an intersection."
+    },
+    {
+      "title": "China's indigenous AI chip substitution economy (Ascend, SMIC)",
+      "reason": "Duplicative \u2014 folded into T5 as the substitution-curve sub-question."
+    },
+    {
+      "title": "Algorithmic efficiency as geopolitical equalizer",
+      "reason": "Folded into T5 (and T2); an erosion channel for the chokepoint premium, not a standalone area."
+    },
+    {
+      "title": "Gray-market chip flows and third-country routing",
+      "reason": "Folded into T5 as the enforcement-ceiling sub-question."
+    },
+    {
+      "title": "China's full-stack AI self-reliance (frameworks, cloud, hardware, data)",
+      "reason": "Folded across T5/T6 \u2014 the parallel-stack question splits between hardware substitution and open-ecosystem diffusion."
+    },
+    {
+      "title": "Knowledge transfer beyond hardware: chips vs human capital",
+      "reason": "Folded into T6 as the containment-channel sub-question."
+    },
+    {
+      "title": "Inference-layer economics and the edge route around training-cluster controls",
+      "reason": "Folded into T5 (chokepoint relevance) and T2 (cost structure)."
+    },
+    {
+      "title": "The compute-sufficiency threshold: a 'good-enough' floor China may have crossed",
+      "reason": "Folded into T5 as a sub-question; it is one binary crux, not a broad area."
+    },
+    {
+      "title": "Non-aligned 'AI-unaligned' nations as a third capability bloc",
+      "reason": "Folded into T6 as the non-aligned-tier sub-question."
+    },
+    {
+      "title": "AI capability opacity: the assessment/measurement problem",
+      "reason": "Folded into T5 as a calibration sub-question; a meta-issue rather than a standalone forecastable area."
+    },
+    {
+      "title": "AI proliferation to non-state and sub-state actors",
+      "reason": "Folded into T6 as the non-state sub-question of open-weight diffusion."
+    },
+    {
+      "title": "The open-source AI governance vacuum",
+      "reason": "Duplicative of T6 \u2014 the governance question is the spine of that topic."
+    },
+    {
+      "title": "Global South and emerging markets in the AI mercantilist order",
+      "reason": "Folded into T6 as the dependency-vs-leapfrog sub-question."
+    },
+    {
+      "title": "Military AI, autonomous systems, and dual-use export-control blurring",
+      "reason": "Consciously down-scoped \u2014 primarily a security/defense-policy axis; dual-use export-control strain folded into T5. Out of core economic-mercantilism scope for this brief."
+    },
+    {
+      "title": "Digital authoritarianism exports: AI surveillance as influence tool",
+      "reason": "Down-scoped and folded into T8 (standards/dependency) \u2014 more influence-ops than economic mercantilism, immaterial as its own slot."
+    },
+    {
+      "title": "AI talent as a strategic resource: immigration, brain-drain, human-capital arms race",
+      "reason": "Down-scoped \u2014 a real but secondary lever; folded into T6 (knowledge-transfer channel) and T7 (human-capital input to buildout)."
+    },
+    {
+      "title": "Historical base rates and reference-class discipline (16th-18th c. mercantilism, electrification/railway/dotcom capex cycles, GPT diffusion waves)",
+      "reason": "A cross-cutting calibration METHOD to be applied inside every topic (priming priors on bubble overshoot, slow GPT diffusion, unstable blocs), not a standalone forecast-spawning area \u2014 it earns no bench slot of its own."
+    }
+  ]
+}

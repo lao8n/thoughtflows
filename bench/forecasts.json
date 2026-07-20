@@ -1,0 +1,164 @@
+{
+  "forecasts": [
+    {
+      "id": "F1",
+      "statement": "At least one announced US AI data-center project rated 1 GW or larger will be publicly delayed, downsized, or cancelled with grid-interconnection or power-supply as a primary cited cause.",
+      "probability": 0.87,
+      "timeframe": "by end of 2028",
+      "resolution_criteria": "A company statement, utility/regulatory filing, or report from a major outlet (Reuters/Bloomberg/WSJ/FT) documents a US data-center project of \u22651 GW planned capacity delayed, reduced in scope, or cancelled, with power availability, grid interconnection, or transmission explicitly cited as a primary reason. Routine schedule slips with no power rationale do not count.",
+      "driver_ids": [
+        "D3"
+      ],
+      "rationale": "Physical inputs \u2014 not intelligence \u2014 are the binding constraint. Interconnection queues (multi-year) and regional power scarcity are already the gating factor for hyperscale buildout, and the sheer number of >=1GW announcements makes at least one power-driven stumble near-inevitable in the window.",
+      "why_kept": "Cleanest, highest-confidence expression of the energy-bind pillar with a hard capacity threshold; anchors the submission with a well-justified extreme probability.",
+      "competition_strength": "Strongly calibrated high-conviction call (0.87) with an unambiguous numeric trigger; demonstrates the thesis's core 'energy gates AI' claim without hedging."
+    },
+    {
+      "id": "F2",
+      "statement": "The cheapest API price for a model matching or exceeding January-2026 GPT-4-class capability will be at least 90% lower than the cheapest such option available in January 2026.",
+      "probability": 0.88,
+      "timeframe": "by end of 2028",
+      "resolution_criteria": "Published per-million-token pricing for any commercially available model that matches or exceeds a fixed Jan-2026 GPT-4-class reference score on a standard public benchmark (e.g., MMLU or GPQA) is \u226590% below the lowest-priced qualifying model as of January 2026.",
+      "driver_ids": [
+        "D2",
+        "D1"
+      ],
+      "rationale": "Capability diffuses without a durable moat and the model layer commoditizes; prior GPT-4-class price curves already fell >90% within ~18 months, so a 3-year window makes this near-structural rather than speculative.",
+      "why_kept": "The load-bearing evidence for 'rent leaks out of the model layer'; fully objective (published price vs fixed benchmark) and pairs with F10 to show where the rent goes.",
+      "competition_strength": "High calibration on a mechanism with strong historical precedent; the fixed-benchmark clause removes moving-goalpost ambiguity."
+    },
+    {
+      "id": "F4",
+      "statement": "At least one frontier-scale AI compute deployment of 200 MW-equivalent or larger will operate primarily on off-grid dedicated generation, offshore siting, or satellite-integrated architecture rather than standard utility interconnection.",
+      "probability": 0.62,
+      "timeframe": "by end of 2029",
+      "resolution_criteria": "Credible reporting or company disclosure confirms an operational AI compute deployment drawing \u2265200 MW whose primary power/siting is behind-the-meter dedicated generation islanded from the grid, offshore, or space/satellite-integrated \u2014 i.e., not dependent on standard RTO/ISO grid interconnection.",
+      "driver_ids": [
+        "D5",
+        "D3",
+        "D2"
+      ],
+      "rationale": "The space/off-grid compute modality routes physical buildout around both the interconnection bottleneck and the regulable grid, giving the West's siting/export-control containment tools a built-in expiry date. Behind-the-meter gas at this scale is already emerging, and the criterion resolves on operational fact rather than stated intent.",
+      "why_kept": "The originality centerpiece \u2014 the proof-of-concept that effective control migrates off the regulable grid. No other kept forecast captures the jurisdiction-agnostic wildcard.",
+      "competition_strength": "Most original/contrarian pick; reframes containment as time-limited. Intent language stripped so it resolves on an observable capacity fact."
+    },
+    {
+      "id": "F5",
+      "statement": "In at least one calendar year, credible reporting will document that 100,000 or more restricted advanced AI accelerators (H100-class or better) reached China despite US export controls.",
+      "probability": 0.65,
+      "timeframe": "by end of 2028",
+      "resolution_criteria": "A US/allied government report, GAO/BIS/congressional finding, or investigative report by a major outlet quantifies \u2265100,000 export-restricted advanced accelerators entering China in a single calendar year via smuggling, transshipment, or offshore cloud circumvention.",
+      "driver_ids": [
+        "D5",
+        "D2"
+      ],
+      "rationale": "Export controls are a real chokepoint but leak from within, and they target the silicon layer where durable value no longer sits. The lever erodes faster than it binds \u2014 the mercantilist tool degrades on its own timeline.",
+      "why_kept": "Mercantilist lever (export controls) plus a contrarian rebuttal of 'controls work'; distinct from F4's off-grid mechanism (this is diversion of restricted silicon, not siting).",
+      "competition_strength": "Contrarian and mercantilist; the numeric threshold and named report-types give a scoreable bar, with probability moderated for reporting-precision risk."
+    },
+    {
+      "id": "F7",
+      "statement": "US employment in at least one major AI-exposed white-collar occupation (software developers, paralegals/legal assistants, or customer-service representatives) will fall 10% or more below its 2024\u20132025 peak.",
+      "probability": 0.55,
+      "timeframe": "by end of 2029",
+      "resolution_criteria": "US BLS data (OES or CES occupational series) shows the employment level for at least one of the three named occupations at least 10% below its highest 2024\u20132025 annual reading.",
+      "driver_ids": [
+        "D4",
+        "D1"
+      ],
+      "rationale": "Agentic capability substitutes for tasks faster than it reinstates complementary ones; the thesis holds that AI displaces pervasively even without a decisive lead. A 10% decline in a single most-exposed category is a moderate, not maximal, claim.",
+      "why_kept": "The only labor-displacement forecast; expresses 'enriches and displaces' and is fully objective via named BLS series.",
+      "competition_strength": "Objective official-statistics anchor; the named occupation set and fixed peak baseline prevent cherry-picking, and 0.55 reflects genuine two-sided uncertainty."
+    },
+    {
+      "id": "F8",
+      "statement": "The US real policy rate (effective fed funds minus 12-month headline CPI) will be negative for at least six consecutive months.",
+      "probability": 0.55,
+      "timeframe": "by end of 2029",
+      "resolution_criteria": "Monthly effective federal funds rate minus year-over-year headline CPI is below zero for six or more consecutive calendar months, per Fed (FRED series DFF) and BLS CPI data.",
+      "driver_ids": [
+        "D7"
+      ],
+      "rationale": "Fiscal dominance and eroding central-bank independence tilt the regime toward financial repression \u2014 negative real rates as the debt-management tool. This is currency/financial statecraft, the macro face of mercantilism.",
+      "why_kept": "Mercantilist lever (financial repression) and the macro-regime pillar; resolvable to the month from two public series. Chosen over F9 to avoid a second, conditional macro forecast.",
+      "competition_strength": "Precise, machine-checkable resolution from FRED/BLS; expresses fiscal dominance without vague 'inflation stays high' language."
+    },
+    {
+      "id": "F10",
+      "statement": "At least one independent top-tier frontier AI lab (OpenAI, Anthropic, xAI, Mistral, or comparable) will be acquired by or brought under majority/exclusive operational control of a hyperscaler or consumer-platform incumbent.",
+      "probability": 0.5,
+      "timeframe": "by end of 2029",
+      "resolution_criteria": "A named independent frontier lab becomes the subject of a completed acquisition, a majority equity stake, or a contractual arrangement granting a hyperscaler/consumer-platform incumbent exclusive control of its compute, model IP, and go-to-market \u2014 confirmed by company announcement or regulatory filing.",
+      "driver_ids": [
+        "D2"
+      ],
+      "rationale": "Rent migrates up-stack to distribution; pure model labs lack a standalone moat once capability commoditizes (see F2) and get pulled into platform incumbents that own users, power, and channels. 'Who controls platforms' beats 'who reaches AGI'.",
+      "why_kept": "Names where the rent goes (distribution), complementing F2's 'rent leaves the model layer'; contrarian against the 'labs are permanent kingmakers' consensus.",
+      "competition_strength": "Contrarian and directly tied to the thesis's platform-control claim; the acquisition/majority/exclusive-control triple keeps resolution objective."
+    },
+    {
+      "id": "F11",
+      "statement": "China's PLA will initiate a declared military blockade, quarantine, or direct kinetic action against Taiwan beyond routine exercises.",
+      "probability": 0.12,
+      "timeframe": "by end of 2028",
+      "resolution_criteria": "Official statements or consensus major-outlet reporting confirm a PLA-declared blockade/quarantine of Taiwan or a direct kinetic strike on Taiwan-controlled territory. Routine drills, ADIZ incursions, and gray-zone coercion do not count.",
+      "driver_ids": [
+        "D6"
+      ],
+      "rationale": "Beijing's Taiwan calculus is driven by politics, not economic interdependence, so the kinetic tail is live and not defused by trade linkage \u2014 but the base rate over three years is low. The calibrated low number is the point: a real but non-modal tail on the compute-chokepoint container.",
+      "why_kept": "The 'live Taiwan tail' is explicit in the thesis; the deliberately low probability demonstrates calibration discipline rather than 50/50 hedging.",
+      "competition_strength": "Well-justified extreme (<0.20); the exclusion of routine drills makes an otherwise fuzzy geopolitical event cleanly scoreable."
+    },
+    {
+      "id": "F12",
+      "statement": "At least 3 of the 20 most populous non-treaty-aligned 'swing' states will adopt a predominantly Chinese-origin AI stack (Chinese frontier models and/or Chinese-made accelerators) for state or critical-infrastructure deployments.",
+      "probability": 0.45,
+      "timeframe": "by end of 2030",
+      "resolution_criteria": "Documented procurement/deployment (government contract, state media, or major-outlet reporting) in \u22653 qualifying swing states where Chinese-origin frontier models or Chinese-made accelerators are the primary stack for a state or critical-infrastructure system.",
+      "driver_ids": [
+        "D6",
+        "D5"
+      ],
+      "rationale": "Fragmentation gravitates toward two compute stacks with no stable middle; as US controls leak and Chinese offerings mature, swing states are pushed to pick, and price/access advantage tilts several toward the Chinese stack.",
+      "why_kept": "Mercantilist lever (bloc/supply-chain formation) and the clearest 'two-stack world' forecast; distinct from F5/F15 which are about leakage and trade volume respectively.",
+      "competition_strength": "Captures unstable multipolarity with a countable threshold; probability reflects genuine uncertainty over adoption pace, avoiding overconfidence."
+    },
+    {
+      "id": "F15",
+      "statement": "Full-year 2028 US\u2013China two-way goods trade in nominal USD will remain at 80% or more of full-year 2024 levels.",
+      "probability": 0.62,
+      "timeframe": "in calendar year 2028",
+      "resolution_criteria": "Official US Census Bureau and/or China Customs statistics show 2028 total US\u2013China two-way goods trade in nominal USD at \u226580% of the 2024 total.",
+      "driver_ids": [
+        "D6",
+        "D5"
+      ],
+      "rationale": "The trade 'breakdown' is institutional/rule erosion layered atop still-flowing physical trade; tariffs and export rules fray the framework while volumes prove sticky. China reads more as an economic rebalancer than a clean decoupler.",
+      "why_kept": "Mercantilist lever (tariffs/trade) and a sharply contrarian counter to the decoupling narrative; the nominal-USD floor is directly measurable from official stats.",
+      "competition_strength": "Contrarian against consensus decoupling, resolvable to a single ratio from official data \u2014 a defensible roundtable centerpiece on 'rules erode but flows persist'."
+    }
+  ],
+  "dropped": [
+    {
+      "id": "F3",
+      "reason": "Overlaps F4 as the space-compute node; a single-site GPU count is harder to verify and less expressive of the jurisdiction-bypass claim than F4's off-grid capacity criterion."
+    },
+    {
+      "id": "F6",
+      "reason": "Institutional-erosion pillar already carried by F5 and F8; 'materially weaken/broad exemption' invites judgment calls, failing the objective-resolution bar."
+    },
+    {
+      "id": "F9",
+      "reason": "Duplicates F8 on the macro/fiscal-dominance pillar and is conditional on a \u226520% drawdown occurring, adding resolution fragility for no new theme."
+    },
+    {
+      "id": "F13",
+      "reason": "Near-duplicate of F1 on the energy-bind theme; kept the sharper project-cancellation version to preserve breadth across the ten."
+    },
+    {
+      "id": "F14",
+      "reason": "Genuine thesis point (no decisive lead) but reconstructing a '12-month lead over the 5th-ranked model' is too subjective to score cleanly; commoditization is captured objectively by F2."
+    }
+  ],
+  "submission_note": "The ten forecasts trace the worldview end to end: energy and jurisdiction \u2014 not intelligence \u2014 bind AI power (F1 grid stall, F4 off-grid/space compute routing around the regulable grid); rent leaks out of the commoditizing model layer (F2) and migrates up-stack to distribution incumbents (F10); Western institutions and containment tools erode faster than they bind (F5 export-control leakage, F8 financial repression); the technology displaces labor pervasively while handing no one a decisive lead (F7); and the container fragments into two compute stacks with a live kinetic tail and sticky physical trade (F11 Taiwan, F12 stack bloc, F15 US\u2013China trade). Four forecasts (F5, F8, F12, F15) turn on named mercantilist levers \u2014 export controls, financial statecraft, bloc formation, and tariffs/trade \u2014 satisfying the brief's mandatory mercantilism coverage. Four are deliberately contrarian (controls leak, labs get absorbed, compute goes off-grid, trade persists despite decoupling), and probabilities span a calibrated range from 0.12 to 0.88 rather than clustering at 50/50."
+}

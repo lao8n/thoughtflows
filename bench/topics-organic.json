@@ -1,0 +1,186 @@
+{
+  "brief": "modern mercantilism, AI, or their intersection (the Bridgewater 'Forecasting the Future 2026' brief)",
+  "topics": [
+    {
+      "id": "T1",
+      "title": "Do AI scaling returns (compute \u2192 frontier capability) hold through 2028?",
+      "kind": "pillar",
+      "run_mode": "pure",
+      "rationale": "Foundational capability question that sits upstream of every mercantilist bet. If the scaling regime breaks, the strategic value of compute chokepoints, capex, and chip controls all reset \u2014 so it must be run pure as the load-bearing assumption the rest of the bench leans on.",
+      "axis_tags": [
+        "AI layer: frontier models/compute",
+        "lever: none (pure capability)",
+        "actor: frontier labs"
+      ],
+      "candidate_forecasts": [
+        "Will at least one publicly released model score \u226590% on GPQA-Diamond by Dec 31 2027?",
+        "Will the largest publicly disclosed training run exceed 1e27 FLOP by Dec 31 2028?",
+        "Will a frontier lab publicly state that pretraining-scaling returns have plateaued by Dec 31 2027?"
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Does the 2024\u20132028 AI capex wave (~$1T) earn its ROIC, or trigger a hyperscaler investment reversal?",
+      "kind": "pillar",
+      "run_mode": "pure",
+      "rationale": "The financial sustainability spine. A capex bust (or proof of circular vendor-financing) would unwind sovereign industrial-policy bets and reorder the whole field; absorbs the circular-financing and NVIDIA-rent candidates as sub-questions.",
+      "axis_tags": [
+        "AI layer: compute/infrastructure economics",
+        "lever: capital markets",
+        "actor: hyperscalers + frontier labs"
+      ],
+      "candidate_forecasts": [
+        "Will any of Microsoft, Google, Amazon, or Meta report a year-over-year decline in AI-related capex in any fiscal year through 2027?",
+        "Will a major hyperscaler take a write-down \u2265$5B explicitly attributed to AI infrastructure by Dec 31 2028?",
+        "Will NVIDIA datacenter-GPU gross margin fall below 60% in any reported quarter through 2028?"
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "Is the post-Washington Consensus industrial-policy era structurally durable or a cyclical overshoot?",
+      "kind": "pillar",
+      "run_mode": "pure",
+      "rationale": "The core mercantilism pillar independent of AI specifics: whether the subsidy-and-tariff paradigm survives fiscal stress and political turnover. Sets the base rate for every crossed industrial-policy intersection on the bench.",
+      "axis_tags": [
+        "lever: industrial subsidy + tariffs",
+        "actor: US/EU/China states",
+        "AI layer: n/a (paradigm)"
+      ],
+      "candidate_forecasts": [
+        "Will the US CHIPS Act remain unrepealed and funded through Dec 31 2027?",
+        "Will the US, EU, and China each have active semiconductor/AI subsidy programs as of Dec 31 2027?",
+        "Will any G7 government announce a material rollback of an AI/chip subsidy program citing fiscal pressure by Dec 31 2028?"
+      ]
+    },
+    {
+      "id": "T4",
+      "title": "Does AI white-collar automation hit disruptive workforce scale by 2028, pivoting AI politics to protectionism?",
+      "kind": "pillar",
+      "run_mode": "pure",
+      "rationale": "The labor/political-economy swing variable. Whether AI substitutes or complements labor determines if a worker-protection protectionist coalition forms in advanced economies \u2014 the domestic-politics hinge for the entire mercantilist narrative.",
+      "axis_tags": [
+        "AI layer: applications/agents",
+        "lever: labor protectionism",
+        "actor: advanced-economy electorates"
+      ],
+      "candidate_forecasts": [
+        "Will US BLS data show a net decline in computer-programmer (SOC 15-1251) employment between 2025 and 2027?",
+        "Will any G7 government enact AI-specific worker-displacement legislation (automation tax, layoff restriction, retraining mandate) by Dec 31 2028?"
+      ]
+    },
+    {
+      "id": "T5",
+      "title": "Do US export controls on advanced AI chips decide the frontier race vs. Chinese challengers?",
+      "kind": "intersection",
+      "run_mode": "crossed",
+      "rationale": "The single most central Mercantilism\u00d7AI intersection: the chip-compute-capability chokepoint theory tested directly. Crosses export-control lever \u00d7 compute layer \u00d7 US/China actors; absorbs the China-domestic-fab candidate as the other side of the same question.",
+      "axis_tags": [
+        "lever: export controls",
+        "AI layer: chips/compute",
+        "actor: US vs China"
+      ],
+      "candidate_forecasts": [
+        "Will US BIS advanced-AI-chip controls on China be net-tightened or held (no net loosening) through Dec 31 2027?",
+        "Will a Chinese-developed model rank in the global top 5 on Chatbot Arena at any point in 2027?",
+        "Will Huawei Ascend or SMIC ship a \u22645nm-class AI accelerator at scale by Dec 31 2028?"
+      ]
+    },
+    {
+      "id": "T6",
+      "title": "Does open-weight model release (Llama, Qwen, DeepSeek, Mistral) nullify US export controls?",
+      "kind": "intersection",
+      "run_mode": "crossed",
+      "rationale": "The strongest refutation lens against T5. If frontier capability diffuses via weights independent of hardware access, the entire chip-chokepoint theory weakens. Crosses model layer \u00d7 export-control lever; pairs the inference-scaling-decoupling candidate as a second arbitrage path.",
+      "axis_tags": [
+        "AI layer: open-weight models",
+        "lever: export-control arbitrage",
+        "actor: Meta/Alibaba/China labs"
+      ],
+      "candidate_forecasts": [
+        "Will an open-weight model rank within the top 10 on Chatbot Arena as of Dec 31 2027?",
+        "Will Meta, Alibaba, or DeepSeek release open weights within 6 months of frontier-benchmark parity at any point in 2027?",
+        "Will the US impose controls specifically restricting open-weight model release by Dec 31 2028?"
+      ]
+    },
+    {
+      "id": "T7",
+      "title": "Is Taiwan/TSMC the decisive AI-compute chokepoint, and does a kinetic shock dwarf fab diversification?",
+      "kind": "intersection",
+      "run_mode": "crossed",
+      "rationale": "The dominant tail-risk: a step-function compute shock that renders incremental diversification moot. Crosses resource-concentration lever \u00d7 fab layer \u00d7 US/China/Taiwan; folds the TSMC-concentration and wartime-commandeering candidates into one chokepoint topic.",
+      "axis_tags": [
+        "lever: supply-chain concentration/kinetic risk",
+        "AI layer: advanced fabrication",
+        "actor: Taiwan/US/China"
+      ],
+      "candidate_forecasts": [
+        "Will a blockade or kinetic conflict disrupt TSMC production at any point before Dec 31 2028?",
+        "Will TSMC Arizona produce \u226515% of TSMC's leading-edge (\u22643nm) output by Dec 31 2027?"
+      ]
+    },
+    {
+      "id": "T8",
+      "title": "Does cheap scalable power displace chips as the binding AI-compute constraint by 2027?",
+      "kind": "intersection",
+      "run_mode": "crossed",
+      "rationale": "Covers the energy layer, which the chip-centric debate underweights. If power, not silicon, is the chokepoint, mercantilist competition shifts to energy assets. Crosses energy lever \u00d7 compute-infrastructure layer \u00d7 US/Gulf/China.",
+      "axis_tags": [
+        "lever: energy/resource control",
+        "AI layer: datacenter power",
+        "actor: US/Gulf states + utilities"
+      ],
+      "candidate_forecasts": [
+        "Will at least one announced AI datacenter \u22651GW be publicly delayed or cancelled citing grid/power constraints by Dec 31 2027?",
+        "Will a hyperscaler bring \u22651GW of dedicated nuclear (restart or SMR) capacity online for AI compute by Dec 31 2028?"
+      ]
+    },
+    {
+      "id": "T9",
+      "title": "Does China's critical-mineral processing chokehold give durable AI supply-chain leverage even if mining diversifies?",
+      "kind": "intersection",
+      "run_mode": "crossed",
+      "rationale": "Captures resource nationalism at the refining stage \u2014 the durable chokepoint distinct from extraction. Crosses resource-nationalism lever \u00d7 hardware-materials layer \u00d7 China; the answer-changing variable for whether mining diversification actually de-risks anything.",
+      "axis_tags": [
+        "lever: resource nationalism (processing)",
+        "AI layer: hardware materials",
+        "actor: China"
+      ],
+      "candidate_forecasts": [
+        "Will China maintain export restrictions on gallium, germanium, or rare-earth processing technology through Dec 31 2027?",
+        "Will non-China gallium or germanium refining capacity exceed 30% of global output by Dec 31 2028?"
+      ]
+    },
+    {
+      "id": "T10",
+      "title": "Can Gulf sovereign capital build a third AI-compute pole, and does inbound sovereign capital create insider leverage over the US stack?",
+      "kind": "intersection",
+      "run_mode": "crossed",
+      "rationale": "Brings in a non-US/China actor and the financial-statecraft-via-capital vector that CFIUS/export controls under-address. Crosses sovereign-capital lever \u00d7 compute layer \u00d7 Gulf actor; folds the sovereign-capital-insider-leverage candidate.",
+      "axis_tags": [
+        "lever: sovereign capital/financial statecraft",
+        "AI layer: compute infrastructure",
+        "actor: Gulf states (G42/PIF/Humain)"
+      ],
+      "candidate_forecasts": [
+        "Will a Gulf entity operate a frontier-scale (\u2265100k H100-equivalent) compute cluster by Dec 31 2027?",
+        "Will a US frontier lab (OpenAI, Anthropic, xAI) accept Gulf sovereign-fund equity by Dec 31 2027?"
+      ]
+    },
+    {
+      "id": "T11",
+      "title": "Does defense/IC demand and civil-military fusion become the decisive selection pressure on which AI labs and architectures survive?",
+      "kind": "intersection",
+      "run_mode": "crossed",
+      "rationale": "Covers the military/national-security layer \u2014 a large candidate cluster \u2014 in one decisive topic: whether Pentagon/PLA demand, not commercial SaaS, anchors frontier-lab economics, and whether China's MCF is a structural asymmetry controls can't reach. Crosses defense-procurement lever \u00d7 applications layer \u00d7 US/China.",
+      "axis_tags": [
+        "lever: defense procurement/civil-military fusion",
+        "AI layer: frontier models/applications",
+        "actor: US DoD-IC vs PLA"
+      ],
+      "candidate_forecasts": [
+        "Will US DoD/IC award \u2265$500M cumulative in contracts to frontier labs (OpenAI, Anthropic, Google DeepMind) by Dec 31 2027?",
+        "Will the US invoke the Defense Production Act or designate AI compute clusters as critical defense infrastructure by Dec 31 2028?"
+      ]
+    }
+  ]
+}
